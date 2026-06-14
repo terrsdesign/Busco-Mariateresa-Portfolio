@@ -119,3 +119,13 @@ p {
   font-size: v.$font-size-body;
   line-height: v.$line-height-body;
 }
+
+.subtitle
+{
+  font-size:v.$font-size-body;
+  text-transform: uppercase;
+  font-family: v.$font-accent;
+  letter-spacing: 0.08rem;
+  color: v.$accent-color !important;
+  font-weight: 500;
+}

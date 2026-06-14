@@ -7,7 +7,6 @@
 .ecodream-page .navbar,
 .ecodream-page .site-footer {
   background-color: v.$ecodream-color;
-  margin-top:64px;
 }
 
 .ecodream-page .site-header {
@@ -606,7 +605,7 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
 .case-image-grid {
   display: grid;
   gap: 24px;
-  width: min(100%, 900px);
+  width: min(100%);
   margin-inline: auto;
 }
 
@@ -1174,20 +1173,30 @@ margin-top:40px;
 .case-test-overview {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0;
+  gap: 32px;
   margin-top: 64px;
-  border-left: 1px solid color.adjust(v.$primary-color, $lightness: -14%);
   overflow: hidden;
   margin-bottom:64px;
 }
 
 .case-test-card {
   display: block;
-  padding: 32px;
+  padding: 36px 24px;
+  border: 1px solid color.adjust(v.$primary-color, $lightness: -5%);
+  border-radius: v.$radius-md;
+  background-color: #ffffff;
+  
+}
+
+.case-test-card:hover
+{
+  border-radius: v.$radius-md;
+  box-shadow: 0 8px 20px rgba(31, 27, 28, 0.08);
+
 }
 
 .case-test-card:not(:last-child) {
-  border-right: 1px solid color.adjust(v.$primary-color, $lightness: -14%);
+  border-right: 1px solid color.adjust(v.$primary-color, $lightness: -5%);
 }
 
 
@@ -1197,6 +1206,7 @@ margin-top:40px;
   text-transform: uppercase;
   letter-spacing: 0.08rem;
   color:v.$ecodream-accent-color;
+  text-align: center;
 }
 
 .case-test-card p {
@@ -1222,29 +1232,114 @@ margin-top:40px;
 
 
 /* =========================
+   CONCLUSION
+========================= */
+
+.case-conclusion {
+  background-color: #ffffff;
+  margin-top: 64px;
+  border-bottom:0;
+}
+
+.case-conclusion .case-section-title {
+  justify-content: center;
+  text-align: center;
+}
+
+.case-conclusion-stack {
+  max-width: 1040px;
+  margin-inline: auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+
+.case-conclusion-intro {
+  grid-column: 1 / -1;
+  max-width: 760px;
+  margin-inline: auto;
+  margin-bottom:16px;
+}
+
+.case-conclusion-point {
+  padding: 40px 24px;
+  border: 1px solid color.adjust(v.$primary-color, $lightness: -5%);
+  border-radius: v.$radius-md;
+}
+
+.case-conclusion-point:hover
+{
+  border-radius: v.$radius-md;
+  box-shadow: 0 8px 20px rgba(31, 27, 28, 0.08);
+
+}
+
+
+.case-conclusion-point:first-of-type {
+  border-top: 1px solid color.adjust(v.$primary-color, $lightness: -12%);
+}
+
+.case-conclusion-icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: v.$ecodream-accent-color;
+  color: v.$primary-color;
+  font-family: v.$font-accent;
+  font-size: 1.2rem;
+}
+
+.case-conclusion-point h4 {
+  margin-bottom: 8px;
+  font-size: v.$font-size-label;
+  text-transform: uppercase;
+}
+
+.case-conclusion-point p {
+  max-width: 280px;
+  margin-inline: auto;
+}
+
+
+
+/* =========================
    NEXT PROJECT
 ========================= */
 
 .next-project-banner {
-  padding: 80px 0;
-  background-color: #e5b03b;
+  padding: 64px 0;
 }
 
 .next-project-content {
+  max-width: 760px;
+  margin-inline: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 48px;
+  justify-content: center;
+  gap: 0;
+  text-align: center;
 }
 
 .next-project-content h2 {
   margin: 0;
   font-family: v.$font-heading;
   line-height: 0.95;
-  color: v.$neutral-dark;
+  color: #9e005d;
+}
+
+.next-project-content p {
+  max-width: 520px;
+  color: v.$primary-color;
 }
 
 .next-project-content .section-label {
   margin-bottom: 16px;
-  color: v.$neutral-dark;
+  color: #4f362b;
 }
