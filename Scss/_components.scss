@@ -876,3 +876,207 @@
   letter-spacing: 0.08em;
 }
   
+
+
+/* =========================  CV PAGE  ========================= */
+
+.cv-section {
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+
+.cv-paper {
+  max-width: 1180px;
+  margin-inline: auto;
+  background-color: #ffffff;
+  box-shadow: 0 24px 70px rgba(31, 27, 28, 0.12);
+  overflow: hidden;
+}
+
+.cv-header {
+  display: grid;
+  grid-template-columns: 288px minmax(0, 1fr);
+  align-items: end;
+  min-height: 150px;
+  background-color: #720E2B;
+}
+
+.cv-header-text {
+  padding: 0;
+}
+
+.cv-photo {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin-left: 42px;
+  transform: translateY(48px);
+  object-fit: cover;
+  z-index: 2;
+  border-radius: v.$radius-md;
+}
+
+.cv-summary {
+  margin-left: 288px;
+  padding: 20px 48px 26px 0;
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: 390px minmax(0, 1fr);
+  gap: 46px;
+  padding: 0 28px 72px 0;
+}
+
+.cv-main {
+  padding-right: 28px;
+  padding-left: 44px;
+  border-left: 1px solid rgba(167, 154, 157, 0.22);
+}
+
+.cv-block {
+  margin-bottom: 42px;
+}
+
+.cv-main > .cv-block {
+  margin-bottom: 72px;
+}
+
+.cv-main > .cv-block:last-child {
+  margin-bottom: 0;
+}
+
+.cv-sidebar .cv-block > .section-label {
+  padding-left: 42px;
+  background-color:v.$secondary-color;
+  font-family: v.$font-accent;
+  color:v.$primary-color;
+  font-size: v.$font-size-label;
+  font-weight: 400;
+}
+
+.cv-main .cv-block > .section-label {
+  padding-bottom: 0px;
+  border-bottom: 6px solid color.adjust(v.$primary-color, $lightness: -3%);
+}
+
+.cv-sidebar .cv-block > ul {
+  padding-left: 62px;
+  padding-right: 20px;
+}
+
+.cv-sidebar .cv-block:first-child > ul {
+  list-style: none;
+  padding-left: 42px;
+}
+
+.cv-main > .cv-block > .section-label 
+{
+  font-size: v.$font-size-h4;
+}
+
+
+.cv-tools {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  padding-left: 42px;
+  padding-right: 20px;
+}
+
+.cv-sidebar .subtitle
+{font-size:v.$font-size-body;
+  font-family: v.$font-main;
+  text-transform: capitalize;
+  font-weight:600;
+  letter-spacing: normal;
+}
+
+.cv-tools ul {
+  padding-left: 20px;
+}
+.cv-skill {
+  margin-bottom: 18px;
+}
+
+.cv-skill .subtitle {
+  margin-bottom: 2px;
+}
+
+.cv-skill p:not(.subtitle) {
+  margin-top: 0;
+}
+
+.cv-skill {
+  padding-left: 42px;
+  padding-right: 24px;
+  margin-bottom: 28px;
+}
+
+.cv-entry h4
+{font-size:v.$font-size-body-lg;
+font-family:v.$font-main;
+font-weight:600;
+margin:0;
+}
+
+.cv-sidebar .cv-block:last-child > p:not(.section-label) {
+  padding-left: 42px;
+}
+
+.cv-entry {
+  margin-bottom: 30px;
+}
+
+.cv-entry:last-child {
+  margin-bottom: 0;
+}
+
+.cv-entry ul {
+  padding-left: 22px;
+}
+
+/* header contrast without redefining typography */
+
+.cv-header p {
+  color: #FCFAF6;
+  font-style: italic;
+}
+
+.cv-header h1
+{
+color: color.adjust(v.$accent-color, $lightness: 20%);
+margin:0;
+}
+
+
+.cv-header .subtitle {
+  color: #FCFAF6 !important;
+}
+
+.cv-sidebar a,
+.cv-main a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+
+.cv-language-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-inline: auto;
+  margin-bottom: 32px;
+}
+
+.cv-language-toggle .is-active {
+  background-color: #720E2B;
+  color: #FCFAF6;
+}
+
+[data-lang-panel][hidden] {
+  display: none;
+}
