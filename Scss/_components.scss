@@ -1096,12 +1096,22 @@ margin:0;
   flex: 1;
 }
 
+.contact-page h2 {
+  color: v.$secondary-color;
+}
+
+
 .contact-section {
   min-height: calc(100vh - 82px);
   display: flex;
   align-items: stretch;
   padding-top: 80px;
   padding-bottom: 0;
+}
+
+.contact-section img
+{max-width:250px;
+  margin-top:32px
 }
 
 .contact-section .page-container {

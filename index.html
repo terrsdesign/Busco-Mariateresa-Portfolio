@@ -44,6 +44,12 @@
         MB
       </a>
 
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
       <ul class="nav-menu nav-menu-right">
         <li><a href="aboutme.html">About me</a></li>
         <li><a href="cv.html">CV</a></li>
@@ -412,6 +418,26 @@ Redesigned an eco-conscious handbag e-commerce experience, improving navigation,
 
   </div>
 </footer>
+
+<script>
+  const navWrapper = document.querySelector(".nav-wrapper");
+  const navToggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelectorAll(".nav-menu a");
+
+  navToggle.addEventListener("click", () => {
+    const isOpen = navWrapper.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", isOpen);
+    navToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navWrapper.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Open menu");
+    });
+  });
+</script>
 
 </body>
 </html>

@@ -37,6 +37,12 @@
         MB
       </a>
 
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
       <ul class="nav-menu nav-menu-right">
         <li><a href="../about.html">About me</a></li>
         <li><a href="../cv.html">CV</a></li>
@@ -1528,6 +1534,28 @@ The EcoDream redesign successfully addressed the main usability issues identifie
       closeLightbox();
     }
   });
+</script>
+
+<script>
+  const navWrapper = document.querySelector(".nav-wrapper");
+  const navToggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelectorAll(".nav-menu a");
+
+  if (navWrapper && navToggle) {
+    navToggle.addEventListener("click", () => {
+      const isOpen = navWrapper.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", isOpen);
+      navToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        navWrapper.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.setAttribute("aria-label", "Open menu");
+      });
+    });
+  }
 </script>
 
 </body>
