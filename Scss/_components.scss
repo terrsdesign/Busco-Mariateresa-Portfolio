@@ -573,37 +573,18 @@ border: 1px solid rgba(v.$neutral-dark, 0.05);
 
 /* Posizioni dei 5 punti sulla linea */
 
-.approach-path-point-01 {
-  left: 13%;
-  top: 50%;
-}
-
-.approach-path-point-02 {
-  left: 31%;
-  top: 52%;
-}
-
-.approach-path-point-03 {
-  left: 51%;
-  top: 50%;
-}
-
-.approach-path-point-04 {
-  left: 71%;
-  top: 54%;
-}
-
-.approach-path-point-05 {
-  left: 89%;
-  top: 52%;
-}
+.approach-path-point-01 { left: 13%; top: 50%;}
+.approach-path-point-02 {left: 31%;top: 52%;}
+.approach-path-point-03 { left: 51%;top: 50%;}
+.approach-path-point-04 {left: 71%;top: 54%;}
+.approach-path-point-05 {left: 89%;top: 52%;}
 
 
 .approach-step-01 { left: 6%;top: 65%;}
 .approach-step-02 { left: 24%; top: 16%; }
 .approach-step-03 { left: 43%; top: 67%; }
 .approach-step-04 { left: 63%; top: 13%; }
-.approach-step-05 { right: 0%; top: 6%; }
+.approach-step-05 { right: 0%; top: 67%; }
 
 
 

@@ -803,7 +803,7 @@ p {
 
 .approach-step-05 {
   right: 0%;
-  top: 6%;
+  top: 67%;
 }
 
 .approach-step {
@@ -1811,7 +1811,7 @@ p {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #99567E;
+  background-color: rgb(105.5540540541, 100.4932432432, 54.9459459459);
   z-index: 2;
 }
 
@@ -1837,7 +1837,7 @@ p {
   font-family: "Geist Mono", monospace;
   font-size: 0.875rem;
   line-height: 1;
-  background-color: rgb(105.5540540541, 100.4932432432, 54.9459459459);
+  background-color: #99567E;
   color: #FCFAF6;
 }
 

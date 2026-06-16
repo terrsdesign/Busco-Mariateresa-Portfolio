@@ -376,7 +376,7 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: v.$ecodream-accent-color;
+  background-color: color.adjust(v.$ecodream-color, $lightness: -25%);
   z-index: 2;
 }
 
@@ -403,8 +403,8 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
   font-family: v.$font-accent;
   font-size: v.$font-size-label;
   line-height: 1;
-  background-color: color.adjust(v.$ecodream-color, $lightness: -25%);
-  color: v.$primary-color;
+  background-color: v.$ecodream-accent-color;
+  color:v.$primary-color;
 }
 
 
