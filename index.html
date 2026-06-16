@@ -277,13 +277,43 @@ Redesigned an eco-conscious handbag e-commerce experience, improving navigation,
   <div class="approach-path">
 
 <svg class="approach-line" viewBox="-20 0 1060 260" preserveAspectRatio="none" aria-hidden="true">
-    
-  <path
-  class="approach-line-base"
-
+    <defs>
+  <linearGradient id="approachPathGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#5C0B23" />
+    <stop offset="38%" stop-color="#720E2B" />
+    <stop offset="52%" stop-color="#8A3A52" />
+    <stop offset="68%" stop-color="#720E2B" />
+    <stop offset="100%" stop-color="#5C0B23" />
+  </linearGradient>
+</defs>
+ <path
+  class="approach-line-shadow"
   d="
     M 0 155
+    C 75 90, 160 92, 215 145
+    C 275 202, 345 200, 420 145
+    C 490 90, 565 92, 630 150
+    C 695 208, 770 202, 835 145
+    C 900 88, 965 108, 1000 135
+  "
+/>
 
+<path
+  class="approach-line-base"
+  d="
+    M 0 155
+    C 75 90, 160 92, 215 145
+    C 275 202, 345 200, 420 145
+    C 490 90, 565 92, 630 150
+    C 695 208, 770 202, 835 145
+    C 900 88, 965 108, 1000 135
+  "
+/>
+
+<path
+  class="approach-line-highlight"
+  d="
+    M 0 155
     C 75 90, 160 92, 215 145
     C 275 202, 345 200, 420 145
     C 490 90, 565 92, 630 150

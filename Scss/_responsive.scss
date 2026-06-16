@@ -593,8 +593,8 @@
 
 @media (max-width: 992px) {
   .ecodream-page .case-research .case-layout-2 {
-    grid-template-columns: 1fr !important;
-    gap: 48px !important;
+    grid-template-columns: 1fr ;
+    gap: 48px ;
   }
 
   .ecodream-page .case-research .case-block,
@@ -611,194 +611,255 @@
   }
 
   .ecodream-page .case-research .case-activity p {
-    margin-left: 0 !important;
+    margin-left: 0;
   }
 
   .ecodream-page .case-research .highlight-quote {
-    max-width: 100% !important;
-    margin-left: 0 !important;
+    max-width: 100% ;
+    margin-left: 0 ;
   }
 
   .ecodream-page .case-research .case-score-list {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: 0 ;
+    padding-right: 0 ;
   }
 
   .ecodream-page .case-research .case-image-grid-2 {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr ;
   }
 
   .ecodream-page .case-research .case-survey-bubbles {
-    grid-template-columns: 1fr !important;
-    max-width: 100% !important;
-    gap: 32px !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    grid-template-columns: 1fr ;
+    max-width: 100% ;
+    gap: 52px ;
+    margin-left: 0 ;
+    margin-right: 0 ;
   }
 
   .ecodream-page .case-research .case-survey-bubble {
-    max-width: 100% !important;
-    justify-self: stretch !important;
+    max-width: 100% ;
+    justify-self: stretch ;
   }
 
   .ecodream-page .case-research .case-issues-grid {
-    grid-template-columns: 1fr !important;
-    gap: 0 !important;
+    grid-template-columns: 1fr ;
+    gap: 0 ;
   }
 }
 
 @media (max-width: 576px) {
   .ecodream-page .case-research .case-numbered-list li {
-    grid-template-columns: 40px minmax(0, 1fr) !important;
+    grid-template-columns: 40px minmax(0, 1fr) ;
   }
 
   .ecodream-page .case-research .case-score-item {
-    grid-template-columns: 1fr !important;
-    gap: 8px !important;
+    grid-template-columns: 1fr ;
+    gap: 8px ;
   }
 
   .ecodream-page .case-research .case-gallery {
-    padding-inline: 0 !important;
+    padding-inline: 0 ;
   }
 
   .ecodream-page .case-research .case-gallery-viewport {
-    width: 100% !important;
+    width: 100% ;
   }
 
   .ecodream-page .case-research .case-gallery-slide {
-    width: 100% !important;
+    width: 100% ;
   }
 
   .ecodream-page .case-research .case-gallery-slide.is-active-left,
   .ecodream-page .case-research .case-gallery-slide.is-active-right {
-    left: 0 !important;
+    left: 0;
   }
 
   .ecodream-page .case-research .case-gallery-slide.is-active-right {
-    display: none !important;
+    display: none ;
   }
 
+  
   .ecodream-page .case-research .case-issue-card {
-    grid-template-columns: 1fr !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    display: grid ;
+    align-items: center ;
+    min-height: 160px;
+  }
+
+  .ecodream-page .case-research .case-issue-text,
+  .ecodream-page .case-research .case-issue-number {
+    align-self: center;
   }
 }
 
 
-@media (max-width: 900px) {
-  .case-issues-grid {
+
+/* =========================
+   ECODREAM - STRATEGY RESPONSIVE
+   Solo layout, niente font
+========================= */
+
+@media (max-width: 1200px) {
+  .ecodream-page .case-strategy .case-layout-2 {
+    gap: 32px;
+  }
+
+  .ecodream-page .case-strategy .case-layout-equal {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ecodream-page .case-strategy .case-image-grid-2 {
     grid-template-columns: 1fr;
   }
 
-  .case-conclusion-stack {
-    grid-template-columns: 1fr;
-    max-width: 760px;
-  }
-
-  .case-conclusion-point p {
-    max-width: 520px;
+  .ecodream-page .case-strategy .case-image-grid,
+  .ecodream-page .case-strategy .case-image-card,
+  .ecodream-page .case-strategy .case-image-card img {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 }
 
-@media (max-width: 520px) {
-  .case-issue-card {
+@media (max-width: 768px) {
+  .ecodream-page .case-strategy .case-layout-equal {
     grid-template-columns: 1fr;
   }
 
-  .case-issue-number {
-    text-align: left;
-    margin-top: 8px;
+  .ecodream-page .case-strategy .case-layout-2 {
+    gap: 40px;
+  }
+
+  .ecodream-page .case-strategy .case-block,
+  .ecodream-page .case-strategy .case-activity,
+  .ecodream-page .case-strategy .case-numbered-list {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .ecodream-page .case-strategy .highlight-quote {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .ecodream-page .case-strategy .case-activity p {
+    margin-left: 0;
   }
 }
 
-@media (max-width: 992px) {
-  .case-wireframe-layout {
+/* =========================
+   ECODREAM - WIREFRAMES RESPONSIVE
+   Solo layout, niente font
+========================= */
+
+@media (max-width: 1200px) {
+  .ecodream-page .case-design .case-wireframe-layout,
+  .ecodream-page .case-design .case-wireframe-layout.case-layout-reverse {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 
-  .case-wireframe-preview {
+  .ecodream-page .case-design .case-block,
+  .ecodream-page .case-design .case-activity,
+  .ecodream-page .case-design .case-wireframe-preview,
+  .ecodream-page .case-design .case-page-flow {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .ecodream-page .case-design .case-activity p {
+    margin-left: 0;
+  }
+
+  .ecodream-page .case-design .highlight-quote {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .ecodream-page .case-design .case-wireframe-preview {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .case-page-flow {
-    grid-template-columns: repeat(5, auto);
+  .ecodream-page .case-design .case-page-flow {
     overflow-x: auto;
     justify-content: start;
     padding-bottom: 8px;
   }
+}
 
-  .case-design-system {
-    grid-template-columns: 1fr;
-  }
-
-  .case-design-system-block {
-    padding: 40px 24px;
-  }
-
-  .case-layout-reverse {
-    grid-template-columns: 1fr;
-  }
-
-  .case-prototype-intro {
-    grid-template-columns: 1fr;
-  }
-
-  .case-test-overview {
+@media (max-width: 768px) {
+  .ecodream-page .case-design .case-wireframe-preview {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .case-test-card:nth-child(2) {
-    border-right: 0;
+  .ecodream-page .case-design .case-wireframe-card,
+  .ecodream-page .case-design .case-image-card,
+  .ecodream-page .case-design .case-image-card img {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
-  .case-test-card:nth-child(-n + 2) {
-    border-bottom: 1px solid #eae0c0;
+  
+}
+
+/* =========================
+   ECODREAM - DESIGN SYSTEM MOBILE
+   Solo layout, niente font
+========================= */
+
+@media (max-width: 768px) {
+  .ecodream-page .case-design .case-design-system-band .case-image-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
-  .case-prototype-media {
-    min-height: 420px;
+  .ecodream-page .case-design .case-design-system-band .case-image-card {
+    width: 100%;
+    max-width: 100%;
   }
 
-  .case-desktop-video {
-    width: min(100%, 480px);
-  }
-
-  .case-phone-video {
-    width: min(100%, 210px);
-    left: 24px;
+  .ecodream-page .case-design .case-design-system-band .case-image-card img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
 }
 
-@media (max-width: 640px) {
-  .case-wireframe-preview {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+/* =========================
+   ECODREAM - PROTOTYPE RESPONSIVE
+   Solo layout, niente font
+========================= */
 
-  .case-test-overview {
+@media (max-width: 1200px) {
+  .ecodream-page .case-prototype .case-prototype-intro {
     grid-template-columns: 1fr;
+    gap: 48px;
   }
 
-  .case-test-card {
-    border-right: 0;
+  .ecodream-page .case-prototype .case-block,
+  .ecodream-page .case-prototype .case-prototype-media,
+  .ecodream-page .case-prototype .case-test-overview {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
-  .case-test-card:not(:last-child) {
-    border-bottom: 1px solid #eae0c0;
+  .ecodream-page .case-prototype .highlight-quote {
+    max-width: 100%;
+    margin-left: 0;
   }
 
-  .case-phone-video {
-    width: min(100%, 260px);
-  }
-
-  .case-prototype-media {
+  .ecodream-page .case-prototype .case-prototype-media {
     display: grid;
-    gap: 24px;
+    grid-template-columns: 1fr;
+    gap: 32px;
     min-height: auto;
   }
 
-  .case-desktop-video,
-  .case-phone-video {
+  .ecodream-page .case-prototype .case-desktop-video,
+  .ecodream-page .case-prototype .case-phone-video {
     position: relative;
     top: auto;
     left: auto;
@@ -807,18 +868,94 @@
     margin-inline: auto;
   }
 
-  .case-desktop-video {
+  .ecodream-page .case-prototype .case-desktop-video {
+    display: none;
+    width: min(100%, 640px);
+  }
+
+  .ecodream-page .case-prototype .case-phone-video {
+    width: min(100%, 260px);
+  }
+
+  .ecodream-page .case-prototype .case-test-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .ecodream-page .case-prototype .case-test-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .ecodream-page .case-prototype .btn-custom {
     width: 100%;
   }
 
-  .case-phone-video {
-    width: min(100%, 240px);
+  .ecodream-page .case-prototype .case-phone-video {
+    width: 100%;
   }
 }
 
-.case-task-outcome-layout {
-  grid-template-columns: minmax(0, 0.35fr) minmax(0, 0.65fr);
+@media (max-width: 992px) {
+  .ecodream-page .case-task-outcome-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .ecodream-page .case-task-outcome-layout .case-block {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
 }
+
+/* =========================
+   ECODREAM - CONCLUSION RESPONSIVE
+   Solo layout, niente font
+========================= */
+
+@media (max-width: 992px) {
+  .ecodream-page .case-conclusion {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .ecodream-page .case-conclusion .case-section-title {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .ecodream-page .case-conclusion-stack {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 760px;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .ecodream-page .case-conclusion-intro {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: 0;
+  }
+
+  .ecodream-page .case-conclusion-point {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .ecodream-page .case-conclusion-point p {
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .ecodream-page .case-conclusion-icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
 
 /* =========================
    RESPONSIVE - CV

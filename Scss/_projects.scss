@@ -2,15 +2,44 @@
 @use "sass:color";
 
 
+.section-divider {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 88px auto;
+  border: none;
+  background: linear-gradient(
+    90deg,
+    rgba(v.$secondary-color, 0) 0%,
+    rgba(v.$secondary-color, 0.30) 50%,
+    rgba(v.$secondary-color, 0) 100%
+  );
+}
 
+.section-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: v.$ecodream-color;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .ecodream-page .navbar,
 .ecodream-page .site-footer {
-  background-color: v.$ecodream-color;
+  background: linear-gradient(
+    180deg,
+    color.adjust(v.$ecodream-color, $lightness: -8%) 0%,
+    v.$ecodream-color 100%
+  );
 }
 
 .ecodream-page .site-header {
   background-color: v.$primary-color;
+  border-bottom: none;
 }
 
 .ecodream-page .nav-menu a,
@@ -26,6 +55,7 @@
 .ecodream-page .nav-menu a:hover,
 .ecodream-page .footer-links a:hover {
   color: color.adjust(v.$neutral-dark, $lightness: 20%);
+  
 }
 
 .ecodream-page .footer-content {
@@ -34,12 +64,26 @@
 }
 
 .ecodream-page .diagonal-highlight {
-  background-color: v.$ecodream-color;
+  background: color.adjust(v.$ecodream-color, $lightness: -25%);
   padding: 1px 20px;
   margin-left: -2px;
   color: v.$primary-color;
 }
+.ecodream-page .case-design .case-activity {
+  margin-bottom: 112px;
+}
 
+.ecodream-page .case-design .case-design-system-band {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.ecodream-page .case-image-card {
+  background-color: rgba(v.$primary-color, 0.9);
+  border: 1px solid rgba(v.$neutral-dark, 0.05);
+  box-shadow: 0 10px 24px rgba(v.$neutral-dark, 0.05);
+  padding: 8px;
+}
 
 /*----------- Typography -------------------*/
 .case-study-page .section-label {
@@ -94,8 +138,8 @@
 
 .highlight-quote {
   max-width: 80%;
-  border-left: 1px solid #6f2f3f;
-  color:color.adjust(v.$ecodream-color, $lightness: -10%);
+  border-left: 2px solid rgba(v.$ecodream-accent-color, 0.35);
+  color:color.adjust(v.$ecodream-color, $lightness: -15%);
   font-size: v.$font-size-body-lg;
   line-height: v.$line-height-body-lg;
   font-weight: 400;
@@ -359,7 +403,7 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
   font-family: v.$font-accent;
   font-size: v.$font-size-label;
   line-height: 1;
-  background-color: v.$ecodream-accent-color;
+  background-color: color.adjust(v.$ecodream-color, $lightness: -25%);
   color: v.$primary-color;
 }
 
@@ -439,9 +483,7 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
   color: v.$neutral-dark;
 }
 
-.case-activity {
-  margin-bottom: 80px;
-}
+
 
 .case-activity p
 {
@@ -801,28 +843,36 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
   justify-items: center;
   max-width: 960px;
 }
-
 .case-survey-bubble {
   position: relative;
   margin: 0;
   padding: 16px 32px;
   border-radius: 999px;
-  background-color: v.$ecodream-accent-color;
+  background: linear-gradient(
+    180deg,
+    color.adjust(v.$ecodream-accent-color, $lightness: 5%) 0%,
+    v.$ecodream-accent-color 55%,
+    color.adjust(v.$ecodream-accent-color, $lightness: -3%) 100%
+  );
+  box-shadow:
+    0 8px 18px rgba(v.$neutral-dark, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.10);
   transform: rotate(var(--bubble-rotate, 0deg)) translateY(var(--bubble-y, 0));
 }
 
 .case-survey-bubble::after {
   content: "";
   position: absolute;
-  left: 36px;
-  bottom: -12px;
-  width: 24px;
-  height: 24px;
-  background-color: v.$ecodream-accent-color;
-  border-right: 1px solid color.adjust(v.$primary-color, $lightness: -14%);
-  border-bottom: 1px solid color.adjust(v.$primary-color, $lightness: -14%);
+  left: 38px;
+  bottom: -8px;
+  width: 22px;
+  height: 22px;
+  background-color: color.adjust(v.$ecodream-accent-color, $lightness: -2%);
   transform: rotate(45deg);
+  box-shadow: none;
 }
+
+
 
 .case-survey-bubble p {
   margin: 0;
@@ -889,11 +939,11 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
 .case-issues-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 24px;
-  margin: auto;
-  max-width: 960px;
-  justify-items: auto;
-  margin-top:24px;
+  gap: 24px;
+  max-width: 800px;
+  margin-top: 32px;
+  align-content: center;
+  margin:auto;
 }
 
 .case-issue-card {
@@ -901,8 +951,23 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 16px;
   align-items: center;
-  padding: 0 24px;
-  border-bottom: 1px solid color.adjust(v.$primary-color, $lightness: -5%);
+  min-height: 160px;
+  padding: 28px 24px;
+  border: 1px solid rgba(v.$neutral-dark, 0.06);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 10px 24px rgba(v.$neutral-dark, 0.04);
+}
+
+.case-issue-card:hover
+{
+  border-radius: v.$radius-md;
+  box-shadow: 0 8px 20px rgba(31, 27, 28, 0.08);
+
+}
+
+.case-issue-text {
+  align-self: center;
 }
 
 .case-issue-icon {
@@ -930,6 +995,7 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
 .case-issue-number {
   min-width: 56px;
   text-align: right;
+  align-self: center;
 }
 
 .case-issue-number span {
@@ -984,7 +1050,7 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
 
 .case-wireframe-layout {
   grid-template-columns: minmax(0, 0.20fr) minmax(0, 0.80fr);
-  gap: 56px;
+  gap: 72px;
   align-items: start;
 }
 
@@ -1010,8 +1076,8 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
   font-size: v.$font-size-label;
   line-height: v.$line-height-label;
   text-transform: uppercase;
-  color: v.$ecodream-accent-color;
-  font-weight: 500;
+  color: color.adjust(v.$ecodream-color, $lightness: -25%);
+  font-weight: 400;
   text-align:center;
 }
 
@@ -1029,50 +1095,7 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
   display: block;
 }
 
-.case-page-flow {
-  display: grid;
-  grid-template-columns:
-    minmax(0, 1fr) auto
-    minmax(0, 1fr) auto
-    minmax(0, 1fr) auto
-    minmax(0, 1fr) auto
-    minmax(0, 1fr);
-  gap: 16px;
-  margin-top: 16px;
-  align-items: center;
-  margin-bottom:20px;
-}
 
-.case-page-flow-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Solo le icone/pagine hanno il cerchio */
-.case-page-flow-item > span {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: v.$ecodream-color;
-  color: v.$primary-color;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-family: v.$font-accent;
-  font-size: 1.4rem;
-  line-height: 1;
-}
-
-
-.case-page-flow-item p {
-  margin: 0;
-  font-family: v.$font-accent;
-  font-size: v.$font-size-label;
-  line-height: v.$line-height-label;
-  text-transform: uppercase;
-  color: v.$neutral-medium;
-}
 
 /* =========================
    DESIGN SYSTEM BAND
@@ -1082,13 +1105,12 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
 .case-design-system-band {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  margin-top: 96px;
-  margin-bottom: 96px;
-  padding: 32px 0 0;
-  background-color: #ffffff;
-  border-top:10px solid v.$ecodream-color;
-  border-bottom:10px solid v.$ecodream-color;
-
+  margin-top: 120px;
+  margin-bottom: 120px;
+  padding: 56px 0 40px;
+  background-color: color.adjust(v.$primary-color, $lightness: 1%);
+  border-top: 8px solid v.$ecodream-color;
+  border-bottom: 8px solid v.$ecodream-color;
 }
 
 .case-image-grid-3 {
@@ -1098,9 +1120,12 @@ width:100%;
 margin-inline: auto;
 justify-items: center;
 align-items: center;
-gap:10px;
+gap:24px;
 margin-top:40px;
 }
+
+
+
 
 
 /* =========================

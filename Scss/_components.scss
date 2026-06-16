@@ -49,7 +49,9 @@
 .btn-custom-primary {
   background-color: v.$accent-color;
   color: v.$primary-color;
-  box-shadow: 0 6px 12px rgba(31, 27, 28, 0.18);
+  box-shadow: 0 2px 5px rgba(31, 27, 28, 0.18);
+
+  
 
   &:hover {
     background-color: color.adjust(v.$accent-color, $lightness: -10%);
@@ -70,7 +72,7 @@
 .btn-custom-secondary {
   background-color: color.adjust(v.$neutral-light, $lightness: 10%);
   color: v.$primary-color;
-  box-shadow: 0 6px 12px rgba(31, 27, 28, 0.18);
+  box-shadow: 0 2px 5px rgba(31, 27, 28, 0.18);
 
   &:hover {
     background-color: v.$neutral-light;
@@ -107,7 +109,10 @@
 .diagonal-highlight {
   display: inline-block;
   padding: 0.08em 0.20em;
-  background-color: v.$accent-color;
+background: linear-gradient(
+    180deg,
+    color.adjust(v.$accent-color, $lightness: 15%) 0%,
+    color.adjust(v.$accent-color, $lightness: 8%) 100%);  
   color: v.$secondary-color;
   transform: rotate(-3deg);
   transform-origin: center;
@@ -115,6 +120,7 @@
   font-family: v.$font-accent;
   border-radius: 4px;
   margin: 0 4px;
+  
 }
 
 .bigger-word {
@@ -158,6 +164,18 @@
   &:hover {
     color: v.$accent-color;
   }
+}
+
+.site-header {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 40%),
+    linear-gradient(180deg, v.$secondary-color 0%, v.$secondary-color-soft 100%);
+}
+
+.site-footer {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 40%),
+    linear-gradient(180deg, v.$secondary-color 0%, v.$secondary-color-soft 100%);
 }
 
 /* ------------------ FINE Nav Menu--------------------------- */
@@ -317,13 +335,14 @@
   position: relative;
   overflow: visible;
   padding: 0;
-  border: 1px solid color.adjust(v.$primary-color, $lightness: -4%);
   border-radius: v.$radius-md;
   background-color: v.$primary-color;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 8px 10px rgba(128, 125, 120, 0.08);
-
+border: 1px solid rgba(v.$neutral-dark, 0.05);
+  box-shadow:
+    0 18px 40px rgba(v.$neutral-dark, 0.05),
+    0 4px 12px rgba(v.$neutral-dark, 0.03);
 }
 
 .project-card-large {
@@ -336,13 +355,13 @@
 
 .project-card-title {
   position: absolute;
-  top: -16px;
-  left: 28px;
+  top: -12px;
+  left: 24px;
   display: inline-flex;
   align-items: center;
-  max-width: calc(100% - 56px);
-  padding: 4px 18px;
-  border-radius: 8px;
+  max-width: calc(100% - 48px);
+  padding: 2px 12px;
+  border-radius: 4px;
   font-family: v.$font-accent;
   font-size: v.$font-size-link-sm;
   line-height: v.$line-height-link-sm;
@@ -350,15 +369,17 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: v.$neutral-dark;
+  border: 1px solid rgba(v.$neutral-dark, 0.05);
+  box-shadow: 0 2px 6px rgba(v.$neutral-dark, 0.04);
   z-index: 2;
 }
 
 .project-card--uxui .project-card-title {
-  background-color: v.$project-uxui-color;
+  background-color: rgba(v.$project-uxui-color, 0.92);
 }
 
 .project-card--branding .project-card-title {
-  background-color: v.$project-branding-color;
+  background-color: rgba(v.$project-branding-color, 0.92);
 }
 
 .project-card-main {
@@ -368,7 +389,7 @@
 }
 
 .project-card-main-horizontal {
-  grid-template-columns: 0.95fr 1.35fr;
+  grid-template-columns: 0.82fr 1.48fr;
 }
 
 .project-card-main-vertical {
@@ -399,7 +420,7 @@
 
 
 .project-card-text {
-  padding: 28px;
+  padding: 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -441,13 +462,17 @@
 .project-tags span {
   display: inline-flex;
   align-items: center;
-  padding: 4px 12px;
-  border-radius: 8px;
+  padding: 3px 10px;
+  border-radius: 6px;
   font-family: v.$font-accent;
   font-size: v.$font-size-link-sm;
   line-height: v.$line-height-link-sm;
   color: v.$neutral-medium;
-  background-color: color.adjust(v.$neutral-light, $lightness: 30%);
+  background: linear-gradient(
+    180deg,
+    color.adjust(v.$primary-color, $lightness: -3%) 0%,
+    color.adjust(v.$primary-color, $lightness: -5%) 100%
+  );
 }
 
 .project-arrow {
@@ -494,15 +519,36 @@
   stroke-linejoin: round;
 }
 
+.approach-line-shadow {
+  fill: none;
+  stroke: rgba(92, 11, 35, 0.16);
+  stroke-width: 11px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: translateY(1.5px);
+}
+
 .approach-line-base {
+  fill: none;
   stroke: v.$secondary-color;
-  stroke-width: 8px;
+  stroke-width: 7px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.approach-line-highlight {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.18);
+  stroke-width: 1.5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: translateY(-0.5px);
 }
 
 
 .approach-line-dots {
   stroke: v.$primary-color;
-  stroke-width: 1.5;
+  stroke-width: 1.2;
   stroke-dasharray: 7 12;
 }
 
@@ -553,30 +599,11 @@
 }
 
 
-.approach-step-01 {
-  left: 6%;
-  top: 65%;
-}
-
-.approach-step-02 {
-  left: 26%;
-  top: 18%;
-}
-
-.approach-step-03 {
-  left: 44%;
-  top: 68%;
-}
-
-.approach-step-04 {
-  left: 64%;
-  top: 14%;
-}
-
-.approach-step-05 {
-  right: 0;
-  top: 67%;
-}
+.approach-step-01 { left: 6%;top: 65%;}
+.approach-step-02 { left: 24%; top: 16%; }
+.approach-step-03 { left: 43%; top: 67%; }
+.approach-step-04 { left: 63%; top: 13%; }
+.approach-step-05 { right: 0%; top: 6%; }
 
 
 
@@ -597,7 +624,7 @@
   display: inline-flex;
   align-items: center;
   max-width: calc(100% - 28px);
-  padding: 4px 14px;
+  padding: 3px 12px;
   border-radius: 8px;
   font-family: v.$font-accent;
   font-size: v.$font-size-link-sm;
@@ -616,6 +643,7 @@
   font-size: v.$font-size-body-sm;
   line-height: v.$line-height-body-sm;
   margin-top:10px;
+  max-width: 200px;
 }
 
 .approach-note {
@@ -735,7 +763,9 @@
   top: 50%;
   width: 130vw;
   transform: translate(-50%, -50%) rotate(-4deg);
-  background-color: v.$secondary-color;
+background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 40%),
+    linear-gradient(135deg, v.$secondary-color-dark 0%, v.$secondary-color 35%, v.$secondary-color-soft 100%);
   color: v.$primary-color;
   overflow: hidden;
   padding: 8px 0;
@@ -1096,8 +1126,12 @@ margin:0;
   flex: 1;
 }
 
-.contact-page h2 {
+.contact-page .contact-content h2 {
   color: v.$secondary-color;
+}
+
+.contact-page .site-footer h2 {
+  color: v.$primary-color;
 }
 
 
@@ -1109,9 +1143,13 @@ margin:0;
   padding-bottom: 0;
 }
 
-.contact-section img
-{max-width:250px;
-  margin-top:32px
+.contact-content img {
+  position: relative;
+  display: block;
+  max-width: 260px;
+  margin-top: 32px;
+  margin-bottom: -48px;
+  z-index: 2;
 }
 
 .contact-section .page-container {
@@ -1127,22 +1165,26 @@ margin:0;
 }
 
 .contact-content {
-  padding: 48px 64px 80px 0;
-}
-
-.contact-content h1 {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  max-width: 760px;
+  padding: 40px 0 0;
 }
 
 .contact-content > p:not(.section-label) {
-  max-width: 520px;
-  margin-bottom: 56px;
+  max-width: 560px;
+  margin-bottom: 32px;
 }
+
+.contact-content h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  line-height: v.$line-height-h3;
+}
+
+
 
 .contact-links {
   display: grid;
-  gap: 16px;
+  gap: 10px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1175,14 +1217,31 @@ margin:0;
 }
 
 .contact-form-wrap {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 48px 80px;
-  border-left: 1px solid rgba(167, 154, 157, 0.35);
+  border-left: none;
   border-bottom: 1px solid rgba(167, 154, 157, 0.35);
   border-bottom-right-radius: 24px;
   background-color: #FCFAF6;
+}
+
+.contact-form-wrap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 48px;
+  bottom: 48px;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    rgba(v.$neutral-light, 0) 0%,
+    rgba(v.$neutral-light, 0.22) 18%,
+    rgba(v.$neutral-light, 0.22) 82%,
+    rgba(v.$neutral-light, 0) 100%
+  );
 }
 
 .contact-form {
@@ -1196,12 +1255,19 @@ margin:0;
 .contact-form select,
 .contact-form textarea {
   width: 100%;
-  border: 1px solid rgba(167, 154, 157, 0.45);
+  border: 1px solid rgba(v.$neutral-light, 0.32);
   border-radius: 12px;
-  background-color: #FCFAF6;
-  color: #1F1B1C;
+  background: linear-gradient(
+    180deg,
+    rgba(v.$primary-color, 0.96) 0%,
+    rgba(color.adjust(v.$primary-color, $lightness: -1.5%), 0.96) 100%
+  );
+  color: v.$neutral-dark;
   padding: 18px 24px;
   font: inherit;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 2px 6px rgba(v.$neutral-dark, 0.03);
 }
 
 .contact-form textarea {

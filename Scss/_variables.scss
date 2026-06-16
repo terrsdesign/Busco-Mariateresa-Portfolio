@@ -1,5 +1,12 @@
+@use "sass:color";
+
 $primary-color: #FCFAF6;
 $secondary-color: #720E2B;
+
+$secondary-color-dark: color.scale($secondary-color, $lightness: -18%);
+$secondary-color-soft: color.scale($secondary-color, $lightness: 14%);
+$secondary-color-fade: color.scale($secondary-color, $lightness: 28%);
+
 $accent-color: #7DA6BB;
 $neutral-dark: #1F1B1C;
 $neutral-medium: #4A4243;
