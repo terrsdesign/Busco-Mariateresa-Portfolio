@@ -2735,6 +2735,70 @@ p {
   color: #4f362b;
 }
 
+/*----------------------------Planty of Food--------------------------*/
+.pof-page .navbar,
+.pof-page .site-footer {
+  background: linear-gradient(180deg, rgb(218.2486486486, 159.2324324324, 28.9513513514) 0%, #e5b03b 100%);
+}
+
+.pof-page .site-header {
+  background-color: #e5b03b;
+  border-bottom: none;
+}
+
+.pof-page .nav-menu a,
+.pof-page .site-logo,
+.pof-page .footer-main h2,
+.pof-page .footer-subtitle,
+.pof-page .footer-social p,
+.pof-page .footer-links a,
+.pof-page .footer-bottom p {
+  color: #1F1B1C;
+}
+
+.pof-page .nav-menu a:hover,
+.pof-page .footer-links a:hover {
+  color: rgb(85.5172413793, 74.4827586207, 77.2413793103);
+}
+
+.pof-page .footer-content {
+  border-bottom: 1px solid rgb(234.972972973, 194.1486486486, 104.027027027) !important;
+}
+
+.pof-page .diagonal-highlight {
+  background: linear-gradient(180deg, rgb(183.5, 0, 108.0094936709) 0%, rgb(168.2, 0, 99.0037974684) 100%);
+  padding: 1px 20px;
+  margin-left: -2px;
+  color: #FCFAF6;
+}
+
+.pof-page .page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pof-page .case-hero-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  overflow: visible;
+}
+
+.pof-page .case-hero-image {
+  display: block;
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  max-height: none;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  opacity: 1;
+  border-radius: 0;
+}
+
 /* =========================
    RESPONSIVE - HOME
 ========================= */

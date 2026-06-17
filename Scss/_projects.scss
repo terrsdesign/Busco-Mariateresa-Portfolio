@@ -1368,3 +1368,82 @@ margin-top:40px;
   margin-bottom: 16px;
   color: #4f362b;
 }
+
+
+
+/*----------------------------Planty of Food--------------------------*/
+.pof-page .navbar,
+.pof-page .site-footer {
+  background: linear-gradient(
+    180deg,
+    color.adjust(v.$pof-color, $lightness: -8%) 0%,
+    v.$pof-color 100%
+  );
+}
+
+.pof-page .site-header {
+  background-color: v.$pof-color;
+  border-bottom: none;
+}
+
+
+.pof-page .nav-menu a,
+.pof-page .site-logo,
+.pof-page .footer-main h2,
+.pof-page .footer-subtitle,
+.pof-page .footer-social p,
+.pof-page .footer-links a,
+.pof-page .footer-bottom p {
+  color: v.$neutral-dark;
+}
+
+.pof-page .nav-menu a:hover,
+.pof-page .footer-links a:hover {
+  color: color.adjust(v.$neutral-dark, $lightness: 20%);
+  
+}
+
+.pof-page .footer-content {
+    border-bottom: 1px solid color.adjust(v.$pof-color, $lightness: 10%)!important;
+
+}
+
+.pof-page .diagonal-highlight {
+background: linear-gradient(
+    180deg,
+    color.adjust(v.$pof-accent-color, $lightness: 5%) 0%,
+    color.adjust(v.$pof-accent-color, $lightness: 2%) 100%);  padding: 1px 20px;
+  margin-left: -2px;
+  color: v.$primary-color;
+}
+
+
+.pof-page .page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.pof-page .case-hero-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  overflow: visible;
+}
+
+.pof-page .case-hero-image {
+  display: block;
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+  opacity: 1;
+    border-radius: 0;
+
+ 
+}
+
+  
