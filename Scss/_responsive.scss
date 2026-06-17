@@ -1177,12 +1177,32 @@
     border-right: 0;
   }
 
-  .pof-page .pof-logo-showcase {
-    min-height: 220px;
-    padding: 12px;
+
+@media (max-width: 768px) {
+  .pof-page .pof-logo-showcase--left,
+  .pof-page .pof-logo-showcase--right {
+    gap: 20px;
   }
 
-  .pof-page .pof-palette--row {
+  .pof-page .pof-logo-img--symbol {
+    max-width: 220px;
+  }
+}
+
+  .pof-page .pof-construction-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .pof-page .pof-palette.pof-palette--row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .pof-page .pof-palette.pof-palette--row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
   }
