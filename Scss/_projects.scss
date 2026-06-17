@@ -1417,33 +1417,242 @@ background: linear-gradient(
   color: v.$primary-color;
 }
 
+.pof-page .case-study-page {
+  background-color: v.$primary-color;
+  padding: 32px 0 96px;
+}
 
 .pof-page .page-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding:0;
 }
 
+.pof-page .case-hero {
+  background-color: transparent;
+}
+
+.pof-page .case-hero-top {
+  padding: 56px 0 40px;
+}
 
 .pof-page .case-hero-image-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 32px;
+  padding: 24px 0;
   overflow: visible;
+}
+
+.pof-page .pof-scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-top: 20px;
+  color: rgba(v.$pof-accent-color, 0.85);
+  animation: pofScrollFloat 2s ease-in-out infinite;
+}
+
+.pof-page .pof-scroll-line {
+  width: 1px;
+  height: 50px;
+  background-color: rgba(v.$pof-accent-color, 0.75);
+}
+
+.pof-page .pof-scroll-arrow {
+  display: inline-block;
+  margin-top: -6px;
+  font-family: v.$font-accent;
+  font-size: 0.7rem;
+  line-height: 1;
+  color: rgba(v.$pof-accent-color, 0.95);
+}
+
+.pof-page .pof-moodboard-full {
+  width: 100%;
+  border:none;
+  margin-top:-130px;
+
+}
+
+.pof-page .pof-moodboard-full img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .pof-page .case-hero-image {
   display: block;
   width: 100%;
-  max-width: 100px;
+  max-width: 150px;
   height: auto;
   max-height: none;
   object-fit: contain;
   object-position: center;
   opacity: 1;
-    border-radius: 0;
-
- 
+  border-radius: 0;
 }
 
-  
+.pof-page .pof-intro-band .page-container {
+  background-color: v.$pof-color;
+}
+
+.pof-page .pof-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: stretch;
+}
+
+.pof-page .pof-intro-title,
+.pof-page .pof-intro-text {
+  padding: 86px 40px;
+}
+
+.pof-page .pof-intro-title {
+  position: relative;
+}
+
+.pof-page .pof-intro-title::after {
+  content: "";
+  position: absolute;
+  top: 42px;
+  bottom: 42px;
+  right: 0;
+  width: 1px;
+  background-color: rgba(v.$primary-color, 0.50);
+}
+
+.pof-page .pof-intro-title h2 {
+  margin: 0;
+  color: v.$primary-color;
+}
+
+.pof-page .pof-intro-text p {
+  margin: 0;
+  color: v.$neutral-dark;
+}
+
+.pof-page .subtitle
+{
+  color:v.$pof-accent-color!important;
+  font-weight:600;
+}
+
+
+.pof-page .pof-board-section {
+  padding: 0 0 40px;
+}
+
+.pof-page .pof-board-grid {
+  display: grid;
+  gap: 0;
+}
+
+.pof-page .pof-board-grid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.pof-page .pof-board-grid--1 {
+  grid-template-columns: 1fr;
+}
+
+.pof-page .pof-card {
+  padding: 48px 40px;
+  background-color: v.$primary-color;
+}
+
+.pof-page .pof-board-grid--2 .pof-card:nth-child(2n) {
+  border-right: 0;
+}
+
+.pof-page .pof-board-grid--1 .pof-card {
+  border-right: 0;
+}
+
+.pof-page .pof-label {
+  margin-bottom: 16px;
+  font-family: v.$font-accent;
+  color: v.$pof-accent-color;
+  text-transform: uppercase;
+}
+
+.pof-page .pof-card h3 {
+  margin-bottom: 32px;
+  color: v.$neutral-dark;
+}
+
+.pof-page .pof-logo-showcase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  padding: 24px;
+}
+
+.pof-page .pof-logo-showcase img {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+}
+
+.pof-page .pof-logo-variations {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.pof-page .pof-logo-variation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  padding: 20px;
+  border: 1px solid rgba(v.$neutral-dark, 0.08);
+}
+
+.pof-page .pof-logo-variation img {
+  display: block;
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+}
+
+.pof-page .pof-logo-variation--accent {
+  background-color: v.$pof-accent-color;
+  border-color: transparent;
+}
+
+.pof-page .pof-palette--row {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.pof-page .pof-swatch-block {
+  text-align: center;
+}
+
+.pof-page .pof-swatch-circle {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 16px;
+  border-radius: 999px;
+}
+
+.pof-page .pof-swatch-circle--light {
+  border: 1px solid rgba(v.$neutral-dark, 0.08);
+}
+
+.pof-page .pof-swatch-block strong {
+  display: block;
+  color: v.$neutral-dark;
+}
+
+.pof-page .pof-swatch-block p {
+  margin: 4px 0 0;
+  color: v.$neutral-medium;
+}

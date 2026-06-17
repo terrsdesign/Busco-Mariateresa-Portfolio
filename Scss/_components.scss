@@ -465,7 +465,7 @@ border: 1px solid rgba(v.$neutral-dark, 0.05);
   padding: 3px 10px;
   border-radius: 6px;
   font-family: v.$font-accent;
-  font-size: v.$font-size-link-sm;
+  font-size: v.$font-size-link-sm!important;
   line-height: v.$line-height-link-sm;
   color: v.$neutral-medium;
   background: linear-gradient(

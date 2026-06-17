@@ -1124,3 +1124,66 @@
 }
 
 
+@media (max-width: 768px) {
+  .pof-page .pof-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 32px 20px;
+  }
+}
+
+@keyframes pofScrollFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.85;
+  }
+
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .pof-page .pof-intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pof-page .pof-intro-title,
+  .pof-page .pof-intro-text {
+    padding: 32px 20px;
+  }
+
+  .pof-page .pof-intro-title::after {
+    top: auto;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    width: auto;
+    height: 1px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .pof-page .pof-board-grid--2 {
+    grid-template-columns: 1fr;
+  }
+
+  .pof-page .pof-card {
+    padding: 32px 20px;
+    border-right: 0;
+  }
+
+  .pof-page .pof-logo-showcase {
+    min-height: 220px;
+    padding: 12px;
+  }
+
+  .pof-page .pof-palette--row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
