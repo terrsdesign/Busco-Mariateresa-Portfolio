@@ -183,17 +183,21 @@
     display: grid;
     gap: 36px;
     min-height: auto;
-    padding-left: 92px;
+    padding-left: 96px;
   }
 
   .approach-path::before {
-    content: "";
-    position: absolute;
-    left: 14px;
-    top: 8px;
-    bottom: 8px;
-    width: 2px;
-    background-color: #720E2B;
+  content: "";
+  position: absolute;
+  left: 23px;
+  top: 10px;
+  height: 620px;
+  width: 2px;
+  background-color: #720E2B;
+}
+
+.approach-path-points {
+    display: none;
   }
 
   .approach-step,
@@ -210,12 +214,14 @@
     min-height: auto;
     padding: 0;
     background: transparent;
+    transform: none;
+    text-align: left;
   }
 
   .approach-step::before {
     content: "";
     position: absolute;
-    left: -85px;
+    left: -80px;
     top: 4px;
     width: 16px;
     height: 16px;
@@ -223,48 +229,6 @@
     border-radius: 50%;
     background-color: #FCFAF6;
     z-index: 4;
-  }
-
-  .approach-path-points {
-    position: absolute;
-    inset: 0 auto 0 0;
-    width: 76px;
-    display: block;
-    z-index: 3;
-    pointer-events: none;
-  }
-
-  .approach-path-point {
-    left: 50px;
-    width: 28px;
-    height: 28px;
-    transform: translateY(-2px);
-  }
-
-  .approach-path-point img {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-
-  .approach-path-point-01 {
-    top: 0;
-  }
-
-  .approach-path-point-02 {
-    top: calc(20% + 8px);
-  }
-
-  .approach-path-point-03 {
-    top: calc(35% + 30px);
-  }
-
-  .approach-path-point-04 {
-    top: calc(62% + 28px);
-  }
-
-  .approach-path-point-05 {
-    top: calc(80% + 28px);
   }
 
   .approach-step-title {
@@ -287,7 +251,10 @@
     max-width: 100%;
     font-size: 0.95rem;
     line-height: 1.35rem;
+    text-align: left;
   }
+
+  .approach-note{margin-top:40px;}
 }
 
   .contact-cta {

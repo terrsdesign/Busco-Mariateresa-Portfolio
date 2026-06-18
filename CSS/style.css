@@ -193,7 +193,7 @@ p {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  padding-bottom: clamp(100px, 12vw, 180px);
+  padding-bottom: 0;
   padding-top: 100px;
 }
 
@@ -232,12 +232,12 @@ p {
 /* --------------------------- FINE PROJECTS LAYOUT----------------------------------- */
 .approach-section {
   background-color: #FCFAF6;
-  margin-top: -20px;
+  margin-top: -60px;
 }
 
 .approach-section .section-heading {
   margin-top: 40px;
-  margin-bottom: -40px;
+  margin-bottom: -50px;
 }
 
 .approach-grid {
@@ -712,7 +712,7 @@ p {
 
 .approach-path-wrapper {
   position: relative;
-  margin-top: 12px;
+  margin-top: -40px;
 }
 
 .approach-illustration {
@@ -796,8 +796,8 @@ p {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 50px;
-  min-width: 50px;
+  width: 40px;
+  min-width: 40px;
   height: auto;
   display: block;
 }
@@ -894,18 +894,16 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 3px 12px;
-  border-radius: 8px;
   font-family: "Geist Mono", monospace;
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #FCFAF6;
-  background-color: #7DA6BB;
-  white-space: nowrap;
+  color: #1F1B1C;
   margin-bottom: 14px;
+  border-bottom: 1px solid rgb(175.2272727273, 200.3863636364, 213.2727272727);
+  padding: 0 12px;
 }
 
 .approach-step-content p,
@@ -915,6 +913,7 @@ p {
   font-size: 0.875rem;
   line-height: 1rem;
   text-align: left;
+  color: #4A4243;
 }
 
 .approach-note {
@@ -922,14 +921,14 @@ p {
   width: fit-content;
   max-width: 560px;
   margin: -60px auto;
-  padding: 60px 32px 0;
+  padding: 60px 32px 40px;
   border-top: 1px solid rgb(245.625, 239.375, 226.875);
   text-align: center;
 }
 
 .approach-note h4 {
   color: #7DA6BB;
-  font-weight: 400;
+  font-weight: 300 !important;
 }
 
 /*-------------------fine approach-----------------------*/
@@ -977,6 +976,7 @@ p {
 .hero-keywords {
   position: relative;
   margin-top: -96px;
+  z-index: -1;
 }
 
 .hero-keywords-track-wrap {
@@ -3237,16 +3237,19 @@ p {
     display: grid;
     gap: 36px;
     min-height: auto;
-    padding-left: 92px;
+    padding-left: 96px;
   }
   .approach-path::before {
     content: "";
     position: absolute;
-    left: 14px;
-    top: 8px;
-    bottom: 8px;
+    left: 23px;
+    top: 10px;
+    height: 620px;
     width: 2px;
     background-color: #720E2B;
+  }
+  .approach-path-points {
+    display: none;
   }
   .approach-step,
   .approach-step-01,
@@ -3262,11 +3265,13 @@ p {
     min-height: auto;
     padding: 0;
     background: transparent;
+    transform: none;
+    text-align: left;
   }
   .approach-step::before {
     content: "";
     position: absolute;
-    left: -85px;
+    left: -80px;
     top: 4px;
     width: 16px;
     height: 16px;
@@ -3274,40 +3279,6 @@ p {
     border-radius: 50%;
     background-color: #FCFAF6;
     z-index: 4;
-  }
-  .approach-path-points {
-    position: absolute;
-    inset: 0 auto 0 0;
-    width: 76px;
-    display: block;
-    z-index: 3;
-    pointer-events: none;
-  }
-  .approach-path-point {
-    left: 50px;
-    width: 28px;
-    height: 28px;
-    transform: translateY(-2px);
-  }
-  .approach-path-point img {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-  .approach-path-point-01 {
-    top: 0;
-  }
-  .approach-path-point-02 {
-    top: calc(20% + 8px);
-  }
-  .approach-path-point-03 {
-    top: calc(35% + 30px);
-  }
-  .approach-path-point-04 {
-    top: calc(62% + 28px);
-  }
-  .approach-path-point-05 {
-    top: calc(80% + 28px);
   }
   .approach-step-title {
     position: static;
@@ -3328,6 +3299,10 @@ p {
     max-width: 100%;
     font-size: 0.95rem;
     line-height: 1.35rem;
+    text-align: left;
+  }
+  .approach-note {
+    margin-top: 40px;
   }
 }
 @media (max-width: 768px) {

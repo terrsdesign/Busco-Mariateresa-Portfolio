@@ -51,7 +51,7 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
-  padding-bottom: clamp(100px, 12vw, 180px);
+  padding-bottom: 0;
   padding-top:100px;
   
 }
@@ -95,12 +95,12 @@
 
 .approach-section {
   background-color: v.$primary-color;
-  margin-top:-20px;
+  margin-top:-60px;
 }
 
 .approach-section .section-heading {
   margin-top:40px;
-  margin-bottom:-40px;
+  margin-bottom:-50px;
 
 }
 
