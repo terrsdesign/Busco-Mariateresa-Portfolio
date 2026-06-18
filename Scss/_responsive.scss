@@ -2,6 +2,15 @@
    RESPONSIVE - HOME
 ========================= */
 
+@keyframes heroKeywordsScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @media (max-width: 992px) {
   .projects-grid,
   .approach-grid {
@@ -149,18 +158,6 @@
 
 
 
-  .diagonal-marquee-section {
-    height: 120px;
-    margin-top: 0px;
-    bottom:40px;
-    
-  }
-
-  .diagonal-marquee {
-    width: 150vw;
-    padding: 14px 0;
-    transform: translate(-50%, 50%) rotate(-6deg);
-  }
 
   .projects-asymmetric-grid {
     grid-template-columns: 1fr;

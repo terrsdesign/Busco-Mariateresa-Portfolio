@@ -221,33 +221,10 @@ background: linear-gradient(
 }
 /* ------------------ ARROWS--------------------------- */
 
-
-.section-heading-arrow-left {
+.section-heading {
   position: relative;
-  display: block;
-  width: 300px;
-  height: 2px;
-  margin-top: -35px;
-  margin-left: auto;
-  background-color: v.$neutral-dark;
-  z-index: -1;
-}
-.section-heading-arrow-left::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 10px;
-  height: 10px;
-  border-left: 2px solid v.$neutral-dark;
-  border-bottom: 2px solid v.$neutral-dark;
-  transform: translateY(-50%) rotate(45deg);
 }
 
-
-.projects-section .section-heading .section-heading-arrow-left {
-  margin-left: auto;
-}
 
 .hero-title-arrow {
   position: relative;
@@ -256,7 +233,7 @@ background: linear-gradient(
   width: 85px;
   height: 2px;
   margin-bottom: 4px;
-  background-color: v.$neutral-dark;
+  background-color: rgba(v.$secondary-color, 0.58);
 }
 
 .hero-title-arrow::after {
@@ -266,8 +243,36 @@ background: linear-gradient(
   top: 50%;
   width: 9px;
   height: 9px;
-  border-top: 1px solid v.$neutral-dark;
-  border-right: 1px solid v.$neutral-dark;
+  border-top: 1px solid rgba(v.$secondary-color, 0.68);
+  border-right: 1px solid rgba(v.$secondary-color, 0.68);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.project-arrow {
+  width: 44px;
+  color: v.$neutral-dark;
+  font-size: v.$font-size-h4;
+}
+
+.approach-note-arrow {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 1px;
+  margin-top: 18px;
+  background-color: v.$secondary-color;
+  animation: arrow-move-left 1.6s ease-in-out infinite;
+}
+
+.approach-note-arrow::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid v.$secondary-color;
+  border-bottom: 2px solid v.$secondary-color;
   transform: translateY(-50%) rotate(45deg);
 }
 
@@ -293,19 +298,20 @@ background: linear-gradient(
 
 .hero-image-wrapper {
   width: 100%;
-  max-width: 320px;
+  max-width: 220px;
   margin-left: auto;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   position: relative;
   z-index: 2;
+  padding-top:60px;
 }
 
 .hero-image {
   display: block;
   width: 100%;
-  max-width: 260px;
+  max-width: 200px;
   height: auto;
   object-fit: contain;
 }
@@ -475,42 +481,47 @@ border: 1px solid rgba(v.$neutral-dark, 0.05);
   );
 }
 
-.project-arrow {
-  width: 44px;
-  color: v.$neutral-dark;
-  font-size: v.$font-size-h4;
-}
+
 
 /* -------------------------END PROJECTS--------------------------- */
 
 
-
 /* ========================  APPROACH PATH ========================= */
+
+
+.approach-section .section-heading h2 {
+  color:v.$accent-color;
+}
 
 .approach-path-wrapper {
   position: relative;
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  align-items: center;
-  gap: 0px;
-  margin-top: -40px;
+  margin-top: 12px;
 }
 
 .approach-illustration {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  position: absolute;
+  left: 20px;
+  bottom: 120px;
+  z-index: 3;
 }
 
 .approach-image {
-  width: 140px;
+  width: 115px;
   height: auto;
   display: block;
 }
 
 .approach-path {
   position: relative;
-  min-height: 300px;
+  min-height: 520px;
+  padding-left: 130px;
+}
+
+.approach-line {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top:80px;
 }
 
 .approach-line path {
@@ -521,35 +532,28 @@ border: 1px solid rgba(v.$neutral-dark, 0.05);
 
 .approach-line-shadow {
   fill: none;
-  stroke: rgba(92, 11, 35, 0.16);
-  stroke-width: 11px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  stroke: rgba(92, 11, 35, 0.14);
+  stroke-width: 6px;
   transform: translateY(1.5px);
 }
 
 .approach-line-base {
   fill: none;
   stroke: v.$secondary-color;
-  stroke-width: 7px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  stroke-width: 4px;
 }
 
 .approach-line-highlight {
   fill: none;
-  stroke: rgba(255, 255, 255, 0.18);
+  stroke: rgba(255, 255, 255, 0.16);
   stroke-width: 1.5px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
   transform: translateY(-0.5px);
 }
 
-
 .approach-line-dots {
   stroke: v.$primary-color;
-  stroke-width: 1.2;
-  stroke-dasharray: 7 12;
+  stroke-width: 1;
+  stroke-dasharray: 6 8;
 }
 
 .approach-path-points {
@@ -559,52 +563,88 @@ border: 1px solid rgba(v.$neutral-dark, 0.05);
   pointer-events: none;
 }
 
+
 .approach-path-point {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  font-weight: 600;
-  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 170px;
+  transform: translate(-50%, -96px);
+  z-index: 3;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
-/* Posizioni dei 5 punti sulla linea */
+.approach-path-point img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  min-width: 50px;
+  height: auto;
+  display: block;
+}
 
-.approach-path-point-01 { left: 13%; top: 50%;}
-.approach-path-point-02 {left: 31%;top: 52%;}
-.approach-path-point-03 { left: 51%;top: 50%;}
-.approach-path-point-04 {left: 71%;top: 54%;}
-.approach-path-point-05 {left: 89%;top: 52%;}
+.approach-path-point::before {
+  content: "";
+  position: absolute;
+  top: 52px;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  transform: translateX(-50%);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(v.$secondary-color, 0.28) 0 6px,
+    transparent 6px 12px
+  );
+}
 
+.approach-path-point::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 96px;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background-color: v.$secondary-color;
+  border: 1px solid v.$primary-color;
+  box-shadow: 0 0 0 2px v.$secondary-color;
+  transform: translate(-50%, -50%);
+}
+.approach-path-point-01 { left: 22%; top: 22%; }
+.approach-path-point-02 { left: 39%; top: 39%; }
+.approach-path-point-03 { left: 57%; top: 22%; }
+.approach-path-point-04 { left: 74%; top: 40%; }
+.approach-path-point-05 { left: 90%; top: 23%; }
 
-.approach-step-01 { left: 6%;top: 65%;}
-.approach-step-02 { left: 24%; top: 16%; }
-.approach-step-03 { left: 43%; top: 67%; }
-.approach-step-04 { left: 63%; top: 13%; }
-.approach-step-05 { right: 0%; top: 67%; }
-
-
+.approach-step-01 { left: 22%; top: 36%; }
+.approach-step-02 { left: 39%; top: 52%; }
+.approach-step-03 { left: 57%; top: 36%; }
+.approach-step-04 { left: 74%; top: 52%; }
+.approach-step-05 { left: 90%; top: 36%; }
 
 .approach-step {
   position: absolute;
-  width: 200px;
+  width: 180px;
   min-height: 96px;
   padding: 0;
-  background-color: none;
+  background-color: transparent;
   overflow: visible;
   z-index: 2;
+  text-align: center;
+  transform: translateX(-50%);
+
 }
 
+
 .approach-step-title {
-  position: absolute;
-  top: -14px;
-  left: 0px;
+  position: static;
   display: inline-flex;
   align-items: center;
-  max-width: calc(100% - 28px);
+  justify-content: center;
   padding: 3px 12px;
   border-radius: 8px;
   font-family: v.$font-accent;
@@ -616,64 +656,35 @@ border: 1px solid rgba(v.$neutral-dark, 0.05);
   color: v.$primary-color;
   background-color: v.$accent-color;
   white-space: nowrap;
-  z-index: 3;
+  margin-bottom: 14px;
 }
 
+.approach-step-content p,
 .approach-step p {
-  margin-bottom: 0;
+  margin: 0;
+  max-width: 180px;
   font-size: v.$font-size-body-sm;
   line-height: v.$line-height-body-sm;
-  margin-top:10px;
-  max-width: 200px;
+  text-align:left;
 }
 
 .approach-note {
   width: fit-content;
   max-width: 560px;
-  margin: 56px auto 0;
-  padding: 24px 32px;
+  margin: -60px auto;
+  padding: 60px 32px 0;
   border-top: 1px solid color.adjust(v.$primary-color, $lightness: -5%);
   text-align: center;
 }
 
-.approach-note h2 {
-  margin-bottom: 8px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: v.$accent-color;
-  font-size: v.$font-size-h4;
-}
+.approach-note h4
+{color: v.$accent-color;
+font-weight:400;}
 
-.approach-note p {
-  margin-bottom: 0;
-  font-family: v.$font-main;
-  font-size: v.$font-size-body-lg;
-  line-height: v.$line-height-body-lg;
-  color: v.$neutral-dark;
-}
 
-.approach-note-arrow {
-  position: relative;
-  display: inline-block;
-  width: 150px;
-  height: 2px;
-  margin-top: 18px;
-  background-color: v.$accent-color;
-  animation: arrow-move-left 1.6s ease-in-out infinite;
-}
 
-.approach-note-arrow::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 10px;
-  height: 10px;
-  border-left: 2px solid v.$accent-color;
-  border-bottom: 2px solid v.$accent-color;
-  transform: translateY(-50%) rotate(45deg);
-}
+
+/*-------------------fine approach-----------------------*/
 
 @keyframes arrow-move-left {
   0% {
@@ -725,63 +736,69 @@ border: 1px solid rgba(v.$neutral-dark, 0.05);
 
 
 
-/*  DIAGONAL MARQUEE */
-
-.diagonal-marquee-section {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: clamp(10px, 3vw, 50px);
-  height: 120px;
-  z-index: 5;
-  overflow: visible;
-  pointer-events: none;
+/*   MARQUEE */
+.hero-keywords {
+  position: relative;
+  margin-top: -96px;
 }
 
-.diagonal-marquee {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 130vw;
-  transform: translate(-50%, -50%) rotate(-4deg);
-background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 40%),
-    linear-gradient(135deg, v.$secondary-color-dark 0%, v.$secondary-color 35%, v.$secondary-color-soft 100%);
-  color: v.$primary-color;
+.hero-keywords-track-wrap {
+  position: relative;
   overflow: hidden;
-  padding: 8px 0;
-  z-index: 10;
+  padding-top: 20px;
 }
 
-.diagonal-marquee-track {
+.hero-keywords-track-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(v.$secondary-color, 0.18);
+  z-index: 1;
+}
+
+.hero-keywords-track {
   display: flex;
   width: max-content;
-  gap: 48px;
-  animation: marquee-scroll 30s linear infinite;
+  animation: heroKeywordsScroll 40s linear infinite;
 }
 
-.diagonal-marquee-track span {
+.hero-keywords-line {
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
-  font-family: v.$font-accent;
-  font-size: v.$font-size-label;
-  line-height: v.$line-height-label;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  padding-right: 40px;
+  gap: 20px;
+}
+
+.hero-keywords-line span {
+  position: relative;
+  display: inline-block;
   white-space: nowrap;
+  background-color: v.$primary-color;
+  padding-right: 24px;
+  margin-right: 24px;
+  font-family: v.$font-accent;
+  color: rgba(v.$secondary-color, 0.78);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1;
 }
 
-@keyframes marquee-scroll {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
+.hero-keywords-line span::after {
+  content: "•";
+  position: absolute;
+  right: -16px;
+  top: 50%;
+  transform: translateY(-52%);
+  color: rgba(v.$secondary-color, 0.38);
 }
 
-
+.hero-keywords-line span:last-child::after {
+  content: "";
+}
 
 
 /* ------------------------- FOOTER --------------------------- */
