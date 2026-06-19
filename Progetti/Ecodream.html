@@ -353,379 +353,227 @@ Too much text, no hierarchy, same content repeated across pages. <br><br>
 
 </div>
   </div>
-  
-
-  
 </section>
 
+<!---------------------Accessibility------------->
+<section class="case-accessibility">
+  <div class="container page-container">
+    <div class="case-accessibility-block">
+      <p class="case-kicker">Accessibility Audit</p>
 
-
-
-
-
-    <!-- FROM HERE: SINGLE COLUMN -->
-    <div class="case-block">
-
-      <div class="case-activity">
-  <h4>-- Competitor analysis</h4>
-
-  <p>
-    I analysed direct and indirect competitors to understand how sustainable fashion brands organise product information, communicate their values and guide users through the shopping experience. <br>
-  </p> <p class="highlight-quote">"I wanted to understand how competing brands address similar user needs and identify best practices that could be adapted to improve the EcoDream experience."
-  </p>
-
-  <div class="case-image-grid case-image-grid-2">
-    <a href="../Assets/Image/comparisontable1.svg" class="case-image-card">
-      <img 
-        src="../Assets/Image/comparisontable1.svg" 
-        alt="EcoDream competitor analysis comparison table"
-      >
-    </a>
-
-    <a href="../Assets/Image/comparisontable2.svg" class="case-image-card">
-      <img 
-        src="../Assets/Image/comparisontable2.svg" 
-        alt="EcoDream second competitor analysis comparison table"
-      >
-    </a>
-  </div>
-</div>
-      <div class="case-activity">
-  <h4>-- User survey</h4>
-
-  <p><strong> Before designing for users, I needed to understand them.</strong><br>
-    I ran a survey covering demographics, sustainability awareness, budget range and shopping preferences. I also asked specific questions about the existing Ecodream shop: filter availability, product information clarity and navigation and explored what actually stops users from completing a purchase.
-  </p>
-<p class="highlight-quote">Question: Do you ever abandon your cart before completing a purchase? Why?</p>
-  <div class="case-survey-bubbles">
-
-    <blockquote class="case-survey-bubble">
-      <p>“I realise the things I want to buy aren't really necessary, just a impulse of the moment.”</p>
-    </blockquote>
-
-    <blockquote class="case-survey-bubble">
-      <p>“Yes, to compare prices with other sites.”</p>
-    </blockquote>
-
-    <blockquote class="case-survey-bubble">
-      <p>“If the total feels too high, I take a moment to think it over.”</p>
-    </blockquote>
-
-    <blockquote class="case-survey-bubble">
-      <p>“Uncertainty about payment and doubts about the product.”</p>
-    </blockquote>
-
-    <blockquote class="case-survey-bubble">
-      <p>“Yes, because I realise what I was about to buy wasn't that important after all ”</p>
-    </blockquote>
-
-    <blockquote class="case-survey-bubble">
-      <p>“Sometimes because of shipping costs.”</p>
-    </blockquote>
-
-  </div>
-</div>
-
-      <div class="case-activity">
-        <h4>-- User personas + journey</h4>
-
-        <p>
-Based on the data collected, I defined 3 user personas to identify a clear target audience. For each persona, I mapped a user journey to simulate realistic purchase and navigation experiences on the existing site, highlighting the key friction points along the way.        </p>
-
-        <div class="case-gallery" data-gallery>
-          <div class="case-gallery-main">
-
-            <button class="case-gallery-arrow case-gallery-arrow-prev" type="button" data-gallery-prev aria-label="Previous image">
-              ‹
-            </button>
-
-            <div class="case-gallery-viewport">
-
-              <a href="../Assets/Image/userpersona1.svg" class="case-gallery-slide is-active" data-gallery-slide>
-                <img 
-                  src="../Assets/Image/userpersona1.svg" 
-                  alt="EcoDream first user persona"
-                >
-              </a>
-
-              <a href="../Assets/Image/userjourney1.svg" class="case-gallery-slide" data-gallery-slide>
-                <img 
-                  src="../Assets/Image/userjourney1.svg" 
-                  alt="EcoDream first user journey"
-                >
-              </a>
-
-              <a href="../Assets/Image/userpersona2.svg" class="case-gallery-slide" data-gallery-slide>
-                <img 
-                  src="../Assets/Image/userpersona2.svg" 
-                  alt="EcoDream second user persona"
-                >
-              </a>
-
-              <a href="../Assets/Image/userjourney2.svg" class="case-gallery-slide" data-gallery-slide>
-                <img 
-                  src="../Assets/Image/userjourney2.svg" 
-                  alt="EcoDream second user journey"
-                >
-              </a>
-
-              <a href="../Assets/Image/userpersona3.svg" class="case-gallery-slide" data-gallery-slide>
-                <img 
-                  src="../Assets/Image/userpersona3.svg" 
-                  alt="EcoDream third user persona"
-                >
-              </a>
-
-              <a href="../Assets/Image/userjourney3.svg" class="case-gallery-slide" data-gallery-slide>
-                <img 
-                  src="../Assets/Image/userjourney3.svg" 
-                  alt="EcoDream third user journey"
-                >
-              </a>
-
-            </div>
-
-            <button class="case-gallery-arrow case-gallery-arrow-next" type="button" data-gallery-next aria-label="Next image">
-              ›
-            </button>
-
+      <div class="case-accessibility-grid">
+        <div class="case-accessibility-item">
+            <div class="case-accessibility-item-header">
+          <img src="../Assets/Image/icon-html.svg" alt="" aria-hidden="true">
+          <span>HTML Structure</span>
           </div>
-
-          <div class="case-gallery-footer">
-            <span class="case-gallery-count" data-gallery-count>1 / 6</span>
-            <div class="case-gallery-dots" data-gallery-dots aria-label="Gallery pagination"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="case-activity">
-        <h4>-- Accessibility Audit</h4>
-
-        <p>While navigating the site, I noticed several accessibility issues straight away, both in the code, such as missing aria attributes and alt texts, and visually, including contrast ratios and element sizing. This prompted a more thorough audit to document and prioritise every issue found.        </p>
-     
-
-  <div class="case-issues-grid">
-
-    <article class="case-issue-card">
-
-      <div class="case-issue-text">
-        <h4><span class="diagonal-highlight" style="transform: rotate(-3deg);">HTML Structure</span></h4>
-        <ul>
+          <ul>
             <li>Missing ARIA attributes</li>
             <li>Misused headings</li>
-            <li>No landmark roles.</li>
-        </ul>
-        
-      </div>
+            <li>No landmark roles</li>
+          </ul>
+        </div>
 
-      <div class="case-issue-number">
-        <span>3</span>
-        <small>Issues</small>
-      </div>
-    </article>
-
-    <article class="case-issue-card">
-
-      <div class="case-issue-text">
-        <h4><span class="diagonal-highlight" style="transform: rotate(-3deg);">Images &amp; Alt Text</span></h4>
-        <ul>
+        <div class="case-accessibility-item">
+            <div class="case-accessibility-item-header">          
+          <img src="../Assets/Image/icon-image.svg" alt="" aria-hidden="true">
+          <span>Images & Alt Text</span>
+          </div>
+          <ul>
             <li>Missing or uninformative alt text</li>
             <li>Icons too small</li>
-        </ul>
-      </div>
+          </ul>
+        </div>
 
-      <div class="case-issue-number">
-        <span>2</span>
-        <small>Issues</small>
-      </div>
-    </article>
-
-    <article class="case-issue-card">
-
-      <div class="case-issue-text">
-        <h4><span class="diagonal-highlight" style="transform: rotate(-3deg);">Focus &amp; Navigation</span></h4>
-        <ul>
+        <div class="case-accessibility-item">
+            <div class="case-accessibility-item-header">
+          <img src="../Assets/Image/icon-focus.svg" alt="" aria-hidden="true">
+          <span>Focus & Navigation</span>
+          </div>
+          <ul>
             <li>Focus indicator barely visible</li>
             <li>Non-sequential tab order</li>
-        </ul>
-      </div>
+            <li>No wishlist</li>
+            <li>No search bar</li>
+            
+          </ul>
+        </div>
 
-      <div class="case-issue-number">
-        <span>2</span>
-        <small>Issues</small>
-      </div>
-    </article>
-
-    <article class="case-issue-card">
-
-      <div class="case-issue-text">
-        <h4><span class="diagonal-highlight" style="transform: rotate(-3deg);">Text &amp; Contrast</span></h4>
-        <ul>
+        <div class="case-accessibility-item">
+            <div class="case-accessibility-item-header">          
+          <img src="../Assets/Image/icon-text.svg" alt="" aria-hidden="true">
+          <span>Text & Contrast</span>
+          </div>
+          <ul>
             <li>Fonts too thin</li>
             <li>Poor contrast</li>
             <li>Dense unstructured text</li>
-            <li>Cannot change font or size</li>
-        </ul>
-      </div>
+          </ul>
+        </div>
 
-      <div class="case-issue-number">
-        <span>4</span>
-        <small>Issues</small>
-      </div>
-    </article>
-
-    <article class="case-issue-card">
-
-      <div class="case-issue-text">
-        <h4><span class="diagonal-highlight" style="transform: rotate(-3deg);">Links &amp; Inputs</span></h4>
-        <ul>
-          <li>No meaningful link text</li>
+        <div class="case-accessibility-item">
+            <div class="case-accessibility-item-header">
+          <img src="../Assets/Image/icon-link.svg" alt="" aria-hidden="true">
+          <span>Links & Inputs</span>
+          </div>
+          <ul>
+            <li>No meaningful link text</li>
             <li>Input without labels</li>
             <li>Errors not signalled</li>
+          </ul>
+        </div>
 
-      </ul>
+      
       </div>
-
-      <div class="case-issue-number">
-        <span>3</span>
-        <small>Issues</small>
-      </div>
-    </article>
-
-    <article class="case-issue-card">
-
-      <div class="case-issue-text">
-        <h4><span class="diagonal-highlight" style="transform: rotate(-3deg);">Other Pain Points</span></h4>
-        <ul>
-          <li>No wishlist</li>
-            <li>No accessiblity mode</li>
-            <li>Buttons too small on mobile</li>
-            <li>No search bar</li>
-        </ul>
-      </div>
-
-      <div class="case-issue-number">
-        <span>4</span>
-        <small>Issues</small>
-      </div>
-    </article>
-
-  </div>
-</div>
-
-
-</div>
-
     </div>
-
   </div>
+    <span class="main-section-title-divider" aria-hidden="true"></span>
+
 </section>
 
-<hr class="section-divider">
 
-<!------------------ STRATEGY SECTION ----------------------->
 
-<section class="case-section case-strategy" id="strategy">
+
+<section class="case-competitors">
   <div class="container page-container">
 
-    <div class="case-section-title">
-      <span class="case-section-number">02</span>
-
-      <div>
-        <p class="section-label">Strategy</p>
-      </div>
-    </div>
-      <p class="highlight-quote">Ecodream doesn't sell essential goods. As the survey revealed, most users abandon their cart because the purchase feels unnecessary, navigation issues and lack of product information come second. 
-      </p><br><p>But that's exactly the point!<strong><br>We can't control personal decisions or budgets, but we can make sure that a confusing navigation or poor communication are never the reason someone walks away. </strong><br> Why would anyone spend time on a poorly organised site when the competition is just one click away? The goal of this strategy is to remove every obstacle that had nothing to do with the product itself.</p>
-      </p><br>
-    <!-- FIRST PART: TWO COLUMNS -->
-    <div class="case-layout case-layout-2 case-layout-equal">
-
-      <div class="case-block">
-        <h3>
-          <span class="diagonal-highlight" style="transform: rotate(-3deg);">
-            Main friction points
-          </span>
-        </h3>
-
-       <ol class="case-numbered-list case-icon-list">
-          <li>
-            <img src="../Assets/Image/x.svg" alt="" aria-hidden="true" class="case-list-image-icon">
-            <p>Confusing Information Architecture</p>
-          </li>
-
-          <li>
-            <img src="../Assets/Image/x.svg" alt="" aria-hidden="true" class="case-list-image-icon">
-            <p>Poor Product and Information discoverability</p>
-          </li>
-
-          <li>
-            <img src="../Assets/Image/x.svg" alt="" aria-hidden="true" class="case-list-image-icon">
-            <p>Content Hierarchy & Readability</p>
-          </li>
-        </ol>
-      </div>
-
-      <div class="case-block">
-        <h3>
-          <span class="diagonal-highlight" style="transform: rotate(-3deg);">
-            Strategic decisions
-          </span>
-        </h3>
-
-       <ol class="case-numbered-list case-icon-list">
-          <li>
-            <img src="../Assets/Image/v.svg" alt="" aria-hidden="true" class="case-list-image-icon">
-            <p>Improve the information architecture to make content easier to find.</p>
-          </li>
-
-          <li>
-            <img src="../Assets/Image/v.svg" alt="" aria-hidden="true" class="case-list-image-icon">
-            <p>Improve product discoverability through better navigation, filtering and content organization.</p>
-          </li>
-
-          <li>
-            <img src="../Assets/Image/v.svg" alt="" aria-hidden="true" class="case-list-image-icon">
-            <p>Use a stronger visual hierarchy to guide users through the experience.</p>
-          </li>
-        </ol>
-      </div>
-
-    </div>
-
-    <!-- FROM HERE: SINGLE COLUMN -->
-    <div class="case-block">
-
-      <div class="case-activity">
-        <h4>-- Reorganising information architecture</h4>
+    <div class="case-competitors-layout">
+      <div class="case-competitors-copy">
+        <p class="case-kicker">Competitor Analysis</p>
 
         <p>
-The original information architecture was all over the place. Pages were tangled with no clear logic, you'd expect to find something in one place and either find it somewhere else entirely, or not find it at all. Before designing anything, the structure needed to make sense.</p>
+          To understand where Ecodream was falling behind, I
+          compared four key areas across competitors to understand what similar brands were doing better.
+        </p>
+        <span class="highlight-quote">EcoDream wins hands down on content quality but falls apart when it comes to structure.</span>
 
-        <div class="case-image-grid case-image-grid-2 case-image-grid-medium">
-
-          <a href="../Assets/Image/architecture1.svg" class="case-image-card">
-            <img 
-              src="../Assets/Image/architecture1.svg" 
-              alt="EcoDream information architecture before redesign"
-            >
-          </a>
-
-          <a href="../Assets/Image/architecture2.svg" class="case-image-card">
-            <img 
-              src="../Assets/Image/architecture2.svg" 
-              alt="EcoDream information architecture after redesign"
-            >
-          </a>
-
-        </div>
       </div>
 
+      <div class="case-competitors-table-wrap">
+        <table class="case-competitors-table">
+          <thead>
+            <tr>
+              <th>Macroarea analysed</th>
+              <th>Ecodream</th>
+              <th>Too Italy</th>
+              <th>Seama</th>
+              <th>Ritagli di G.</th>
+              <th>Miomojo</th>
+              <th>Turinmade</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Website / UX generale</td>
+              <td>0,5/5</td>
+              <td>3,2/5</td>
+              <td>3,6/5</td>
+              <td>2,5/5</td>
+              <td>3,4/5</td>
+              <td>2,3/5</td>
+            </tr>
+            <tr>
+              <td>Brand</td>
+              <td>5/5</td>
+              <td>2,9/5</td>
+              <td>0,7/5</td>
+              <td>0,7/5</td>
+              <td>5/5</td>
+              <td>1,4/5</td>
+            </tr>
+            <tr>
+              <td>Products</td>
+              <td>2,5/5</td>
+              <td>4,3/5</td>
+              <td>3,2/5</td>
+              <td>3,6/5</td>
+              <td>3,6/5</td>
+              <td>3,9/5</td>
+            
+            </tr>
+            <tr>
+              <td>Customers</td>
+              <td>2,5/5</td>
+              <td>4,6/5</td>
+              <td>3,3/5</td>
+              <td>4,2/5</td>
+              <td>4,2/5</td>
+              <td>4,2/5</td>
+              
+            </tr>
+            <tr>
+              <td>Social Networks</td>
+              <td>2/5</td>
+              <td>4/5</td>
+              <td>2,5/5</td>
+              <td>2/5</td>
+              <td>5/5</td>
+              <td>3/5</td>
+              
+            </tr>
+            <tr class="is-total">
+              <td>Overall score</td>
+              <td>2,3/5</td>
+              <td>3,8/5</td>
+              <td>2,8/5</td>
+              <td>2,7/5</td>
+              <td>4/5</td>
+              <td>3/5</td>
+              
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
+  
   </div>
 </section>
-<hr class="section-divider">
+
+<!------------------ SURVEY SECTION ----------------------->
+
+<section class="case-survey">
+  <div class="container page-container">
+    <div class="case-survey-intro">
+      <p class="case-kicker">Survey Outcome</p>
+      <p>I ran a survey covering demographics, sustainability awareness, budget range and shopping preferences. I also asked specific questions about the existing Ecodream shop: filter availability, 
+        product information clarity and navigation and explored what actually stops users from completing a purchase.</p>
+      <span class="highlight-quote">Question: Do you ever abandon your cart before completing a purchase? Why?</span>
+    
+    </div>
+
+    <div class="case-survey-quotes">
+      <div class="case-survey-quote">
+        <p>“Uncertainty about payment and doubts about the product.”</p>
+      </div>
+
+      <div class="case-survey-quote">
+        <p>“I realise the things I want to buy aren't really necessary, just a impulse of the moment.”</p>
+      </div>
+
+      <div class="case-survey-quote">
+        <p>“If the total feels too high, I take a moment to think it over.”</p>
+      </div>
+
+      <div class="case-survey-quote">
+        <p>“I don’t know if this is actually sustainable.”</p>
+      </div>
+    </div>
+    <div class="case-survey-note">
+  <img src="../Assets/Image/icon-search.svg" alt="" aria-hidden="true">
+  <p>
+    The survey revealed that most users abandon their cart because the purchase feels unnecessary, 
+    navigation issues and lack of product information come second. But that's exactly the point!<br>
+    <strong>We can't control personal decisions or budgets, but we can make sure that a confusing navigation or poor communication are never the reason someone walks away.
+  </strong></p>
+</div>
+  </div>
+</section>
+
+
+
+    
 
 <!------------------ DESIGN SECTION ----------------------->
 

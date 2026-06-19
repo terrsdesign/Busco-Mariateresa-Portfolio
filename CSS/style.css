@@ -1786,7 +1786,7 @@ p {
   flex-shrink: 0;
 }
 
-.case-snapshot-head span {
+.case-snapshot-head span, .case-accessibility-item span {
   font-family: "Geist Mono", monospace;
   font-size: 0.875rem;
   line-height: 1.375rem;
@@ -1972,7 +1972,11 @@ p {
   box-shadow: 0 5px 20px rgba(31, 27, 28, 0.05), 0 1px 6px rgba(31, 27, 28, 0.03);
 }
 
-.case-research-card .case-kicker, .case-score-band .case-kicker {
+.case-research-card .case-kicker,
+.case-score-band .case-kicker,
+.case-competitors .case-kicker,
+.case-survey .case-kicker,
+.case-accessibility .case-kicker {
   margin: 0 0 40px;
   font-family: "Geist Mono", monospace;
   font-size: 1rem;
@@ -2036,7 +2040,7 @@ p {
 }
 
 .case-score-band {
-  margin-top: 48px;
+  margin-top: 80px;
 }
 
 .case-score-band .case-kicker {
@@ -2101,406 +2105,203 @@ p {
   color: #99567E;
 }
 
-/* =========================
-   CASE STUDY GALLERY
-   Gallery riutilizzabile per le immagini delle sezioni case study.
-   Mostra una sola immagine grande alla volta.
-   Usa JavaScript per cambiare slide, aggiornare frecce, count e dots.
-   Al click sull'immagine, apre una preview grande in overlay.
-========================= */
-.case-gallery {
+/*-------------- Comparative analysis ---------------------*/
+.case-competitors {
+  margin-top: -100px;
+}
+
+.case-competitors-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.6fr) minmax(0, 1.4fr);
+  gap: 56px;
+  align-items: start;
+}
+
+.case-competitors-copy {
+  display: grid;
+  gap: 18px;
+}
+
+.case-competitors-copy .case-kicker,
+.case-competitors-copy .main-subtitle,
+.case-competitors-copy p {
+  margin: 0;
+}
+
+.case-competitors-table-wrap {
+  overflow-x: auto;
+  border-radius: 8px;
+  background-color: rgb(253.275, 252.125, 249.825);
+  box-shadow: 0 5px 20px rgba(31, 27, 28, 0.05), 0 1px 6px rgba(31, 27, 28, 0.03);
+}
+
+.case-competitors-table {
   width: 100%;
-  max-width: 100%;
-  position: relative;
-  padding-inline: 52px;
+  border-collapse: collapse;
 }
 
-.case-gallery-viewport {
-  position: relative;
-  width: 100%;
-  height: 380px;
-  overflow: hidden;
-  border-bottom: 1px solid rgb(234.15, 220.25, 192.45);
-  background-color: #FCFAF6;
+.case-competitors-table th,
+.case-competitors-table td {
+  padding: 8px 8px;
+  border-bottom: 1px solid rgba(153, 86, 126, 0.08);
+  text-align: center;
 }
 
-/* Singola immagine della gallery.
-   La gallery mostra 2 immagini affiancate per volta.
-   JavaScript assegna le classi:
-   - is-active-left alla prima immagine visibile
-   - is-active-right alla seconda immagine visibile
-*/
-.case-gallery-slide {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: calc(50% - 8px);
-  display: block;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateX(16px);
-  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
-  text-decoration: none;
+.case-competitors-table th:first-child,
+.case-competitors-table td:first-child {
+  text-align: left;
 }
 
-.case-gallery-slide.is-active-left {
-  left: 0;
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(0);
-}
-
-.case-gallery-slide.is-active-right {
-  left: calc(50% + 8px);
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(0);
-}
-
-.case-gallery-slide img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  display: block;
-  background-color: #FCFAF6;
-}
-
-.case-gallery-arrow {
-  position: absolute;
-  top: 50%;
-  z-index: 3;
-  width: 35px;
-  height: 35px;
-  border: 1px solid #FCFAF6;
-  border-radius: 50%;
-  background-color: #FCFAF6;
-  color: #99567E;
-  font-size: 3rem;
-  line-height: 1;
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  transform: translateY(-50%);
-  transition: background-color 0.25s ease, color 0.25s ease, opacity 0.25s ease;
-}
-
-.case-gallery-arrow:hover {
-  color: #B3AC6D;
-}
-
-.case-gallery-arrow:disabled {
-  opacity: 0.35;
-  cursor: not-allowed;
-}
-
-.case-gallery-arrow-prev {
-  left: 0px;
-}
-
-.case-gallery-arrow-next {
-  right: 0px;
-}
-
-.case-gallery-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin-top: 14px;
-}
-
-.case-gallery-count {
+.case-competitors-table thead th {
   font-family: "Geist Mono", monospace;
   font-size: 0.8rem;
   line-height: 1.1rem;
-  color: #A79A9D;
-}
-
-.case-gallery-dots {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.case-gallery-dot {
-  width: 8px;
-  height: 8px;
-  border: 1px solid #B3AC6D;
-  border-radius: 50%;
-  background-color: transparent;
-  cursor: pointer;
-  padding: 0;
-  transition: background-color 0.25s ease, transform 0.25s ease;
-}
-
-.case-gallery-dot.is-active {
-  background-color: #B3AC6D;
-  transform: scale(1.2);
-}
-
-/* =========================
-   CASE IMAGE GRID
-   Griglia riutilizzabile per mostrare immagini statiche affiancate.
-   Utile quando non serve una gallery, ad esempio con solo 2 immagini.
-========================= */
-.case-image-grid {
-  display: grid;
-  gap: 24px;
-  width: 100%;
-  margin-inline: auto;
-}
-
-.case-image-grid-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.case-image-card {
-  display: block;
-  overflow: hidden;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.case-image-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(31, 27, 28, 0.08);
-}
-
-.case-image-card img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* =========================
-   CASE STUDY LIGHTBOX
-   Overlay globale per aprire le immagini della gallery in grande.
-========================= */
-.case-lightbox {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  padding: 40px;
-  background-color: rgba(31, 27, 28, 0.84);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
-}
-
-.case-lightbox.is-open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.case-lightbox-image {
-  max-width: min(1100px, 92vw);
-  max-height: 86vh;
-  -o-object-fit: contain;
-     object-fit: contain;
-  border-radius: 8px;
-  background-color: #FCFAF6;
-}
-
-.case-lightbox-close {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 44px;
-  height: 44px;
-  border: none;
-  border-radius: 50%;
-  background-color: #FCFAF6;
-  color: #1F1B1C;
-  font-size: 1.75rem;
-  line-height: 1;
-  cursor: pointer;
-}
-
-/* =========================
-   CASE STUDY LISTS
-   Liste riutilizzabili:
-   - case-simple-list per metodi semplici
-   - case-numbered-list per finding, problemi, decisioni
-========================= */
-.case-simple-list {
-  display: grid;
-  gap: 12px;
-  margin: 0;
-  padding-left: 20px;
-}
-
-.case-simple-list li {
-  font-size: 1rem;
-  line-height: 1.4rem;
-  color: #4A4243;
-}
-
-.case-numbered-list {
-  display: grid;
-  gap: 16px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.case-numbered-list li {
-  display: grid;
-  grid-template-columns: 48px 1fr;
-  gap: 8px;
-  align-items: start;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgb(236.7, 224.5, 200.1);
-}
-
-.case-numbered-list li:last-child {
-  padding-bottom: 0;
-  border-bottom: none;
-}
-
-.case-numbered-list span {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: #B3AC6D;
-  color: #FCFAF6;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Geist Mono", monospace;
-  font-size: 0.8rem;
-  line-height: 1;
-}
-
-.case-numbered-list p {
-  margin-bottom: 0;
-  color: #4A4243;
-}
-
-/* =========================
-   CASE SCORE LIST
-   Lista riutilizzabile per mostrare metriche e punteggi.
-   Usata nella fase Research per sintetizzare la valutazione UX.
-========================= */
-.case-score-list {
-  display: grid;
-  margin-top: 20px;
-  padding: 10px 50px 10px;
-}
-
-.case-score-name {
-  font-family: "Satoshi-Variable", sans-serif;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  color: #4A4243;
-}
-
-.case-stars {
-  font-family: "Geist Mono", monospace;
-  font-size: 1.2rem;
-  line-height: 1;
+  text-transform: uppercase;
   letter-spacing: 0.08em;
-  white-space: nowrap;
+  color: #99567E;
+  font-weight: 500;
 }
 
-.case-stars-filled {
+.case-competitors-table tbody td {
+  color: #4A4243;
+  font-size: 0.875rem;
+}
+
+.case-competitors-table tbody tr.is-total td {
+  color: #99567E;
+  font-weight: 600;
+}
+
+/*---------------SURVEY------------------*/
+.case-survey {
+  margin-top: -64px;
+}
+
+.case-survey-intro {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.case-survey-intro .case-kicker,
+.case-survey-intro h2,
+.case-survey-intro p {
+  margin: 0;
+}
+
+.case-survey-intro p:last-child {
+  max-width: auto;
+}
+
+.case-survey-quotes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.case-survey-quote {
+  padding: 8px 24px 12px;
+  border: 1px solid rgba(31, 27, 28, 0.05);
+  border-radius: 8px;
+  background-color: rgb(253.275, 252.125, 249.825);
+  box-shadow: 0 5px 20px rgba(31, 27, 28, 0.05), 0 1px 6px rgba(31, 27, 28, 0.03);
+}
+
+.case-survey-quote::before {
+  content: "“";
+  display: block;
+  font-family: "Sundrea", serif;
+  font-size: 10rem;
+  line-height: 1;
   color: #99567E;
 }
 
-.case-stars-empty {
-  color: #A79A9D;
-}
-
-/* =========================
-   CASE SURVEY BUBBLES
-   Nuvolette testuali per risposte del sondaggio.
-========================= */
-.case-survey-bubbles {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 64px;
-  margin: 32px auto 120px;
-  justify-items: center;
-  max-width: 960px;
-}
-
-.case-survey-bubble {
-  position: relative;
-  margin: 0;
-  padding: 16px 32px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, rgb(166.6610878661, 97.8389121339, 138.9267782427) 0%, #99567E 55%, rgb(143.2054393305, 80.4945606695, 117.9338912134) 100%);
-  box-shadow: 0 8px 18px rgba(31, 27, 28, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  transform: rotate(var(--bubble-rotate, 0deg)) translateY(var(--bubble-y, 0));
-}
-
-.case-survey-bubble::after {
-  content: "";
-  position: absolute;
-  left: 38px;
-  bottom: -8px;
-  width: 22px;
-  height: 22px;
-  background-color: rgb(146.470292887, 82.329707113, 120.6225941423);
-  transform: rotate(45deg);
-  box-shadow: none;
-}
-
-.case-survey-bubble p {
-  margin: 0;
-  font-family: "Satoshi-Variable", sans-serif;
+.case-survey-quote p {
+  margin-top: -80px;
   font-size: 0.875rem;
-  line-height: 1rem;
-  color: #FCFAF6;
 }
 
-/* variazioni automatiche */
-.case-survey-bubble:nth-child(1) {
-  --bubble-rotate: -2deg;
-  --bubble-y: 0;
-  max-width: 92%;
+.case-survey-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 24px;
 }
 
-.case-survey-bubble:nth-child(2) {
-  --bubble-rotate: 1.5deg;
-  --bubble-y: 24px;
-  max-width: 86%;
-  justify-self: end;
+.case-survey-note img {
+  width: 40px;
+  height: 40px;
+  min-width: 22px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
 }
 
-.case-survey-bubble:nth-child(3) {
-  --bubble-rotate: 2deg;
-  --bubble-y: -8px;
-  max-width: 88%;
+.case-survey-note p {
+  margin: 0;
 }
 
-.case-survey-bubble:nth-child(4) {
-  --bubble-rotate: -1.5deg;
-  --bubble-y: 18px;
-  max-width: 84%;
-  justify-self: end;
+/*-----------------ACCESSIBILITà------------------*/
+.case-accessibility {
+  margin-top: -80px;
 }
 
-.case-survey-bubble:nth-child(5) {
-  --bubble-rotate: 1deg;
-  --bubble-y: -4px;
-  max-width: 90%;
+.case-accessibility-block .case-kicker {
+  margin: 0 0 40px;
 }
 
-.case-survey-bubble:nth-child(6) {
-  --bubble-rotate: -2.5deg;
-  --bubble-y: 20px;
-  max-width: 74%;
-  justify-self: flex-end;
+.case-accessibility-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0;
+  margin-bottom: 40px;
 }
 
-.case-survey-bubble:nth-child(even)::after {
-  left: auto;
-  right: 36px;
+.case-accessibility-item {
+  padding: 0 16px 20px;
+  border-right: 1px solid rgba(153, 86, 126, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.case-accessibility-item-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.case-accessibility-item-header img {
+  width: 24px;
+  height: 24px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.case-accessibility-item:last-child {
+  border-right: 0;
+}
+
+.case-accessibility-item img {
+  width: 28px;
+  height: 28px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.case-accessibility-item ul {
+  margin-top: 4px;
+  padding-left: 18px;
+  display: grid;
+  gap: 0;
+}
+
+.case-accessibility-item li {
+  color: #1F1B1C;
+  font-size: 0.875rem;
 }
 
 /* =========================  CASE ISSUES GRID ========================= */
