@@ -1514,25 +1514,11 @@ p {
   margin: 0;
 }
 
-.section-divider {
-  display: block;
-  width: 100%;
-  height: 2px;
-  margin: 88px auto;
-  border: none;
-  background: linear-gradient(90deg, rgba(114, 14, 43, 0) 0%, rgba(114, 14, 43, 0.3) 50%, rgba(114, 14, 43, 0) 100%);
-}
-
-.section-divider::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  background-color: #B3AC6D;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
+.ecodream-page hr {
+  border: 0;
+  height: 1px;
+  background-color: rgba(153, 86, 126, 0.58);
+  width: 80%;
 }
 
 .ecodream-page .navbar,
@@ -1640,14 +1626,13 @@ p {
 }
 
 .highlight-quote {
-  max-width: 80%;
-  border-left: 2px solid rgba(153, 86, 126, 0.35);
-  color: rgb(139.0945945946, 132.4256756757, 72.4054054054);
+  max-width: 75%;
+  border-left: 1px solid rgba(153, 86, 126, 0.35);
+  color: #99567E;
   font-size: 1.2rem;
   line-height: 1.6rem;
   font-weight: 400;
   font-style: italic;
-  letter-spacing: -0.02em;
   padding-left: 20px;
   margin-left: 50px !important;
 }
@@ -1664,75 +1649,196 @@ p {
   background-color: #FCFAF6;
 }
 
-.case-hero {
-  padding: 0px 0 80px;
-  background-color: #FCFAF6;
-  color: #1F1B1C;
-}
-
-.case-hero-top {
-  padding-top: 10px;
-  margin-bottom: 20px;
-}
-
-.case-hero img {
-  border-radius: 16px;
-  opacity: 0.85;
-}
-
-.case-hero-line {
-  width: 100%;
-  height: 1px;
-  margin-bottom: 40px;
-  background-color: rgb(245.625, 239.375, 226.875);
-}
-
-.case-hero-grid {
+/*--------------HERO -----------------*/
+.case-hero-top--ecodream {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: center;
   gap: 48px;
+  margin-bottom: 40px;
 }
 
-.case-meta {
+.case-hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.case-hero-copy h1 {
+  margin: 12px 0 16px;
+}
+
+.ecodream-page .main-subtitle {
+  margin: 0 0 20px;
+  font-family: "Satoshi-Variable", sans-serif;
+  font-size: 1.75rem;
+  line-height: 2.1875rem;
+  color: rgb(149.1567567568, 142.0054054054, 77.6432432432);
+}
+
+.case-hero-text {
+  max-width: 520px;
+  margin: 0 0 28px;
+}
+
+.case-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.case-hero-media--ecodream {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.macbook-mockup {
+  position: relative;
+  width: 450px;
+  z-index: 1;
+}
+
+.macbook-mockup video {
+  position: absolute;
+  top: 6%;
+  left: 11%;
+  width: 78%;
+  height: 78%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.macbook-mockup img,
+.video-mockup img,
+.video-mockup video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.macbook-mockup img {
+  position: relative;
+  z-index: 2;
+}
+
+.video-mockup {
+  position: absolute;
+  right: 2%;
+  bottom: 10%;
+  width: 130px;
+  z-index: 3;
+}
+
+.video-mockup video {
+  position: absolute;
+  top: 1%;
+  left: 4%;
+  width: 92%;
+  height: 93%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 28px;
+  z-index: 1;
+}
+
+.video-mockup img {
+  position: relative;
+  z-index: 2;
+}
+
+.ecodream-page .main-section-title-divider {
+  background: linear-gradient(90deg, rgba(153, 86, 126, 0) 0%, rgba(153, 86, 126, 0.3) 50%, rgba(153, 86, 126, 0) 100%);
+  margin: auto;
+  width: 1000px;
+}
+
+.case-snapshot {
   display: grid;
-  gap: 28px;
-  padding-right: 32px;
-  border-right: 1px solid rgb(245.625, 239.375, 226.875);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin: 20px 0 20px;
 }
 
-.case-meta-item span {
-  margin-bottom: 4px;
+.case-snapshot-item {
+  padding: 25px 20px 25px;
+  border-right: 1px solid rgba(153, 86, 126, 0.08);
+}
+
+.case-snapshot-item:last-child {
+  border-right: 0;
+}
+
+.case-snapshot-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.case-snapshot-head img {
+  width: 28px;
+  height: 28px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  flex-shrink: 0;
+}
+
+.case-snapshot-head span {
   font-family: "Geist Mono", monospace;
   font-size: 0.875rem;
-  text-transform: uppercase;
-  color: #99567E;
-  font-weight: 500;
+  line-height: 1.375rem;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgb(122.3243243243, 116.4594594595, 63.6756756757);
 }
 
-.case-meta-item p {
-  margin-bottom: 0;
+.case-snapshot-item p {
+  margin: -8px 0 0 40px;
+  color: #1F1B1C;
   font-size: 0.875rem;
-  line-height: 1rem;
-  color: #4A4243;
 }
 
-.case-overview-intro {
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+/*--------------------OVERVIEW-----------------*/
+.case-overview-block {
+  margin-top: 56px;
+}
+
+.case-overview-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.case-overview-copy {
+  display: grid;
+  gap: 20px;
+  padding-right: 80px;
+}
+
+.case-overview-copy p {
+  margin: 0;
 }
 
 .case-overview-stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border-left: 1px solid rgb(245.625, 239.375, 226.875);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px;
+  border: 0;
+  margin-bottom: 40px;
 }
 
 .case-stat {
-  min-height: 120px;
-  padding: 24px;
-  background-color: #FCFAF6;
-  border-right: 1px solid rgb(245.625, 239.375, 226.875);
+  padding: 24px 24px 28px;
+  border-bottom: 1px solid rgba(31, 27, 28, 0.05);
+  border-radius: 8px;
+  background-color: rgb(253.275, 252.125, 249.825);
+  box-shadow: 0 18px 40px rgba(31, 27, 28, 0.05), 0 4px 12px rgba(31, 27, 28, 0.03);
 }
 
 .case-stat span {
@@ -1741,234 +1847,258 @@ p {
   font-family: "Geist Mono", monospace;
   font-size: 1.75rem;
   line-height: 2.1875rem;
-  color: #B3AC6D;
+  color: rgb(149.7351464435, 84.1648535565, 123.3112970711);
 }
 
 .case-stat p {
-  margin-bottom: 0;
+  margin: 0;
   font-size: 0.875rem;
   line-height: 1rem;
   color: #4A4243;
   font-family: "Geist Mono", monospace;
 }
 
-.case-quote {
-  margin: 26px 0;
-  padding-left: 32px;
-  border-left: 1px solid #99567E;
-  font-style: italic;
+/*-----------PROBLEM ----------------*/
+.case-problem {
+  margin-top: 32px;
+  margin-bottom: 40px;
 }
 
-/* PROCESS */
-.case-research > .container > .case-block {
-  margin-top: 96px;
-}
-
-.case-process {
-  padding: 60px 0;
-  position: relative;
-  background-color: rgb(254.55, 254.25, 253.65);
-  border-top: 10px solid #B3AC6D;
-  border-bottom: 10px solid #B3AC6D;
-}
-
-.case-process .section-label {
-  text-align: center;
-}
-
-.case-process-layout {
+.case-problem-layout {
   display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  margin-top: 56px;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 500px);
+  gap: 48px;
+  align-items: end;
 }
 
-.case-process-timeline {
-  position: relative;
-  display: grid;
-  gap: 20px;
-  width: -moz-fit-content;
-  width: fit-content;
-  max-width: 100%;
-  margin-inline: auto;
+.case-problem-intro .case-kicker {
+  margin-bottom: 18px;
 }
 
-/* Barra verticale centrale della timeline */
-.case-process-timeline::before {
-  content: "";
-  position: absolute;
-  left: 108px;
-  top: 28px;
-  bottom: 28px;
-  width: 1px;
-  background-color: rgb(239.25, 228.75, 207.75);
-}
-
-/* Singolo step */
-.case-process-step {
-  position: relative;
-  display: grid;
-  grid-template-columns: 36px 130px minmax(280px, 1fr) auto;
-  align-items: center;
-  -moz-column-gap: 24px;
-       column-gap: 24px;
-  padding: 8px 16px 16px 0;
-}
-
-.case-process-step:hover {
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(31, 27, 28, 0.08);
-  background-color: hsl(40, 50%, 107.6470588235%);
-}
-
-.case-process-link {
-  justify-self: end;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 5px 18px;
-  border-bottom: 1px solid rgb(245.625, 239.375, 226.875);
-  color: #99567E;
-  font-family: "Geist Mono", monospace;
-  font-size: 0.8rem;
-  line-height: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.case-process-link:hover {
-  background-color: #B3AC6D;
-  color: #FCFAF6;
-}
-
-/* Numero a sinistra della barra */
-.case-process-index {
-  font-family: "Geist Mono", monospace;
-  font-size: 0.8rem;
-  line-height: 1.1rem;
-  color: #4A4243;
-  text-align: right;
-  margin-left: 80px;
-}
-
-/* Parte grafica: pallino + linea + sfera */
-.case-process-visual {
-  position: relative;
-  display: flex;
-  align-items: center;
-  min-height: 72px;
-}
-
-/* Pallino sulla barra verticale */
-.case-process-dot {
-  position: absolute;
-  left: 44px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: rgb(105.5540540541, 100.4932432432, 54.9459459459);
-  z-index: 2;
-}
-
-/* Linea orizzontale dal pallino alla sfera */
-.case-process-connector {
-  position: absolute;
-  left: 48px;
-  width: 30px;
-  height: 1px;
-  background-color: rgb(239.25, 228.75, 207.75);
-}
-
-/* Sfera con icona */
-.case-process-icon {
-  position: absolute;
-  left: 76px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Geist Mono", monospace;
-  font-size: 0.875rem;
-  line-height: 1;
-  background-color: #99567E;
-  color: #FCFAF6;
-}
-
-/* =========================
-   CASE STUDY SECTIONS
-   Stili generici per le sezioni della pagina progetto.
-   Da riutilizzare per Research, Strategy, Design, Outcome, ecc.
-========================= */
-.case-section {
-  padding: 112px 0 0 0;
-  background-color: #FCFAF6;
-}
-
-/* Titolo sezione con numero laterale */
-.case-section-title {
-  display: flex;
-  align-items: flex-end;
-  gap: 20px;
+.case-problem-intro h2 {
   margin-bottom: 24px;
+  max-width: 520px;
 }
 
-.case-section-number {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  color: #FCFAF6;
+.case-problem-intro p:last-child {
+  max-width: 500px;
+  margin: 0;
+  padding-top: 16px;
+}
+
+.case-problem-points {
+  display: grid;
+  gap: 16px;
+}
+
+.case-problem-point {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(153, 86, 126, 0.08);
+  border-radius: 8px;
+  background-color: rgb(253.275, 252.125, 249.825);
+  box-shadow: 0 5px 20px rgba(31, 27, 28, 0.05), 0 1px 6px rgba(31, 27, 28, 0.03);
+}
+
+.case-problem-icon {
+  width: 25px;
+  height: 25px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(114, 14, 43, 0.55);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  color: rgba(114, 14, 43, 0.95);
   font-family: "Geist Mono", monospace;
-  font-size: 0.875rem;
-  background-color: #99567E;
+  font-size: 1rem;
+  line-height: 1;
+  flex-shrink: 0;
 }
 
-.case-section-title .section-label {
-  margin-bottom: 6px;
-  color: #99567E;
-}
-
-.case-section-title h2 {
-  max-width: 760px;
-  margin-bottom: 0;
-  font-family: "Sundrea", serif;
-  font-size: 3.25rem;
-  line-height: 4.0625rem;
-  font-weight: 400;
+.case-problem-point p {
+  margin: 0;
   color: #1F1B1C;
+  font-size: 0.875rem;
+  font-family: "Geist Mono", monospace;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
-/* =========================
-   CASE STUDY LAYOUT
-   Griglie riutilizzabili per dividere i contenuti.
-========================= */
-.case-layout {
+/*-----------------Research----------------*/
+.case-research {
+  margin-top: 40px;
+}
+
+.case-research-heading {
   display: grid;
+  grid-template-columns: minmax(0, 0.5fr) minmax(0, 1.5fr);
+  gap: 8px;
   align-items: start;
 }
 
-.case-layout-2 {
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
-  gap: 72px;
+.case-research-heading .case-kicker {
+  grid-column: 1;
+  margin: 0 0 14px;
 }
 
-/* Blocco contenuto generico */
-.case-block h3 {
-  margin-bottom: 32px;
+.case-research-heading .main-subtitle {
+  grid-column: 1;
+  display: block;
+  margin: 0;
+}
+
+.case-research-heading > p:last-child {
+  grid-column: 2;
+  margin: 0;
+  max-width: 740px;
+  border-left: 1px solid rgba(153, 86, 126, 0.08);
+  padding-left: 40px;
+}
+
+.case-research-summary {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.6fr) minmax(0, 1.4fr);
+  gap: 40px;
+  margin-top: 48px;
+}
+
+.case-research-card {
+  padding: 28px 28px 32px;
+  border-bottom: 1px solid rgba(153, 86, 126, 0.08);
+  border-radius: 8px;
+  background-color: rgb(253.275, 252.125, 249.825);
+  box-shadow: 0 5px 20px rgba(31, 27, 28, 0.05), 0 1px 6px rgba(31, 27, 28, 0.03);
+}
+
+.case-research-card .case-kicker, .case-score-band .case-kicker {
+  margin: 0 0 40px;
   font-family: "Geist Mono", monospace;
-  font-size: 0.875rem;
-  line-height: 1.375rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  color: rgb(122.3243243243, 116.4594594595, 63.6756756757);
+  font-weight: 500;
+  border-bottom: 1px solid rgba(153, 86, 126, 0.08);
+}
+
+.case-score-band .case-kicker {
+  border: none;
+}
+
+.case-research-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.case-research-list li {
   color: #1F1B1C;
 }
 
-.case-activity p {
-  margin-left: 28px;
+.case-discovery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.case-discovery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  gap: 14px;
+}
+
+.case-discovery-item img {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  max-width: 42px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+}
+
+.case-discovery-item p {
+  margin: 0;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  max-width: 120px;
+}
+
+.case-discovery-item p {
+  margin: 0;
+}
+
+.case-score-band {
+  margin-top: 48px;
+}
+
+.case-score-band .case-kicker {
+  margin-bottom: 20px;
+}
+
+.case-score-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) 180px;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.case-score-item,
+.case-score-total {
+  padding: 8px 22px 8px;
+  border-right: 1px solid rgba(153, 86, 126, 0.08);
+}
+
+.case-score-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.case-score-item span {
+  display: block;
+  margin: 0;
+  font-family: "Geist Mono", monospace;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4A4243;
+  font-weight: 500;
+}
+
+.case-score-item p {
+  margin: 0;
+  color: #99567E;
+  letter-spacing: 0.08em;
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.case-score-total {
+  border-right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: rgb(253.275, 252.125, 249.825);
+  box-shadow: 0 5px 20px rgba(31, 27, 28, 0.05), 0 1px 6px rgba(31, 27, 28, 0.03);
+}
+
+.case-score-total p {
+  margin: 0;
+  font-family: "Sundrea", serif;
+  font-size: 2.375rem;
+  line-height: 2.8125rem;
+  color: #99567E;
 }
 
 /* =========================
@@ -2260,15 +2390,6 @@ p {
   display: grid;
   margin-top: 20px;
   padding: 10px 50px 10px;
-}
-
-.case-score-item {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 24px;
-  align-items: center;
-  padding: 8px 0;
-  border-bottom: 1px solid rgb(241.8, 233, 215.4);
 }
 
 .case-score-name {
@@ -2755,9 +2876,7 @@ p {
   margin-inline: auto;
 }
 
-/* =========================
-   NEXT PROJECT
-========================= */
+/* ========================= NEXT PROJECT ========================= */
 .next-project-banner {
   padding: 64px 0;
 }
@@ -3330,30 +3449,24 @@ p {
    ECODREAM - HERO RESPONSIVE COMPLETE
    Incollare alla fine del CSS
 ========================= */
-@media (max-width: 1200px) {
-  .ecodream-page .case-hero {
-    padding: 32px 0 64px;
+@media (max-width: 768px) {
+  .case-hero-top--ecodream {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
-  .ecodream-page .case-hero-top {
-    padding-top: 24px;
-    margin-bottom: 32px;
+  .case-hero-media--ecodream {
+    min-height: auto;
+    padding-top: 16px;
   }
-  .ecodream-page .case-hero-image-wrapper {
+  .macbook-mockup {
     width: 100%;
-    margin-bottom: 28px;
   }
-  .ecodream-page .case-hero-image {
-    display: block;
-    width: 100%;
-    max-height: 320px;
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
-  .ecodream-page .case-hero h1 {
-    margin-top: 0;
-    margin-bottom: 16px;
-    font-size: 3rem;
-    line-height: 3.4rem;
+  .video-mockup {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: min(52%, 220px);
+    margin: -24px auto 0;
   }
   .ecodream-page .case-kicker {
     margin-top: 0;

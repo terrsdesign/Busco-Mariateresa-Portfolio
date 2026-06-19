@@ -283,35 +283,30 @@
    ECODREAM - HERO RESPONSIVE COMPLETE
    Incollare alla fine del CSS
 ========================= */
-
-@media (max-width: 1200px) {
-  .ecodream-page .case-hero {
-    padding: 32px 0 64px;
+@media (max-width: 768px) {
+  .case-hero-top--ecodream {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
-  .ecodream-page .case-hero-top {
-    padding-top: 24px;
-    margin-bottom: 32px;
+  .case-hero-media--ecodream {
+    min-height: auto;
+    padding-top: 16px;
   }
 
-  .ecodream-page .case-hero-image-wrapper {
+  .macbook-mockup {
     width: 100%;
-    margin-bottom: 28px;
   }
 
-  .ecodream-page .case-hero-image {
-    display: block;
-    width: 100%;
-    max-height: 320px;
-    object-fit: contain;
+  .video-mockup {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: min(52%, 220px);
+    margin: -24px auto 0;
   }
-
-  .ecodream-page .case-hero h1 {
-    margin-top: 0;
-    margin-bottom: 16px;
-    font-size: 3rem;
-    line-height: 3.4rem;
-  }
+   
+  
 
   .ecodream-page .case-kicker {
     margin-top: 0;
