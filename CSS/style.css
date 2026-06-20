@@ -914,7 +914,7 @@ p {
   margin: 0;
   max-width: 180px;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.1rem;
   text-align: left;
   color: #4A4243;
 }
@@ -1622,19 +1622,19 @@ p {
   margin-bottom: 0;
   color: #4A4243;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.1rem;
 }
 
 .highlight-quote {
   max-width: 75%;
   border-left: 1px solid rgba(153, 86, 126, 0.35);
   color: #99567E;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.6rem;
   font-weight: 400;
   font-style: italic;
   padding-left: 20px;
-  margin-left: 50px !important;
+  margin-left: 20px !important;
 }
 
 .highlight-quote a {
@@ -1853,7 +1853,7 @@ p {
 .case-stat p {
   margin: 0;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.1rem;
   color: #4A4243;
   font-family: "Geist Mono", monospace;
 }
@@ -1976,7 +1976,9 @@ p {
 .case-score-band .case-kicker,
 .case-competitors .case-kicker,
 .case-survey .case-kicker,
-.case-accessibility .case-kicker {
+.case-accessibility .case-kicker,
+.case-design-step-head p,
+.prototype-detail-item .case-kicker {
   margin: 0 0 40px;
   font-family: "Geist Mono", monospace;
   font-size: 1rem;
@@ -2031,7 +2033,7 @@ p {
   margin: 0;
   text-align: center;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.1rem;
   max-width: 120px;
 }
 
@@ -2129,10 +2131,14 @@ p {
 }
 
 .case-competitors-table-wrap {
-  overflow-x: auto;
   border-radius: 8px;
   background-color: rgb(253.275, 252.125, 249.825);
   box-shadow: 0 5px 20px rgba(31, 27, 28, 0.05), 0 1px 6px rgba(31, 27, 28, 0.03);
+  padding: 4px;
+  transition: transform 0.25s ease;
+}
+.case-competitors-table-wrap:hover {
+  transform: scale(1.1);
 }
 
 .case-competitors-table {
@@ -2175,6 +2181,7 @@ p {
 /*---------------SURVEY------------------*/
 .case-survey {
   margin-top: -64px;
+  margin-bottom: 40px;
 }
 
 .case-survey-intro {
@@ -2225,7 +2232,8 @@ p {
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  margin-top: 24px;
+  margin-top: 60px;
+  width: 100%;
 }
 
 .case-survey-note img {
@@ -2304,380 +2312,467 @@ p {
   font-size: 0.875rem;
 }
 
-/* =========================  CASE ISSUES GRID ========================= */
-.case-issues-grid {
+/* ------------USER PERSONAS-----------*/
+.ecodream-page .case-personas-heading {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+.ecodream-page .case-personas-title {
+  position: static;
+}
+.ecodream-page .case-personas-copy {
+  max-width: 780px;
+  margin-top: 16px;
+  border-left: 1px solid rgba(153, 86, 126, 0.08);
+  padding-left: 40px;
+}
+
+.ecodream-page .case-user-personas {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  background-color: #FCFAF6;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.ecodream-page .case-personas-layout {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 600px minmax(0, 1fr);
   gap: 24px;
-  max-width: 800px;
-  margin-top: 32px;
-  align-content: center;
-  margin: auto;
+  align-items: start;
 }
-
-.case-issue-card {
+.ecodream-page .case-personas-title {
+  top: 120px;
+}
+.ecodream-page .case-personas-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.ecodream-page .persona-card {
+  display: flex;
+  flex-direction: column;
+  height: 580px;
+  padding: 12px;
+  border: 1px solid rgba(31, 27, 28, 0.05);
+  border-radius: 8px;
+  background-color: rgb(253.275, 252.125, 249.825);
+  box-shadow: 0 5px 20px rgba(31, 27, 28, 0.05), 0 1px 6px rgba(31, 27, 28, 0.03);
+  transition: transform 0.35s ease;
+}
+.ecodream-page .persona-card:hover {
+  transform: scale(1.03);
+}
+.ecodream-page .persona-card-header {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
   gap: 16px;
-  align-items: center;
-  min-height: 160px;
-  padding: 28px 24px;
-  border: 1px solid rgba(31, 27, 28, 0.06);
+  align-items: start;
+  margin-bottom: 36px;
+}
+.ecodream-page .persona-card-header img {
+  width: 90px;
+  height: 130px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.72);
-  box-shadow: 0 10px 24px rgba(31, 27, 28, 0.04);
+  background-color: rgb(246.9, 241.5, 230.7);
+  opacity: 0.8;
+  margin-top: 10px;
 }
-
-.case-issue-card:hover {
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(31, 27, 28, 0.08);
+.ecodream-page .persona-card-header h4 {
+  margin-bottom: 0;
+  font-family: "Geist Mono", monospace;
+  font-size: 1rem;
+  color: #99567E;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
 }
-
-.case-issue-text {
-  align-self: center;
+.ecodream-page .persona-card-header p {
+  margin-bottom: 0;
+  color: #4A4243;
+  font-size: 0.875rem;
+  line-height: 1.1rem;
 }
-
-.case-issue-icon {
-  width: 35px;
-  height: 35px;
-  border-radius: 999px;
-  background-color: #99567E;
-  color: #FCFAF6;
+.ecodream-page .persona-summary {
+  margin-top: 16px;
+  max-width: 260px;
+  font-style: italic;
+}
+.ecodream-page .persona-info {
+  display: grid;
+  gap: 28px;
+}
+.ecodream-page .persona-row {
+  display: grid;
+  grid-template-columns: 32px 60px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+}
+.ecodream-page .persona-row span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-family: "Geist Mono", monospace;
-  font-size: 0.875rem;
-}
-
-.case-issue-text h4 {
-  margin-bottom: 6px;
-}
-
-.case-issue-text li {
-  margin: 0;
-  font-size: 0.875rem;
-}
-
-.case-issue-number {
-  min-width: 56px;
-  text-align: right;
-  align-self: center;
-}
-
-.case-issue-number span {
-  display: block;
-  font-family: "Sundrea", serif;
-  font-size: 1.75rem;
+  font-size: 1.2rem;
   color: #99567E;
 }
-
-.case-issue-number small {
-  display: block;
-  margin-top: 8px;
-  font-family: "Geist Mono", monospace;
-  font-size: 0.65rem;
-  line-height: 1;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #1F1B1C;
-}
-
-/* =========================
-   STRATEGY SECTION
-   Spacing specifico per la fase Strategy.
-========================= */
-.case-strategy > .container > .case-block {
-  margin-top: 96px;
-}
-
-.case-layout-equal {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.case-icon-list li {
-  grid-template-columns: auto minmax(0, 1fr);
-}
-
-.case-list-image-icon {
-  width: 24px;
-  height: 24px;
-  display: block;
-  align-self: start;
-  margin-top: 2px;
-}
-
-/* =========================
-   CASE WIREFRAMES
-========================= */
-.case-wireframe-layout {
-  grid-template-columns: minmax(0, 0.2fr) minmax(0, 0.8fr);
-  gap: 72px;
-  align-items: start;
-}
-
-.case-wireframe-layout.case-layout-reverse {
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 0.2fr);
-}
-
-.case-wireframe-preview {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.case-wireframe-card {
-  display: grid;
-  gap: 12px;
-  text-decoration: none;
-}
-
-.case-wireframe-card > p {
-  margin: 0;
+.ecodream-page .persona-row strong {
   font-family: "Geist Mono", monospace;
   font-size: 0.875rem;
-  line-height: 1.375rem;
+  line-height: 1.3rem;
+  color: rgb(122.3243243243, 116.4594594595, 63.6756756757);
+  font-weight: 500;
+  letter-spacing: 0.06rem;
   text-transform: uppercase;
-  color: rgb(105.5540540541, 100.4932432432, 54.9459459459);
-  font-weight: 400;
+}
+.ecodream-page .persona-row p {
+  margin: 0;
+  color: #4A4243;
+  font-size: 0.875rem;
+  line-height: 1.1rem;
+}
+.ecodream-page .persona-journey {
+  margin-top: auto;
+  padding-top: 40px;
+  margin-bottom: 20px;
+}
+.ecodream-page .persona-journey > p {
+  margin-bottom: 18px;
+  font-family: "Geist Mono", monospace;
+  font-size: 0.875rem;
+  line-height: 1.3rem;
+  color: #99567E;
+  font-weight: 500;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.ecodream-page .journey-line {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  margin-bottom: 10px;
+}
+.ecodream-page .journey-line::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  top: 50%;
+  height: px;
+  background-color: rgba(179, 172, 109, 0.45);
+  transform: translateY(-50%);
+}
+.ecodream-page .journey-line span {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  justify-self: center;
+  border-radius: 999px;
+  background-color: #FCFAF6;
+  padding: 0;
+}
+.ecodream-page .journey-line .is-active {
+  background-color: #99567E;
+  border-color: #99567E;
+  color: #FCFAF6;
+  font-family: "Geist Mono", monospace;
+}
+.ecodream-page .journey-labels {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+}
+.ecodream-page .journey-labels span {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  color: #4A4243;
   text-align: center;
 }
 
-.case-wireframe-card .case-image-card {
-  aspect-ratio: 9/16;
+/* -----------DESIGN -------------*/
+.ecodream-page .case-design-step-head {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+.ecodream-page .case-design-step-head img {
   display: block;
-  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.ecodream-page .case-design-step-head p {
+  margin: 0;
 }
 
-.case-wireframe-card .case-image-card img {
+.ecodream-page .case-design-direction {
+  display: grid;
+  grid-template-columns: 0.72fr 1.45fr;
+  gap: 72px;
+  align-items: end;
+  margin-bottom: 160px;
+  margin-top: 60px;
+}
+.ecodream-page .case-design-copy .main-subtitle {
+  display: block;
+  margin-bottom: 8px;
+}
+.ecodream-page .case-design-copy > p:not(.case-kicker) {
+  max-width: 420px;
+  margin-bottom: 40px;
+  padding-top: 16px;
+}
+.ecodream-page .case-design-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 32px minmax(0, 1fr) 32px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+}
+.ecodream-page .case-design-step {
+  min-width: 0;
+}
+.ecodream-page .case-design-phone {
+  display: block;
+  width: 100%;
+  aspect-ratio: 0.55;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgba(31, 27, 28, 0.05);
+  background-color: rgb(253.275, 252.125, 249.825);
+  box-shadow: 0 18px 40px rgba(31, 27, 28, 0.05), 0 4px 12px rgba(31, 27, 28, 0.03);
+  padding: 8px;
+  transition: transform 0.35s ease;
+}
+.ecodream-page .case-design-phone:hover {
+  transform: scale(1.03);
+}
+.ecodream-page .case-design-phone img {
+  display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top center;
      object-position: top center;
-  display: block;
 }
-
-/* =========================
-   DESIGN SYSTEM BAND
-   Blocco full width per la parte Design System.
-========================= */
-.case-design-system-band {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-top: 120px;
-  margin-bottom: 120px;
-  padding: 56px 0 40px;
-  background-color: rgb(253.275, 252.125, 249.825);
-  border-top: 8px solid #B3AC6D;
-  border-bottom: 8px solid #B3AC6D;
-}
-
-.case-image-grid-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  max-width: none;
-  width: 100%;
-  margin-inline: auto;
-  justify-items: center;
-  align-items: center;
-  gap: 24px;
-  margin-top: 40px;
-}
-
-/* =========================
-   PROTOTYPE SECTION
-========================= */
-.case-prototype-media {
-  position: relative;
-  width: min(100%, 700px);
-  min-height: 460px;
-  margin-inline: auto;
-}
-
-.case-desktop-video {
-  position: absolute;
-  right: 0;
-  top: 55%;
-  z-index: 1;
-  width: min(100%, 520px);
-  aspect-ratio: 16/10;
-  transform: translateY(-50%);
-  overflow: hidden;
-  border-radius: 8px;
-  border: 5px solid #1F1B1C;
-  background-color: #1F1B1C;
-  box-shadow: 0 24px 60px rgba(31, 27, 28, 0.16);
-}
-
-.case-desktop-video video {
-  width: 100%;
-  height: 100%;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.case-phone-video {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  z-index: 2;
-  width: min(100%, 200px);
-  aspect-ratio: 9/19.5;
-  transform: translateY(-50%);
-  overflow: hidden;
-  border-radius: 36px;
-  border: 5px solid #1F1B1C;
-  background-color: #1F1B1C;
-  box-shadow: 0 24px 60px rgba(31, 27, 28, 0.22);
-}
-
-.case-phone-video video {
-  width: 100%;
-  height: 100%;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.case-prototype-intro {
-  align-items: top;
-  grid-template-columns: minmax(0, 0.3fr) minmax(0, 0.7fr);
-}
-
-.case-prototype-note {
-  margin-top: 32px;
-  font-family: "Geist Mono", monospace;
-  font-size: 0.875rem;
-  color: #4A4243;
-}
-
-.case-test-overview {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 32px;
-  margin-top: 64px;
-  overflow: hidden;
-  margin-bottom: 64px;
-}
-
-.case-test-card {
-  display: block;
-  padding: 36px 24px;
-  border: 1px solid rgb(245.625, 239.375, 226.875);
-  border-radius: 8px;
-  background-color: #ffffff;
-}
-
-.case-test-card:hover {
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(31, 27, 28, 0.08);
-}
-
-.case-test-card:not(:last-child) {
-  border-right: 1px solid rgb(245.625, 239.375, 226.875);
-}
-
-.case-test-card h4 {
-  margin-bottom: 12px;
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08rem;
-  color: #99567E;
-  text-align: center;
-}
-
-.case-test-card p {
-  margin-bottom: 16px;
-  font-size: 0.875rem;
-}
-
-.case-test-card li {
-  font-size: 0.875rem;
-  line-height: 1rem;
-}
-
-.case-task-outcome-layout {
-  grid-template-columns: minmax(0, 0.35fr) minmax(0, 0.65fr);
-}
-
-.case-overview-stats-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-bottom: 48px;
-}
-
-/* =========================
-   CONCLUSION
-========================= */
-.case-conclusion {
-  background-color: #ffffff;
-  margin-top: 64px;
-  border-bottom: 0;
-}
-
-.case-conclusion .case-section-title {
-  justify-content: center;
-  text-align: center;
-}
-
-.case-conclusion-stack {
-  max-width: 1040px;
-  margin-inline: auto;
-  text-align: center;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-}
-
-.case-conclusion-intro {
-  grid-column: 1/-1;
-  max-width: 760px;
-  margin-inline: auto;
-  margin-bottom: 16px;
-}
-
-.case-conclusion-point {
-  padding: 40px 24px;
-  border: 1px solid rgb(245.625, 239.375, 226.875);
-  border-radius: 8px;
-}
-
-.case-conclusion-point:hover {
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(31, 27, 28, 0.08);
-}
-
-.case-conclusion-point:first-of-type {
-  border-top: 1px solid rgb(236.7, 224.5, 200.1);
-}
-
-.case-conclusion-icon {
-  width: 30px;
-  height: 30px;
-  margin: 0 auto 16px;
-  border-radius: 50%;
+.ecodream-page .case-design-arrow {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #99567E;
-  color: #FCFAF6;
-  font-family: "Geist Mono", monospace;
-  font-size: 1.2rem;
+  margin-top: 64px;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #99567E;
 }
 
-.case-conclusion-point h4 {
-  margin-bottom: 8px;
+/* ------------------------Prototype ------------------------ */
+.ecodream-page .case-prototype-showcase {
+  display: grid;
+  grid-template-columns: 1fr 200px 0.85fr 0.55fr;
+  gap: 64px;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.case-prototype-copy .main-subtitle {
+  display: block;
+  margin-bottom: 16px;
+}
+.case-prototype-copy > p:not(.case-kicker) {
+  max-width: 390px;
+  margin-bottom: 40px;
+  margin-top: 16px;
+}
+
+.case-prototype-phone {
+  position: relative;
+  width: 200px;
+  justify-self: center;
+}
+.case-prototype-phone video {
+  position: absolute;
+  top: 1.5%;
+  left: 4.5%;
+  width: 91%;
+  height: 96%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 34px;
+  z-index: 1;
+}
+.case-prototype-phone img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.case-prototype-details {
+  display: grid;
+  gap: 32px;
+}
+
+.prototype-detail-item {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+}
+.prototype-detail-item p {
+  margin: 0;
+  color: #4A4243;
   font-size: 0.875rem;
+  line-height: 1.1rem;
+}
+
+.prototype-detail-item .case-kicker {
+  margin: 0 0 8px 0;
+  font-size: 0.875rem;
+}
+
+.prototype-detail-icon img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.case-prototype-results {
+  display: grid;
+  gap: 48px;
+  padding: 24px;
+  background-color: rgb(253.275, 252.125, 249.825);
+  box-shadow: 0 18px 40px rgba(31, 27, 28, 0.05), 0 4px 12px rgba(31, 27, 28, 0.03);
+  border-radius: 8px;
+  border: 1px solid rgba(31, 27, 28, 0.05);
+}
+
+.prototype-result-item strong {
+  display: block;
+  margin-bottom: 8px;
+  font-family: "Sundrea", serif;
+  font-size: 2.375rem;
+  line-height: 2.8125rem;
+  color: #99567E;
+  font-weight: 400;
+}
+.prototype-result-item strong small {
+  font-size: 45%;
+}
+.prototype-result-item p {
+  margin: 0;
+  color: #4A4243;
+  font-size: 0.875rem;
+  line-height: 1.1rem;
+}
+
+.ecodream-page .case-survey-note li {
+  padding-bottom: 24px;
+}
+
+/* ---------------CONCLUSION-------------- */
+.ecodream-page .case-conclusion {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  background-color: #FCFAF6;
+  margin-top: 40px;
+}
+.ecodream-page .case-conclusion-showcase {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 72px;
+  align-items: center;
+}
+.ecodream-page .case-conclusion-copy .main-subtitle {
+  display: block;
+  padding-bottom: 0;
+}
+.ecodream-page .case-conclusion-copy > p:not(.case-kicker) {
+  max-width: 520px;
+  margin-bottom: 40px;
+  color: #4A4243;
+  padding-top: 20px;
+}
+.ecodream-page .case-conclusion-media {
+  position: relative;
+  min-height: 450px;
+}
+.ecodream-page .case-conclusion-image {
+  display: block;
+  width: 86%;
+  height: 450px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 18px 44px rgba(31, 27, 28, 0.08);
+}
+.ecodream-page .case-conclusion-quote {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: min(360px, 46%);
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgba(252, 250, 246, 0.92);
+  box-shadow: 0 18px 44px rgba(31, 27, 28, 0.12);
+  transform: translateY(-50%);
+}
+.ecodream-page .case-conclusion-quote > span {
+  display: block;
+  margin-bottom: 18px;
+  font-family: "Sundrea", serif;
+  font-size: 5rem;
+  line-height: 2.5rem;
+  color: #99567E;
+  margin-top: 20px;
+}
+.ecodream-page .case-conclusion-quote > p {
+  margin-bottom: 32px;
+  color: #4A4243;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+.ecodream-page .case-conclusion-quote-author {
+  padding-top: 24px;
+  border-top: 1px solid rgba(167, 154, 157, 0.28);
+}
+.ecodream-page .case-conclusion-quote-author strong {
+  display: block;
+  margin-bottom: 8px;
+  font-family: "Geist Mono", monospace;
+  font-size: 0.875rem;
+  line-height: 1.1rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  color: #99567E;
+}
+.ecodream-page .case-conclusion-quote-author p {
+  margin: 0;
+  font-family: "Geist Mono", monospace;
+  font-size: 0.875rem;
+  line-height: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4A4243;
 }
 
-.case-conclusion-point p {
-  max-width: 280px;
-  margin-inline: auto;
-}
-
-/* ========================= NEXT PROJECT ========================= */
+/* ----------------------- NEXT PROJECT -------------------------- */
 .next-project-banner {
   padding: 64px 0;
 }
@@ -2700,6 +2795,10 @@ p {
   color: #9e005d;
 }
 
+.next-project-content .approach-note h4 {
+  margin-bottom: 0;
+}
+
 .next-project-content p {
   max-width: 520px;
   color: #FCFAF6;
@@ -2708,6 +2807,29 @@ p {
 .next-project-content .section-label {
   margin-bottom: 16px;
   color: #4f362b;
+}
+
+.right-arrow {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 1px;
+  margin-top: 32px;
+  background-color: #720E2B;
+  animation: arrow-move-left 1.6s ease-in-out infinite;
+  margin-bottom: 32px;
+}
+
+.right-arrow::before {
+  content: "";
+  position: absolute;
+  left: 94%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #720E2B;
+  border-top: 2px solid #720E2B;
+  transform: translateY(-50%) rotate(45deg);
 }
 
 /*----------------------------Planty of Food--------------------------*/
