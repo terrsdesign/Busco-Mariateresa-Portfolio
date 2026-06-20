@@ -51,21 +51,7 @@
   margin-left: -2px;
   color: v.$primary-color;
 }
-.ecodream-page .case-design .case-activity {
-  margin-bottom: 112px;
-}
 
-.ecodream-page .case-design .case-design-system-band {
-  margin-top: 120px;
-  margin-bottom: 120px;
-}
-
-.ecodream-page .case-image-card {
-  background-color: rgba(v.$primary-color, 0.9);
-  border: 1px solid rgba(v.$neutral-dark, 0.05);
-  box-shadow: 0 10px 24px rgba(v.$neutral-dark, 0.05);
-  padding: 8px;
-}
 
 /*----------- Typography -------------------*/
 .case-study-page .section-label {
@@ -90,33 +76,7 @@
   color: v.$ecodream-accent-color;
 }
 
-.case-info h4 {
-  margin-bottom: 28px;
-  font-size: v.$font-size-body-lg;
-  line-height: v.$line-height-body-lg;
-  font-weight: 400;
-  color: v.$ecodream-accent-color; 
-  font-family: v.$font-main; 
-}
 
-.case-process-text h3, .case-activity h4 {
-  margin-bottom: 0;
-  font-family: v.$font-accent;
-  font-size: v.$font-size-label;
-  line-height: v.$line-height-label;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: v.$ecodream-accent-color;
-  font-weight: 500;
-}
-
-.case-process-text p {
-  max-width: 500px;
-  margin-bottom: 0;
-  color: v.$neutral-medium;
-  font-size: v.$font-size-body-sm;
-  line-height: v.$line-height-body-sm;
-}
 
 .highlight-quote {
   max-width: 75%;
@@ -166,7 +126,7 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
   font-family: v.$font-main;
   font-size: v.$font-size-h4;
   line-height: v.$line-height-h4;
-  color:color.adjust(v.$ecodream-color, $lightness: -12%),
+  color:color.adjust(v.$ecodream-color, $lightness: -12%);
 }
 
 .case-hero-text {
@@ -290,7 +250,7 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-weight:500;
-  color:color.adjust(v.$ecodream-color, $lightness: -20%),
+  color:color.adjust(v.$ecodream-color, $lightness: -20%);
 }
 
 .case-snapshot-item p {
@@ -351,7 +311,7 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
   font-family: v.$font-accent;
   font-size: v.$font-size-h4;
   line-height: v.$line-height-h4;
-  color:color.adjust(v.$ecodream-accent-color, $lightness: -1%),
+  color:color.adjust(v.$ecodream-accent-color, $lightness: -1%);
 }
 
 .case-stat p {
@@ -1024,7 +984,7 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
       left: 14px;
       right: 14px;
       top: 50%;
-      height: px;
+      height: 2px;
       background-color: rgba(v.$ecodream-color, 0.45);
       transform: translateY(-50%);
     }

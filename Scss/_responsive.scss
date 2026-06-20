@@ -1,3 +1,6 @@
+@use "variables" as v;
+@use "sass:color";
+
 /* =========================
    RESPONSIVE - HOME
 ========================= */
@@ -545,373 +548,437 @@
   }
 }
 
-/* =========================
-   ECODREAM - RESEARCH RESPONSIVE
-   Solo layout, niente font
-========================= */
+/* --------------------- ECODREAM - RESPONSIVE ------------------------ */
+
+@media (max-width: 1200px) {
+  .ecodream-page {
+    .main-section-title-divider {
+      width: min(100%, 900px);
+    }
+
+    .case-snapshot {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      row-gap: 24px;
+    }
+
+    .case-snapshot-item:nth-child(3) {
+      border-right: 0;
+    }
+
+    .case-overview-layout,
+    .case-problem-layout,
+    .case-research-heading,
+    .case-research-summary,
+    .case-competitors-layout,
+    .case-design-direction,
+    .case-conclusion-showcase {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .case-overview-copy,
+    .case-research-heading > p:last-child,
+    .case-personas-copy {
+      padding-left: 0;
+      padding-right: 0;
+      border-left: 0;
+    }
+
+    .case-overview-stats {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    
+    .case-survey-quotes,
+    .case-accessibility-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .case-discovery-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 16px;
+}
+
+
+
+    .case-accessibility-item {
+      border-right: 0;
+      border-bottom: 1px solid rgba(v.$ecodream-accent-color, 0.08);
+      padding-top: 20px;
+    }
+
+    .case-personas-heading {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .case-personas-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .persona-card {
+      height: auto;
+      min-height: 0;
+    }
+
+    .case-design-flow {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .case-design-arrow {
+      margin-top: 0;
+      transform: rotate(90deg);
+    }
+
+    .case-design-phone {
+      max-width: 420px;
+      margin-inline: auto;
+    }
+
+    .case-prototype-showcase {
+      grid-template-columns: 1fr 220px;
+      gap: 48px;
+    }
+
+    .case-prototype-results {
+      grid-column: 1 / -1;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .case-conclusion-image {
+      width: 100%;
+    }
+  }
+}
 
 @media (max-width: 992px) {
-  .ecodream-page .case-research .case-layout-2 {
-    grid-template-columns: 1fr ;
-    gap: 48px ;
-  }
+  .ecodream-page {
+    .case-hero-top--ecodream {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
 
-  .ecodream-page .case-research .case-block,
-  .ecodream-page .case-research .case-activity,
-  .ecodream-page .case-research .case-simple-list,
-  .ecodream-page .case-research .case-numbered-list,
-  .ecodream-page .case-research .case-score-list,
-  .ecodream-page .case-research .case-image-grid,
-  .ecodream-page .case-research .case-gallery,
-  .ecodream-page .case-research .case-issues-grid {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-  }
+    .case-hero-media--ecodream {
+      min-height: auto;
+      padding-top: 16px;
+    }
 
-  .ecodream-page .case-research .case-activity p {
-    margin-left: 0;
-  }
+    .macbook-mockup {
+      width: min(100%, 520px);
+    }
 
-  .ecodream-page .case-research .highlight-quote {
-    max-width: 100% ;
-    margin-left: 0 ;
-  }
+    .video-mockup {
+      position: relative;
+      right: auto;
+      bottom: auto;
+      width: min(45%, 210px);
+      margin: -24px auto 0;
+    }
 
-  .ecodream-page .case-research .case-score-list {
-    padding-left: 0 ;
-    padding-right: 0 ;
-  }
+    .case-hero-actions {
+      width: 100%;
+    }
 
-  .ecodream-page .case-research .case-image-grid-2 {
-    grid-template-columns: 1fr ;
-  }
+    .case-score-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+}
 
-  .ecodream-page .case-research .case-survey-bubbles {
-    grid-template-columns: 1fr ;
-    max-width: 100% ;
-    gap: 52px ;
-    margin-left: 0 ;
-    margin-right: 0 ;
-  }
+    .case-score-item,
+    .case-score-total {
+      border-right: 0;
+      padding: 20px;
+      background-color: color.adjust(v.$primary-color, $lightness: 1%);
+    }
 
-  .ecodream-page .case-research .case-survey-bubble {
-    max-width: 100% ;
-    justify-self: stretch ;
-  }
+    .case-competitors-table-wrap {
+      overflow-x: auto;
 
-  .ecodream-page .case-research .case-issues-grid {
-    grid-template-columns: 1fr ;
-    gap: 0 ;
+      &:hover {
+        transform: none;
+      }
+    }
+
+    .case-competitors-table {
+      min-width: 760px;
+    }
+
+    .case-prototype-showcase {
+      grid-template-columns: 1fr;
+    }
+
+    .case-prototype-phone {
+      width: min(100%, 240px);
+      margin-inline: auto;
+    }
+
+    .case-prototype-details {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .case-conclusion-media {
+      min-height: auto;
+    }
+
+    .case-conclusion-image {
+      height: auto;
+      max-height: 520px;
+    }
+
+    .case-conclusion-quote {
+      position: relative;
+      top: auto;
+      right: auto;
+      width: min(92%, 420px);
+      margin: -80px auto 0;
+      transform: none;
+    }
+  }
+}
+@media (max-width: 380px) {
+  .ecodream-page {
+    .case-score-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .ecodream-page {
+    section {
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+
+    .case-kicker {
+      margin-top: 0;
+      margin-bottom: 18px;
+      font-size: 0.75rem;
+      line-height: 1.15rem;
+    }
+
+    .main-subtitle,
+    .case-hero h1 {
+      word-break: normal;
+      overflow-wrap: break-word;
+    }
+
+    .case-hero {
+      padding-top: 40px;
+      padding-bottom: 56px;
+    }
+
+    .case-hero h1 {
+      font-size: 3rem;
+      line-height: 3.45rem;
+    }
+
+    .case-hero-actions .btn-custom {
+      width: min(100%, 320px);
+    }
+
+    .case-snapshot {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .case-snapshot-item,
+    .case-snapshot-item:nth-child(3) {
+      border-right: 0;
+      border-bottom: 1px solid rgba(v.$ecodream-accent-color, 0.08);
+    }
+
+    .case-overview-stats,
+    .case-survey-quotes,
+    .case-accessibility-grid,
+    .case-prototype-details,
+    .case-prototype-results {
+      grid-template-columns: 1fr;
+    }
+
+    .case-research-heading,
+    .case-research-heading .case-kicker,
+    .case-research-heading .main-subtitle,
+    .case-research-heading > p:last-child {
+      grid-column: auto;
+    }
+
+    .highlight-quote {
+      max-width: 100%;
+      margin-left: 0 !important;
+    }
+
+    .case-survey-note {
+      display: grid;
+      grid-template-columns: 40px minmax(0, 1fr);
+    }
+
+    .case-survey-note ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .case-personas-grid {
+      gap: 20px;
+    }
+
+  
+
+    .persona-row {
+      grid-template-columns: 28px minmax(0, 1fr);
+      gap: 8px 12px;
+
+      p {
+        grid-column: 2;
+      }
+    }
+
+    .journey-labels span {
+      font-size: 0.68rem;
+      line-height: 0.9rem;
+    }
+
+    .case-design-direction {
+      margin-top: 24px;
+      margin-bottom: 88px;
+    }
+
+    .case-design-copy > p:not(.case-kicker),
+    .case-prototype-copy > p:not(.case-kicker),
+    .case-conclusion-copy > p:not(.case-kicker) {
+      max-width: 100%;
+    }
+
+    .case-prototype-results {
+      padding: 20px;
+      gap: 24px;
+    }
+
+    .case-conclusion-quote {
+      width: 100%;
+      margin-top: 24px;
+    }
+
+    .next-project-content {
+      max-width: 100%;
+      padding-inline: 20px;
+    }
+    
   }
 }
 
 @media (max-width: 576px) {
-  .ecodream-page .case-research .case-numbered-list li {
-    grid-template-columns: 40px minmax(0, 1fr) ;
+  .ecodream-page {
+    .main-section-title-divider {
+      width: 100%;
+    }
+
+    .case-hero h1 {
+      font-size: 2.55rem;
+      line-height: 2.95rem;
+    }
+
+    .ecodream-page .main-subtitle,
+    .main-subtitle {
+      font-size: 1.85rem;
+      line-height: 2.25rem;
+    }
+
+    .macbook-mockup {
+      width: 100%;
+    }
+
+    .video-mockup {
+      width: min(58%, 190px);
+    }
+
+    .case-snapshot,
+    .case-overview-stats {
+      grid-template-columns: 1fr;
+    }
+
+    .case-stat,
+    .case-research-card,
+    .case-survey-quote,
+    .persona-card,
+    .case-prototype-results,
+    .case-conclusion-quote {
+      padding: 20px;
+    }
+
+    .case-problem-point {
+      align-items: flex-start;
+    }
+
+    
+
+    .case-personas-copy {
+      margin-top: 0;
+    }
+
+    .persona-card-header {
+      grid-template-columns: 1fr;
+
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 220px;
+        object-fit: contain;
+      }
+    }
+
+    .journey-line span {
+      width: 22px;
+      height: 22px;
+      font-size: 0.8rem;
+    }
+
+    .case-design-phone {
+      max-width: 100%;
+    }
+
+    .case-prototype-phone {
+      width: min(100%, 220px);
+    }
+
+    .case-conclusion-image {
+      max-height: 360px;
+    }
+
+    .case-conclusion-quote > p {
+      font-size: v.$font-size-body;
+      line-height: v.$line-height-body;
+    }
+
+    .btn-custom {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+  .ecodream-page {
+  .persona-card-header {
+    grid-template-columns: 50px minmax(0, 1fr);
+    gap: 14px;
+    align-items: start;
+
+    img {
+      width: 50px;
+      height: 50px;
+      max-height: none;
+      object-fit: cover;
+      border-radius: 999px;
+      margin-top: 2px;
+      opacity: 1;
+    }
   }
 
-  .ecodream-page .case-research .case-score-item {
-    grid-template-columns: 1fr ;
-    gap: 8px ;
-  }
-
-  .ecodream-page .case-research .case-gallery {
-    padding-inline: 0 ;
-  }
-
-  .ecodream-page .case-research .case-gallery-viewport {
-    width: 100% ;
-  }
-
-  .ecodream-page .case-research .case-gallery-slide {
-    width: 100% ;
-  }
-
-  .ecodream-page .case-research .case-gallery-slide.is-active-left,
-  .ecodream-page .case-research .case-gallery-slide.is-active-right {
-    left: 0;
-  }
-
-  .ecodream-page .case-research .case-gallery-slide.is-active-right {
-    display: none ;
-  }
-
-  
-  .ecodream-page .case-research .case-issue-card {
-    display: grid ;
-    align-items: center ;
-    min-height: 160px;
-  }
-
-  .ecodream-page .case-research .case-issue-text,
-  .ecodream-page .case-research .case-issue-number {
-    align-self: center;
+  .persona-summary {
+    margin-top: 12px;
+    max-width: 100%;
   }
 }
-
-
-
-/* =========================
-   ECODREAM - STRATEGY RESPONSIVE
-   Solo layout, niente font
-========================= */
-
-@media (max-width: 1200px) {
-  .ecodream-page .case-strategy .case-layout-2 {
-    gap: 32px;
-  }
-
-  .ecodream-page .case-strategy .case-layout-equal {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .ecodream-page .case-strategy .case-image-grid-2 {
-    grid-template-columns: 1fr;
-  }
-
-  .ecodream-page .case-strategy .case-image-grid,
-  .ecodream-page .case-strategy .case-image-card,
-  .ecodream-page .case-strategy .case-image-card img {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .ecodream-page .case-strategy .case-layout-equal {
-    grid-template-columns: 1fr;
-  }
-
-  .ecodream-page .case-strategy .case-layout-2 {
-    gap: 40px;
-  }
-
-  .ecodream-page .case-strategy .case-block,
-  .ecodream-page .case-strategy .case-activity,
-  .ecodream-page .case-strategy .case-numbered-list {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-
-  .ecodream-page .case-strategy .highlight-quote {
-    max-width: 100%;
-    margin-left: 0;
-  }
-
-  .ecodream-page .case-strategy .case-activity p {
-    margin-left: 0;
-  }
-}
-
-/* =========================
-   ECODREAM - WIREFRAMES RESPONSIVE
-   Solo layout, niente font
-========================= */
-
-@media (max-width: 1200px) {
-  .ecodream-page .case-design .case-wireframe-layout,
-  .ecodream-page .case-design .case-wireframe-layout.case-layout-reverse {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .ecodream-page .case-design .case-block,
-  .ecodream-page .case-design .case-activity,
-  .ecodream-page .case-design .case-wireframe-preview,
-  .ecodream-page .case-design .case-page-flow {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-
-  .ecodream-page .case-design .case-activity p {
-    margin-left: 0;
-  }
-
-  .ecodream-page .case-design .highlight-quote {
-    max-width: 100%;
-    margin-left: 0;
-  }
-
-  .ecodream-page .case-design .case-wireframe-preview {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .ecodream-page .case-design .case-page-flow {
-    overflow-x: auto;
-    justify-content: start;
-    padding-bottom: 8px;
-  }
-}
-
-@media (max-width: 768px) {
-  .ecodream-page .case-design .case-wireframe-preview {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .ecodream-page .case-design .case-wireframe-card,
-  .ecodream-page .case-design .case-image-card,
-  .ecodream-page .case-design .case-image-card img {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-
-  
-}
-
-/* =========================
-   ECODREAM - DESIGN SYSTEM MOBILE
-   Solo layout, niente font
-========================= */
-
-@media (max-width: 768px) {
-  .ecodream-page .case-design .case-design-system-band .case-image-grid-3 {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .ecodream-page .case-design .case-design-system-band .case-image-card {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .ecodream-page .case-design .case-design-system-band .case-image-card img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-/* =========================
-   ECODREAM - PROTOTYPE RESPONSIVE
-   Solo layout, niente font
-========================= */
-
-@media (max-width: 1200px) {
-  .ecodream-page .case-prototype .case-prototype-intro {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-
-  .ecodream-page .case-prototype .case-block,
-  .ecodream-page .case-prototype .case-prototype-media,
-  .ecodream-page .case-prototype .case-test-overview {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-
-  .ecodream-page .case-prototype .highlight-quote {
-    max-width: 100%;
-    margin-left: 0;
-  }
-
-  .ecodream-page .case-prototype .case-prototype-media {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-    min-height: auto;
-  }
-
-  .ecodream-page .case-prototype .case-desktop-video,
-  .ecodream-page .case-prototype .case-phone-video {
-    position: relative;
-    top: auto;
-    left: auto;
-    right: auto;
-    transform: none;
-    margin-inline: auto;
-  }
-
-  .ecodream-page .case-prototype .case-desktop-video {
-    display: none;
-    width: min(100%, 640px);
-  }
-
-  .ecodream-page .case-prototype .case-phone-video {
-    width: min(100%, 260px);
-  }
-
-  .ecodream-page .case-prototype .case-test-overview {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 576px) {
-  .ecodream-page .case-prototype .case-test-overview {
-    grid-template-columns: 1fr;
-  }
-
-  .ecodream-page .case-prototype .btn-custom {
-    width: 100%;
-  }
-
-  .ecodream-page .case-prototype .case-phone-video {
-    width: 100%;
-  }
-}
-
-@media (max-width: 992px) {
-  .ecodream-page .case-task-outcome-layout {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .ecodream-page .case-task-outcome-layout .case-block {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-}
-
-/* =========================
-   ECODREAM - CONCLUSION RESPONSIVE
-   Solo layout, niente font
-========================= */
-
-@media (max-width: 992px) {
-  .ecodream-page .case-conclusion {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .ecodream-page .case-conclusion .case-section-title {
-    justify-content: flex-start;
-    text-align: left;
-  }
-
-  .ecodream-page .case-conclusion-stack {
-    grid-template-columns: 1fr;
-    width: 100%;
-    max-width: 760px;
-    gap: 24px;
-    text-align: center;
-  }
-
-  .ecodream-page .case-conclusion-intro {
-    width: 100%;
-    max-width: 100%;
-    margin-inline: 0;
-  }
-
-  .ecodream-page .case-conclusion-point {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .ecodream-page .case-conclusion-point p {
-    max-width: 100%;
-    margin-inline: auto;
-  }
-
-  .ecodream-page .case-conclusion-icon {
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 

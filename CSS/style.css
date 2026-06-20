@@ -1557,22 +1557,6 @@ p {
   color: #FCFAF6;
 }
 
-.ecodream-page .case-design .case-activity {
-  margin-bottom: 112px;
-}
-
-.ecodream-page .case-design .case-design-system-band {
-  margin-top: 120px;
-  margin-bottom: 120px;
-}
-
-.ecodream-page .case-image-card {
-  background-color: rgba(252, 250, 246, 0.9);
-  border: 1px solid rgba(31, 27, 28, 0.05);
-  box-shadow: 0 10px 24px rgba(31, 27, 28, 0.05);
-  padding: 8px;
-}
-
 /*----------- Typography -------------------*/
 .case-study-page .section-label {
   color: #B3AC6D;
@@ -1595,34 +1579,6 @@ p {
   font-size: 4.25rem;
   line-height: 5.1875rem;
   color: #99567E;
-}
-
-.case-info h4 {
-  margin-bottom: 28px;
-  font-size: 1.2rem;
-  line-height: 1.6rem;
-  font-weight: 400;
-  color: #99567E;
-  font-family: "Satoshi-Variable", sans-serif;
-}
-
-.case-process-text h3, .case-activity h4 {
-  margin-bottom: 0;
-  font-family: "Geist Mono", monospace;
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #99567E;
-  font-weight: 500;
-}
-
-.case-process-text p {
-  max-width: 500px;
-  margin-bottom: 0;
-  color: #4A4243;
-  font-size: 0.875rem;
-  line-height: 1.1rem;
 }
 
 .highlight-quote {
@@ -2464,7 +2420,7 @@ p {
   left: 14px;
   right: 14px;
   top: 50%;
-  height: px;
+  height: 2px;
   background-color: rgba(179, 172, 109, 0.45);
   transform: translateY(-50%);
 }
@@ -3582,304 +3538,342 @@ p {
     margin-top: 10px;
   }
 }
-/* =========================
-   ECODREAM - RESEARCH RESPONSIVE
-   Solo layout, niente font
-========================= */
-@media (max-width: 992px) {
-  .ecodream-page .case-research .case-layout-2 {
+/* --------------------- ECODREAM - RESPONSIVE ------------------------ */
+@media (max-width: 1200px) {
+  .ecodream-page .main-section-title-divider {
+    width: min(100%, 900px);
+  }
+  .ecodream-page .case-snapshot {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 24px;
+  }
+  .ecodream-page .case-snapshot-item:nth-child(3) {
+    border-right: 0;
+  }
+  .ecodream-page .case-overview-layout,
+  .ecodream-page .case-problem-layout,
+  .ecodream-page .case-research-heading,
+  .ecodream-page .case-research-summary,
+  .ecodream-page .case-competitors-layout,
+  .ecodream-page .case-design-direction,
+  .ecodream-page .case-conclusion-showcase {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 40px;
   }
-  .ecodream-page .case-research .case-block,
-  .ecodream-page .case-research .case-activity,
-  .ecodream-page .case-research .case-simple-list,
-  .ecodream-page .case-research .case-numbered-list,
-  .ecodream-page .case-research .case-score-list,
-  .ecodream-page .case-research .case-image-grid,
-  .ecodream-page .case-research .case-gallery,
-  .ecodream-page .case-research .case-issues-grid {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-  }
-  .ecodream-page .case-research .case-activity p {
-    margin-left: 0;
-  }
-  .ecodream-page .case-research .highlight-quote {
-    max-width: 100%;
-    margin-left: 0;
-  }
-  .ecodream-page .case-research .case-score-list {
+  .ecodream-page .case-overview-copy,
+  .ecodream-page .case-research-heading > p:last-child,
+  .ecodream-page .case-personas-copy {
     padding-left: 0;
     padding-right: 0;
+    border-left: 0;
   }
-  .ecodream-page .case-research .case-image-grid-2 {
-    grid-template-columns: 1fr;
-  }
-  .ecodream-page .case-research .case-survey-bubbles {
-    grid-template-columns: 1fr;
-    max-width: 100%;
-    gap: 52px;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .ecodream-page .case-research .case-survey-bubble {
-    max-width: 100%;
-    justify-self: stretch;
-  }
-  .ecodream-page .case-research .case-issues-grid {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-}
-@media (max-width: 576px) {
-  .ecodream-page .case-research .case-numbered-list li {
-    grid-template-columns: 40px minmax(0, 1fr);
-  }
-  .ecodream-page .case-research .case-score-item {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-  .ecodream-page .case-research .case-gallery {
-    padding-inline: 0;
-  }
-  .ecodream-page .case-research .case-gallery-viewport {
-    width: 100%;
-  }
-  .ecodream-page .case-research .case-gallery-slide {
-    width: 100%;
-  }
-  .ecodream-page .case-research .case-gallery-slide.is-active-left,
-  .ecodream-page .case-research .case-gallery-slide.is-active-right {
-    left: 0;
-  }
-  .ecodream-page .case-research .case-gallery-slide.is-active-right {
-    display: none;
-  }
-  .ecodream-page .case-research .case-issue-card {
-    display: grid;
-    align-items: center;
-    min-height: 160px;
-  }
-  .ecodream-page .case-research .case-issue-text,
-  .ecodream-page .case-research .case-issue-number {
-    align-self: center;
-  }
-}
-/* =========================
-   ECODREAM - STRATEGY RESPONSIVE
-   Solo layout, niente font
-========================= */
-@media (max-width: 1200px) {
-  .ecodream-page .case-strategy .case-layout-2 {
-    gap: 32px;
-  }
-  .ecodream-page .case-strategy .case-layout-equal {
+  .ecodream-page .case-overview-stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .ecodream-page .case-strategy .case-image-grid-2 {
-    grid-template-columns: 1fr;
-  }
-  .ecodream-page .case-strategy .case-image-grid,
-  .ecodream-page .case-strategy .case-image-card,
-  .ecodream-page .case-strategy .case-image-card img {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-}
-@media (max-width: 768px) {
-  .ecodream-page .case-strategy .case-layout-equal {
-    grid-template-columns: 1fr;
-  }
-  .ecodream-page .case-strategy .case-layout-2 {
-    gap: 40px;
-  }
-  .ecodream-page .case-strategy .case-block,
-  .ecodream-page .case-strategy .case-activity,
-  .ecodream-page .case-strategy .case-numbered-list {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-  .ecodream-page .case-strategy .highlight-quote {
-    max-width: 100%;
-    margin-left: 0;
-  }
-  .ecodream-page .case-strategy .case-activity p {
-    margin-left: 0;
-  }
-}
-/* =========================
-   ECODREAM - WIREFRAMES RESPONSIVE
-   Solo layout, niente font
-========================= */
-@media (max-width: 1200px) {
-  .ecodream-page .case-design .case-wireframe-layout,
-  .ecodream-page .case-design .case-wireframe-layout.case-layout-reverse {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .ecodream-page .case-design .case-block,
-  .ecodream-page .case-design .case-activity,
-  .ecodream-page .case-design .case-wireframe-preview,
-  .ecodream-page .case-design .case-page-flow {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-  .ecodream-page .case-design .case-activity p {
-    margin-left: 0;
-  }
-  .ecodream-page .case-design .highlight-quote {
-    max-width: 100%;
-    margin-left: 0;
-  }
-  .ecodream-page .case-design .case-wireframe-preview {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .ecodream-page .case-design .case-page-flow {
-    overflow-x: auto;
-    justify-content: start;
-    padding-bottom: 8px;
-  }
-}
-@media (max-width: 768px) {
-  .ecodream-page .case-design .case-wireframe-preview {
+  .ecodream-page .case-survey-quotes,
+  .ecodream-page .case-accessibility-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .ecodream-page .case-design .case-wireframe-card,
-  .ecodream-page .case-design .case-image-card,
-  .ecodream-page .case-design .case-image-card img {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
+  .ecodream-page .case-discovery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 16px;
   }
-}
-/* =========================
-   ECODREAM - DESIGN SYSTEM MOBILE
-   Solo layout, niente font
-========================= */
-@media (max-width: 768px) {
-  .ecodream-page .case-design .case-design-system-band .case-image-grid-3 {
+  .ecodream-page .case-accessibility-item {
+    border-right: 0;
+    border-bottom: 1px solid rgba(153, 86, 126, 0.08);
+    padding-top: 20px;
+  }
+  .ecodream-page .case-personas-heading {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 20px;
   }
-  .ecodream-page .case-design .case-design-system-band .case-image-card {
-    width: 100%;
-    max-width: 100%;
+  .ecodream-page .case-personas-grid {
+    grid-template-columns: 1fr;
   }
-  .ecodream-page .case-design .case-design-system-band .case-image-card img {
-    width: 100%;
-    max-width: 100%;
+  .ecodream-page .persona-card {
     height: auto;
+    min-height: 0;
   }
-}
-/* =========================
-   ECODREAM - PROTOTYPE RESPONSIVE
-   Solo layout, niente font
-========================= */
-@media (max-width: 1200px) {
-  .ecodream-page .case-prototype .case-prototype-intro {
+  .ecodream-page .case-design-flow {
     grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .ecodream-page .case-design-arrow {
+    margin-top: 0;
+    transform: rotate(90deg);
+  }
+  .ecodream-page .case-design-phone {
+    max-width: 420px;
+    margin-inline: auto;
+  }
+  .ecodream-page .case-prototype-showcase {
+    grid-template-columns: 1fr 220px;
     gap: 48px;
   }
-  .ecodream-page .case-prototype .case-block,
-  .ecodream-page .case-prototype .case-prototype-media,
-  .ecodream-page .case-prototype .case-test-overview {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
+  .ecodream-page .case-prototype-results {
+    grid-column: 1/-1;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
   }
-  .ecodream-page .case-prototype .highlight-quote {
-    max-width: 100%;
-    margin-left: 0;
-  }
-  .ecodream-page .case-prototype .case-prototype-media {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-    min-height: auto;
-  }
-  .ecodream-page .case-prototype .case-desktop-video,
-  .ecodream-page .case-prototype .case-phone-video {
-    position: relative;
-    top: auto;
-    left: auto;
-    right: auto;
-    transform: none;
-    margin-inline: auto;
-  }
-  .ecodream-page .case-prototype .case-desktop-video {
-    display: none;
-    width: min(100%, 640px);
-  }
-  .ecodream-page .case-prototype .case-phone-video {
-    width: min(100%, 260px);
-  }
-  .ecodream-page .case-prototype .case-test-overview {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-@media (max-width: 576px) {
-  .ecodream-page .case-prototype .case-test-overview {
-    grid-template-columns: 1fr;
-  }
-  .ecodream-page .case-prototype .btn-custom {
-    width: 100%;
-  }
-  .ecodream-page .case-prototype .case-phone-video {
+  .ecodream-page .case-conclusion-image {
     width: 100%;
   }
 }
 @media (max-width: 992px) {
-  .ecodream-page .case-task-outcome-layout {
+  .ecodream-page .case-hero-top--ecodream {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  .ecodream-page .case-task-outcome-layout .case-block {
+  .ecodream-page .case-hero-media--ecodream {
+    min-height: auto;
+    padding-top: 16px;
+  }
+  .ecodream-page .macbook-mockup {
+    width: min(100%, 520px);
+  }
+  .ecodream-page .video-mockup {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: min(45%, 210px);
+    margin: -24px auto 0;
+  }
+  .ecodream-page .case-hero-actions {
     width: 100%;
-    max-width: 100%;
-    min-width: 0;
   }
-}
-/* =========================
-   ECODREAM - CONCLUSION RESPONSIVE
-   Solo layout, niente font
-========================= */
-@media (max-width: 992px) {
-  .ecodream-page .case-conclusion {
-    width: 100%;
-    max-width: 100%;
+  .ecodream-page .case-score-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
   }
-  .ecodream-page .case-conclusion .case-section-title {
-    justify-content: flex-start;
-    text-align: left;
+  .ecodream-page .case-score-item,
+  .ecodream-page .case-score-total {
+    border-right: 0;
+    padding: 20px;
+    background-color: rgb(253.275, 252.125, 249.825);
   }
-  .ecodream-page .case-conclusion-stack {
+  .ecodream-page .case-competitors-table-wrap {
+    overflow-x: auto;
+  }
+  .ecodream-page .case-competitors-table-wrap:hover {
+    transform: none;
+  }
+  .ecodream-page .case-competitors-table {
+    min-width: 760px;
+  }
+  .ecodream-page .case-prototype-showcase {
     grid-template-columns: 1fr;
-    width: 100%;
-    max-width: 760px;
-    gap: 24px;
-    text-align: center;
   }
-  .ecodream-page .case-conclusion-intro {
-    width: 100%;
-    max-width: 100%;
-    margin-inline: 0;
-  }
-  .ecodream-page .case-conclusion-point {
-    width: 100%;
-    max-width: 100%;
-  }
-  .ecodream-page .case-conclusion-point p {
-    max-width: 100%;
+  .ecodream-page .case-prototype-phone {
+    width: min(100%, 240px);
     margin-inline: auto;
   }
-  .ecodream-page .case-conclusion-icon {
-    margin-left: auto;
-    margin-right: auto;
+  .ecodream-page .case-prototype-details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .ecodream-page .case-conclusion-media {
+    min-height: auto;
+  }
+  .ecodream-page .case-conclusion-image {
+    height: auto;
+    max-height: 520px;
+  }
+  .ecodream-page .case-conclusion-quote {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: min(92%, 420px);
+    margin: -80px auto 0;
+    transform: none;
+  }
+}
+@media (max-width: 380px) {
+  .ecodream-page .case-score-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .ecodream-page section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .ecodream-page .case-kicker {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 0.75rem;
+    line-height: 1.15rem;
+  }
+  .ecodream-page .main-subtitle,
+  .ecodream-page .case-hero h1 {
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+  .ecodream-page .case-hero {
+    padding-top: 40px;
+    padding-bottom: 56px;
+  }
+  .ecodream-page .case-hero h1 {
+    font-size: 3rem;
+    line-height: 3.45rem;
+  }
+  .ecodream-page .case-hero-actions .btn-custom {
+    width: min(100%, 320px);
+  }
+  .ecodream-page .case-snapshot {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .ecodream-page .case-snapshot-item,
+  .ecodream-page .case-snapshot-item:nth-child(3) {
+    border-right: 0;
+    border-bottom: 1px solid rgba(153, 86, 126, 0.08);
+  }
+  .ecodream-page .case-overview-stats,
+  .ecodream-page .case-survey-quotes,
+  .ecodream-page .case-accessibility-grid,
+  .ecodream-page .case-prototype-details,
+  .ecodream-page .case-prototype-results {
+    grid-template-columns: 1fr;
+  }
+  .ecodream-page .case-research-heading,
+  .ecodream-page .case-research-heading .case-kicker,
+  .ecodream-page .case-research-heading .main-subtitle,
+  .ecodream-page .case-research-heading > p:last-child {
+    grid-column: auto;
+  }
+  .ecodream-page .highlight-quote {
+    max-width: 100%;
+    margin-left: 0 !important;
+  }
+  .ecodream-page .case-survey-note {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr);
+  }
+  .ecodream-page .case-survey-note ul {
+    margin: 0;
+    padding-left: 18px;
+  }
+  .ecodream-page .case-personas-grid {
+    gap: 20px;
+  }
+  .ecodream-page .persona-row {
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 8px 12px;
+  }
+  .ecodream-page .persona-row p {
+    grid-column: 2;
+  }
+  .ecodream-page .journey-labels span {
+    font-size: 0.68rem;
+    line-height: 0.9rem;
+  }
+  .ecodream-page .case-design-direction {
+    margin-top: 24px;
+    margin-bottom: 88px;
+  }
+  .ecodream-page .case-design-copy > p:not(.case-kicker),
+  .ecodream-page .case-prototype-copy > p:not(.case-kicker),
+  .ecodream-page .case-conclusion-copy > p:not(.case-kicker) {
+    max-width: 100%;
+  }
+  .ecodream-page .case-prototype-results {
+    padding: 20px;
+    gap: 24px;
+  }
+  .ecodream-page .case-conclusion-quote {
+    width: 100%;
+    margin-top: 24px;
+  }
+  .ecodream-page .next-project-content {
+    max-width: 100%;
+    padding-inline: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .ecodream-page .main-section-title-divider {
+    width: 100%;
+  }
+  .ecodream-page .case-hero h1 {
+    font-size: 2.55rem;
+    line-height: 2.95rem;
+  }
+  .ecodream-page .ecodream-page .main-subtitle,
+  .ecodream-page .main-subtitle {
+    font-size: 1.85rem;
+    line-height: 2.25rem;
+  }
+  .ecodream-page .macbook-mockup {
+    width: 100%;
+  }
+  .ecodream-page .video-mockup {
+    width: min(58%, 190px);
+  }
+  .ecodream-page .case-snapshot,
+  .ecodream-page .case-overview-stats {
+    grid-template-columns: 1fr;
+  }
+  .ecodream-page .case-stat,
+  .ecodream-page .case-research-card,
+  .ecodream-page .case-survey-quote,
+  .ecodream-page .persona-card,
+  .ecodream-page .case-prototype-results,
+  .ecodream-page .case-conclusion-quote {
+    padding: 20px;
+  }
+  .ecodream-page .case-problem-point {
+    align-items: flex-start;
+  }
+  .ecodream-page .case-personas-copy {
+    margin-top: 0;
+  }
+  .ecodream-page .persona-card-header {
+    grid-template-columns: 1fr;
+  }
+  .ecodream-page .persona-card-header img {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .ecodream-page .journey-line span {
+    width: 22px;
+    height: 22px;
+    font-size: 0.8rem;
+  }
+  .ecodream-page .case-design-phone {
+    max-width: 100%;
+  }
+  .ecodream-page .case-prototype-phone {
+    width: min(100%, 220px);
+  }
+  .ecodream-page .case-conclusion-image {
+    max-height: 360px;
+  }
+  .ecodream-page .case-conclusion-quote > p {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+  .ecodream-page .btn-custom {
+    width: 100%;
+    min-width: 0;
+  }
+  .ecodream-page .persona-card-header {
+    grid-template-columns: 50px minmax(0, 1fr);
+    gap: 14px;
+    align-items: start;
+  }
+  .ecodream-page .persona-card-header img {
+    width: 50px;
+    height: 50px;
+    max-height: none;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 999px;
+    margin-top: 2px;
+    opacity: 1;
+  }
+  .ecodream-page .persona-summary {
+    margin-top: 12px;
+    max-width: 100%;
   }
 }
 /* =========================
