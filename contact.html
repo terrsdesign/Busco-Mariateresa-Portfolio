@@ -37,6 +37,13 @@
         MB
       </a>
 
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+
       <ul class="nav-menu nav-menu-right">
         <li><a href="aboutme.html">About me</a></li>
         <li><a href="cv.html">CV</a></li>
@@ -195,7 +202,7 @@
   <p><span class="diagonal-highlight" style="transform: rotate(3deg); padding: 2px 10px;">Find me on</span></p>
 
   <div class="footer-links">
-    <a href="www.linkedin.com/in/mariateresabusco" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.linkedin.com/in/mariateresabusco" target="_blank" rel="noopener noreferrer">
       <span class="footer-link-icon" aria-hidden="true">
   <img src="../Assets/Image/linkedin.svg" alt="LinkedIn Profile">
 </span>
@@ -258,6 +265,26 @@
           formMessage.textContent = "Ops, something went wrong! Try again.";
         }
       );
+  });
+</script>
+
+<script>
+  const navWrapper = document.querySelector(".nav-wrapper");
+  const navToggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelectorAll(".nav-menu a");
+
+  navToggle.addEventListener("click", () => {
+    const isOpen = navWrapper.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", isOpen);
+    navToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navWrapper.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Open menu");
+    });
   });
 </script>
 

@@ -1,106 +1,6 @@
 @use "variables" as v;
 @use "sass:color";
 
-/* ------------------BUTTONS / CTA--------------------------- */
-
-.btn-custom {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  text-decoration: none;
-  font-family: v.$font-accent;
-  font-weight: 400;
-  line-height: 1;
-  color: v.$primary-color;
-  font-size: v.$font-size-label;
-  text-transform: uppercase;
-  cursor: pointer;
-  letter-spacing: 0.08em;
-  transition:
-    background-color 0.25s ease,
-    color 0.25s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-/* Sizes */
-
-.btn-custom-large {
-  min-width: 200px;
-  min-height: 40px;
-  padding: 8px 32px;
-  border-radius: v.$radius-md;
-  font-size: v.$font-size-label;
-  line-height: v.$line-height-label;
-}
-
-.btn-custom-small {
-  min-width: 140px;
-  min-height: 30px;
-  padding: 8px 24px;
-  border-radius: 8px;
-  font-size: v.$font-size-link-sm;
-  line-height: v.$line-height-link-sm;
-}
-
-/* Primary: blue */
-
-.btn-custom-primary {
-  background-color: v.$accent-color;
-  color: v.$primary-color;
-  box-shadow: 0 2px 5px rgba(31, 27, 28, 0.18);
-
-  
-
-  &:hover {
-    background-color: color.adjust(v.$accent-color, $lightness: -10%);
-    color: v.$primary-color;
-    transform: rotate(-2deg);
-  }
-
-  &:active {
-    background-color: color.adjust(v.$accent-color, $lightness: -20%);
-    color: v.$primary-color;
-    transform: rotate(0deg);
-    box-shadow: none;
-  }
-}
-
-/* Secondary: grey */
-
-.btn-custom-secondary {
-  background-color: color.adjust(v.$neutral-light, $lightness: 10%);
-  color: v.$primary-color;
-  box-shadow: 0 2px 5px rgba(31, 27, 28, 0.18);
-
-  &:hover {
-    background-color: v.$neutral-light;
-    color: v.$primary-color;
-    transform: rotate(-2deg);
-  }
-
-  &:active {
-    background-color: color.adjust(v.$neutral-light, $lightness: -10%);
-    color: v.$primary-color;
-    transform: rotate(0deg);
-    box-shadow: none;
-  }
-}
-
-/* Disabled */
-
-.btn-custom.is-disabled,
-.btn-custom:disabled {
-  background-color: v.$neutral-light;
-  color: v.$primary-color;
-  pointer-events: none;
-  cursor: not-allowed;
-  box-shadow: none;
-  transform: none;
-}
-/* -----------------------------END BUTTON---------------------------------- */
-
 .style-one {
   font-feature-settings: "ss01" on;
   
@@ -126,6 +26,7 @@ background: linear-gradient(
 .bigger-word {
   display: inline-block;
   font-size: 120%;
+  color: color.adjust(v.$accent-color, $lightness: -10%)
 }
 
 
@@ -216,7 +117,7 @@ background: linear-gradient(
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: v.$accent-color;
+  color: color.adjust(v.$accent-color, $lightness: -10%);
 
 }
 /* ------------------ ARROWS--------------------------- */
@@ -687,7 +588,7 @@ background: linear-gradient(
 }
 
 .approach-note h4
-{color: v.$accent-color;
+{color: color.adjust(v.$accent-color, $lightness: -10%);
 font-weight:300!important;}
 
 
@@ -731,16 +632,7 @@ font-weight:300!important;}
     color: v.$primary-color;
   }
 
-  .btn-primary-custom {
-    margin-top: 20px;
-    background-color: v.$primary-color;
-    color: v.$neutral-dark;
-
-    &:hover {
-      background-color: v.$primary-color;
-      color: v.$secondary-color;
-    }
-  }
+  
 }
 
 
@@ -917,8 +809,12 @@ font-weight:300!important;}
 }
   
 
+/* ---------------------  CV PAGE  --------------------- */
 
-/* =========================  CV PAGE  ========================= */
+.cv-section .subtitle {
+  color: color.adjust(v.$accent-color, $lightness: -18%) !important;
+  font-size:v.$font-size-body-sm;
+}
 
 .cv-section {
   padding-top: 80px;
@@ -928,9 +824,11 @@ font-weight:300!important;}
 .cv-paper {
   max-width: 1180px;
   margin-inline: auto;
-  background-color: #ffffff;
-  box-shadow: 0 24px 70px rgba(31, 27, 28, 0.12);
-  overflow: hidden;
+  background-color: v.$primary-color;
+border: 1px solid rgba(v.$neutral-dark, 0.05);
+  box-shadow:
+    0 18px 40px rgba(v.$neutral-dark, 0.05),
+    0 4px 12px rgba(v.$neutral-dark, 0.03);  overflow: hidden;
 }
 
 .cv-header {
@@ -938,7 +836,9 @@ font-weight:300!important;}
   grid-template-columns: 288px minmax(0, 1fr);
   align-items: end;
   min-height: 150px;
-  background-color: #720E2B;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 40%),
+    linear-gradient(180deg, v.$secondary-color 0%, v.$secondary-color-soft 100%);
 }
 
 .cv-header-text {
@@ -963,8 +863,8 @@ font-weight:300!important;}
 
 .cv-grid {
   display: grid;
-  grid-template-columns: 390px minmax(0, 1fr);
-  gap: 46px;
+  grid-template-columns: 400px minmax(0, 1fr);
+  gap: 48px;
   padding: 0 28px 72px 0;
 }
 
@@ -987,17 +887,29 @@ font-weight:300!important;}
 }
 
 .cv-sidebar .cv-block > .section-label {
+  display: block;
+  margin: 0 0 16px;
   padding-left: 42px;
-  background-color:v.$secondary-color;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 40%),
+    linear-gradient(180deg, v.$secondary-color 0%, v.$secondary-color-soft 100%);
   font-family: v.$font-accent;
-  color:v.$primary-color;
+  color: v.$primary-color;
   font-size: v.$font-size-label;
+  line-height: v.$line-height-label;
   font-weight: 400;
 }
 
 .cv-main .cv-block > .section-label {
-  padding-bottom: 0px;
-  border-bottom: 6px solid color.adjust(v.$primary-color, $lightness: -3%);
+  display: block;
+  margin: 0 0 24px 0;
+  padding-bottom: 0;
+  border-bottom: 2px solid color.adjust(v.$accent-color, $lightness: 30%);
+  color: v.$secondary-color;
+  font-family: v.$font-heading;
+  font-size: v.$font-size-h4;
+  line-height: v.$line-height-body-sm;
+  font-weight: 400;
 }
 
 .cv-sidebar .cv-block > ul {
@@ -1010,12 +922,6 @@ font-weight:300!important;}
   padding-left: 42px;
 }
 
-.cv-main > .cv-block > .section-label 
-{
-  font-size: v.$font-size-h4;
-}
-
-
 .cv-tools {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1024,19 +930,20 @@ font-weight:300!important;}
   padding-right: 20px;
 }
 
-.cv-sidebar .subtitle
-{font-size:v.$font-size-body;
-  font-family: v.$font-main;
-  text-transform: capitalize;
-  font-weight:600;
-  letter-spacing: normal;
+.cv-sidebar .subtitle {
+  letter-spacing: 0rem;
+  padding-bottom: 0;
+  margin-bottom: 5px;
 }
 
 .cv-tools ul {
   padding-left: 20px;
 }
+
 .cv-skill {
-  margin-bottom: 18px;
+  padding-left: 42px;
+  padding-right: 24px;
+  margin-bottom: 28px;
 }
 
 .cv-skill .subtitle {
@@ -1047,17 +954,13 @@ font-weight:300!important;}
   margin-top: 0;
 }
 
-.cv-skill {
-  padding-left: 42px;
-  padding-right: 24px;
-  margin-bottom: 28px;
-}
-
-.cv-entry h4
-{font-size:v.$font-size-body-lg;
-font-family:v.$font-main;
-font-weight:600;
-margin:0;
+.cv-entry h3 {
+  margin: 0;
+  font-size: v.$font-size-body-lg;
+  line-height: v.$line-height-body-lg;
+  font-family: v.$font-main;
+  font-weight: 600;
+  color: v.$neutral-dark;
 }
 
 .cv-sidebar .cv-block:last-child > p:not(.section-label) {
@@ -1065,7 +968,7 @@ margin:0;
 }
 
 .cv-entry {
-  margin-bottom: 30px;
+  margin-bottom: 64px;
 }
 
 .cv-entry:last-child {
@@ -1083,12 +986,18 @@ margin:0;
   font-style: italic;
 }
 
-.cv-header h1
-{
-color: color.adjust(v.$accent-color, $lightness: 20%);
-margin:0;
+.cv-header h1,
+.cv-header .cv-name {
+  margin: 0;
+  color: color.adjust(v.$accent-color, $lightness: 20%);
 }
 
+.cv-header .cv-name {
+  font-family: v.$font-heading;
+  font-size: v.$font-size-h1;
+  line-height: v.$line-height-h1;
+  font-weight: 400;
+}
 
 .cv-header .subtitle {
   color: #FCFAF6 !important;
@@ -1096,11 +1005,17 @@ margin:0;
 
 .cv-sidebar a,
 .cv-main a {
-  color: inherit;
-  text-decoration: underline;
+  color: color.adjust(v.$accent-color, $lightness: -20%);
   text-underline-offset: 4px;
-}
+  font-family: v.$font-accent;
+  letter-spacing: normal;
 
+  &:hover
+  {
+      text-decoration: underline;
+
+  }
+}
 
 .cv-language-toggle {
   display: flex;
@@ -1120,7 +1035,6 @@ margin:0;
 [data-lang-panel][hidden] {
   display: none;
 }
-
 
 /* =========================
    CONTACT PAGE

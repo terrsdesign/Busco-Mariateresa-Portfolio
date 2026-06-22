@@ -1056,7 +1056,7 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
     grid-template-columns: 0.72fr 1.45fr;
     gap: 72px;
     align-items: end;
-    margin-bottom: 160px;
+    margin-bottom: 80px;
     margin-top:60px;
   }
 
@@ -1426,13 +1426,17 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
 
 /*----------------------------Planty of Food--------------------------*/
 
-.pof-page .pof-divider {
+
+.pof-page hr {
   border: 0;
-  height: 1px;
-  width: 100%;
-  margin: 0;
-  background-color: rgba(v.$pof-accent-color, 0.32);
+  height: 6px;
+  background-color: v.$pof-color;
+  opacity: 80%;
+  width:94%;
+  margin:-7px 0 24px 0;
+
 }
+
 
 .pof-page .navbar,
 .pof-page .site-footer {
@@ -1441,12 +1445,35 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
     color.adjust(v.$pof-color, $lightness: -8%) 0%,
     v.$pof-color 100%
   );
+  padding:0;
+}
+
+.pof-page .site-footer h2
+{
+  text-align: left;
 }
 
 .pof-page h2
-{color:#4F362B;
+{color:v.$pof-accent-color;
 font-weight:400;
+text-align: center;
+margin-top:80px;
 }
+
+.pof-page .main-section-title-divider {
+  display: block;
+  width: 800px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(v.$pof-color, 0) 0%,
+    rgba(v.$pof-color, 0.5) 50%,
+    rgba(v.$pof-color, 0) 100%
+  );
+  margin:auto;
+  margin-top:-32px;
+}
+
 
 .pof-page .site-header {
   background-color: v.$pof-color;
@@ -1486,7 +1513,7 @@ background: linear-gradient(
 
 .pof-page .case-study-page {
   background-color: #fff;
-  padding: 32px 0 96px;
+  padding: 0 0 96px;
 }
 
 .pof-page .page-container {
@@ -1500,7 +1527,7 @@ background: linear-gradient(
 }
 
 .pof-page .case-hero-top {
-  padding: 56px 0 40px;
+  padding: 8px 0 20px;
 }
 
 .pof-page .case-hero-image-wrapper {
@@ -1563,8 +1590,12 @@ background: linear-gradient(
 }
 
 .pof-page .pof-intro-band .page-container {
-  background-color: v.$pof-color;
+  background-color: color.adjust(v.$pof-color, $lightness: 4%);
 }
+
+
+  .pof-page .pof-intro-band .page-container .subtitle
+  {color: color.adjust(v.$pof-accent-color, $lightness: -5%)!important}
 
 .pof-page .pof-intro-grid {
   display: grid;
@@ -1593,7 +1624,7 @@ background: linear-gradient(
 
 .pof-page .pof-intro-title h1 {
   margin: 0;
-  color: v.$primary-color;
+  color: v.$pof-accent-color;
 }
 
 .pof-page .pof-intro-text p {
@@ -1603,8 +1634,10 @@ background: linear-gradient(
 
 .pof-page .subtitle
 {
-  color:v.$pof-accent-color!important;
+  color: color.adjust(v.$pof-color, $lightness: -25%)!important;
   font-weight:500;
+  border-bottom: 1px solid rgba(v.$pof-accent-color, 0.12);
+
 }
 
 
@@ -1622,31 +1655,24 @@ background: linear-gradient(
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.pof-page .pof-board-grid--1 {
-  grid-template-columns: 1fr;
-}
+
 
 .pof-page .pof-card {
+  margin-top:20px;
   padding: 48px 0px;
+  text-align: left;
 }
 
-.pof-page .pof-board-grid--2 .pof-card:nth-child(2n) {
-  border-right: 0;
-  margin-top:84px;
+.pof-page .main-subtitle {
+      display: block;
+      margin: 0;
+      color: v.$pof-accent-color;
+      font-family: v.$font-main;
+      font-size: v.$font-size-h4;
+      line-height: v.$line-height-h4;
+    }
 
-}
 
-.pof-page .pof-board-grid--1 .pof-card {
-  border-right: 0;
-  margin-top: 40px;
-}
-
-.pof-page .pof-label {
-  margin-bottom: 16px;
-  font-family: v.$font-accent;
-  color: v.$pof-accent-color;
-  text-transform: uppercase;
-}
 
 .pof-page .pof-card h3 {
   margin-bottom: 32px;
@@ -1655,6 +1681,41 @@ background: linear-gradient(
   margin-top: 32px;
 }
 
+.pof-page {
+  .pof-section-intro {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.65fr) minmax(0, 1.35fr);
+    gap: 56px;
+    align-items: center;
+    margin: 80px 0 40px;
+  }
+
+
+  .pof-section-intro-title {
+    padding-right: 48px;
+    border-right: 1px solid rgba(v.$pof-accent-color, 0.12);
+
+    .case-kicker {
+      margin: 0 0 28px;
+      font-family: v.$font-accent;
+      font-size: v.$font-size-body-sm;
+      line-height: v.$line-height-body-sm;
+      color: v.$neutral-medium;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    
+  }
+
+  .pof-section-intro-copy {
+    max-width: 760px;
+    margin: auto;
+    color: v.$neutral-dark;
+    font-size: v.$font-size-body;
+    line-height: v.$line-height-body;
+  }
+}
 
 .pof-page .pof-logo-showcase--left {
   display: grid;
@@ -1693,44 +1754,343 @@ background: linear-gradient(
   max-width: 100%;
 }
 
-.pof-page .pof-palette--row {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 24px;
+
+
+/* ---------------- POF COLOR PALETTE ---------------- */
+
+.pof-page {
+  .pof-palette-section {
+    padding: 64px 0 180px;
+  }
+
+  .pof-palette-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+    gap: 60px;
+    align-items: center;
+    margin-top: 72px;
+  }
+
+  .pof-palette {
+    display: grid;
+    min-width: 0;
+  }
+
+  .pof-palette--row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 48px 24px;
+    padding-top: 0;
+  }
+
+  .pof-swatch-block {
+    text-align: center;
+    min-width: 0;
+  }
+
+  .pof-swatch-circle {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 16px;
+    border-radius: 999px;
+    box-shadow: 0 8px 18px rgba(v.$neutral-dark, 0.08);
+  }
+
+  .pof-swatch-circle--light {
+    border: 1px solid rgba(v.$neutral-dark, 0.08);
+    box-shadow: none;
+  }
+
+  .pof-swatch-block strong {
+    display: block;
+    color: v.$neutral-dark;
+    font-family: v.$font-accent;
+    font-size: v.$font-size-link-sm;
+    line-height: v.$line-height-link-sm;
+    font-weight: 500;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+  }
+
+  .pof-swatch-codes {
+    margin-top: 8px;
+  }
+
+  .pof-swatch-codes p {
+    margin: 2px 0 0;
+    color: v.$neutral-medium;
+    font-size: 0.7rem;
+    line-height: 0.8rem;
+  }
+
+  .pof-palette-copy {
+    padding-left: 48px;
+  }
+
+  .pof-palette-copy .case-kicker {
+    margin: 0 0 28px;
+    font-family: v.$font-accent;
+    font-size: v.$font-size-body-sm;
+    line-height: v.$line-height-body;
+    color: v.$neutral-medium;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+
 }
 
-.pof-page .pof-swatch-block {
-  text-align: center;
+
+/* ---------------- POF TYPOGRAPHY ---------------- */
+
+.pof-page {
+  .pof-typography-section {
+    padding: 40px 0 120px;
+  }
+
+  .pof-typography-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+    gap: 72px;
+    align-items: center;
+    margin-top: 72px;
+    padding: 48px 0;
+  }
+
+  .pof-typography-copy {
+    padding-right: 56px;
+    border-right: 1px solid rgba(v.$pof-accent-color, 0.12);
+
+    p + p {
+      margin-top: 18px;
+    }
+  }
+
+
+  .pof-type-specimens {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px;
+  }
+
+  .pof-type-specimen {
+    min-width: 0;
+  }
+
+  .pof-type-specimen--abril {
+    .pof-type-aa,
+    .pof-type-set {
+      font-family: "Abril Fatface", serif;
+    }
+
+    .pof-type-aa {
+      color: v.$pof-accent-color;
+    }
+  }
+
+  .pof-type-specimen--montreal {
+    .pof-type-aa,
+    .pof-type-set {
+      font-family: "Neue Montreal", v.$font-main;
+    }
+
+    .pof-type-aa {
+      color: color.adjust(v.$pof-color, $lightness: -34%);
+    }
+  }
+
+  .pof-type-aa {
+    display: block;
+    margin-bottom: 16px;
+    font-size: clamp(5rem, 9vw, 8rem);
+    line-height: 0.85;
+  }
+
+  .pof-type-name {
+    margin: 0 0 28px;
+    color: v.$neutral-medium;
+    font-family: v.$font-accent;
+    font-size: 0.72rem;
+    line-height: 1;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .pof-type-set {
+    margin: 0 0 18px;
+    color: v.$neutral-dark;
+    font-size: 0.78rem;
+    line-height: 1.6;
+    letter-spacing: 0.16em;
+  }
 }
 
-.pof-page .pof-swatch-circle {
-  display: block;
-  width: 72px;
-  height: 72px;
-  margin: 0 auto 16px;
-  border-radius: 999px;
+
+
+
+/* ---------------- POF ICONS ---------------- */
+
+.pof-page {
+  .pof-icons-section {
+    padding: 80px 0 120px;
+  }
+
+  .pof-icons-heading {
+    margin-top: 72px;
+    text-align: center;
+
+    .case-kicker {
+      margin-bottom: 24px;
+    }
+  }
+
+  .pof-icons-strip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 24px;
+    padding: 48px 0;
+
+    img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+    }
+  }
 }
 
-.pof-page .pof-swatch-circle--light {
-  border: 1px solid rgba(v.$neutral-dark, 0.08);
+
+
+/* ---------------- POF SOCIAL IDENTITY ---------------- */
+
+.pof-page {
+  .pof-social-section {
+    padding: 40px 0 120px;
+  }
+
+  .pof-social-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.5fr) minmax(0, 1.5fr);
+    gap: 72px;
+    align-items: start;
+    margin-top: 72px;
+    padding: 48px 0;
+  }
+
+  .pof-social-layout-2
+  {display: grid;
+    grid-template-columns: minmax(280px, 1.2fr) minmax(0, 0.8fr);
+    gap: 72px;
+    align-items: center;
+    margin-top: 40px;
+    padding: 40px 0;}
+
+  .pof-social-copy {
+    padding-right: 56px;
+    border-right: 1px solid rgba(v.$pof-accent-color, 0.12);
+
+    p:last-child {
+      margin-top: 28px;
+    }
+  }
+
+  .pof-social-board {
+    display: grid;
+    grid-template-columns: 1.65fr 0.6fr 0.75fr;
+    gap: 18px;
+    align-items: stretch;
+  }
+
+  .pof-social-item {
+    overflow: hidden;
+    border-bottom: 1px solid rgba(v.$pof-accent-color, 0.08);
+  background-color: transparent;
+  box-shadow:
+    0 5px 20px rgba(v.$neutral-dark, 0.05),
+    0 1px 6px rgba(v.$neutral-dark, 0.03);
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  .pof-social-item--wide {
+    grid-column: 1 / -1;
+  }
 }
 
-.pof-page .pof-swatch-block strong {
-  display: block;
-  color: v.$neutral-dark;
-}
-
-.pof-page .pof-swatch-block p {
-  margin: 4px 0 0;
-  color: v.$neutral-medium;
-}
 
 
-.pof-page .pof-swatch-codes {
-  margin-top: 8px;
-}
 
-.pof-page .pof-swatch-codes p {
-  margin: 2px 0 0;
-  color: v.$neutral-medium;
+/* ---------------- POF FINAL OUTCOME ---------------- */
+
+.pof-page {
+  .pof-outcome-section {
+    padding: 40px 0 96px;
+  }
+
+  .pof-outcome-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 1.1fr) minmax(0, 0.9fr);
+    gap: 72px;
+    align-items: center;
+    margin-top: 72px;
+    padding: 48px 0;
+  }
+
+  .pof-outcome-copy {
+    padding-right: 56px;
+
+    p:last-of-type {
+      margin-top: 28px;
+    }
+
+    .btn-custom {
+      margin-top: 32px;
+    }
+  }
+
+  .pof-outcome-visual {
+    position: relative;
+    min-width: 0;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: v.$radius-md;
+      box-shadow: 0 18px 40px rgba(v.$neutral-dark, 0.08);
+    }
+  }
+
+  .pof-outcome-quote {
+    position: absolute;
+    right: -28px;
+    bottom: 32px;
+    max-width: 260px;
+    padding: 28px;
+    border: 1px solid rgba(v.$pof-accent-color, 0.12);
+    border-radius: v.$radius-md;
+    background-color: rgba(v.$primary-color, 0.9);
+    box-shadow: 0 18px 40px rgba(v.$neutral-dark, 0.08);
+
+    span {
+      display: block;
+      color: v.$pof-accent-color;
+      font-size: 5rem;
+      line-height: 0.8;
+      font-family: v.$font-heading;
+    }
+
+    p {
+      margin: 0;
+      color: v.$neutral-dark;
+      font-size: v.$font-size-body-lg;
+      line-height: v.$line-height-body-lg;
+    }
+  }
 }

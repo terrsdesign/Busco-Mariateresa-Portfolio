@@ -1150,86 +1150,326 @@
 }
 
 
-@media (max-width: 768px) {
-  .pof-page .pof-intro-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 32px 20px;
-  }
-}
-
-@keyframes pofScrollFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-    opacity: 0.85;
-  }
-
-  50% {
-    transform: translateY(6px);
-    opacity: 1;
-  }
-}
-
-@media (max-width: 768px) {
-  .pof-page .pof-intro-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .pof-page .pof-intro-title,
-  .pof-page .pof-intro-text {
-    padding: 32px 20px;
-  }
-
-  .pof-page .pof-intro-title::after {
-    top: auto;
-    bottom: 0;
-    left: 20px;
-    right: 20px;
-    width: auto;
-    height: 1px;
-  }
-}
 
 
 
-@media (max-width: 768px) {
-  .pof-page .pof-board-grid--2 {
-    grid-template-columns: 1fr;
-  }
-
-  .pof-page .pof-card {
-    padding: 32px 20px;
-    border-right: 0;
-  }
-
-
-@media (max-width: 768px) {
-  .pof-page .pof-logo-showcase--left,
-  .pof-page .pof-logo-showcase--right {
-    gap: 20px;
-  }
-
-  .pof-page .pof-logo-img--symbol {
-    max-width: 220px;
-  }
-}
-
-  .pof-page .pof-construction-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
+/* ---------------- POF RESPONSIVE - TEXT STACKED, IMAGE GRIDS KEPT ---------------- */
 
 @media (max-width: 992px) {
-  .pof-page .pof-palette.pof-palette--row {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .pof-page {
+    .page-container {
+      max-width: 760px;
+      padding: 0 28px;
+    }
+
+    .main-section-title-divider {
+      width: 100%;
+      max-width: 620px;
+    }
+
+    .pof-board-section {
+      padding-bottom: 72px;
+    }
+
+    /* Layout principali in verticale */
+    .pof-intro-grid,
+    .pof-section-intro,
+    .pof-palette-layout,
+    .pof-typography-layout,
+    .pof-social-layout,
+    .pof-social-layout-2,
+    .pof-outcome-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    /* Manteniamo le griglie immagini */
+    .pof-board-grid--2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pof-palette--row {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .pof-type-specimens {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pof-social-board {
+      grid-template-columns: 1.65fr 0.6fr 0.75fr;
+    }
+
+    .pof-social-item--wide {
+      grid-column: 1 / -1;
+    }
+
+    .pof-icons-strip {
+      display: grid;
+      grid-template-columns: repeat(4, max-content);
+      justify-content: center;
+      align-items: center;
+      gap: 32px 40px;
+      
+
+      img {
+        width: 92px;
+        height: 92px;
+      }
+    }
+
+    /* Divider laterali diventano divider orizzontali */
+    .pof-section-intro-title,
+    .pof-typography-copy,
+    .pof-social-copy {
+      padding-right: 0;
+      border-right: 0;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(v.$pof-accent-color, 0.12);
+    }
+
+    .pof-palette-copy,
+    .pof-outcome-copy {
+      padding-left: 0;
+      padding-right: 0;
+      border: 0;
+    }
+
+    .pof-intro-title,
+    .pof-intro-text {
+      padding: 56px 36px;
+    }
+
+    .pof-intro-title::after {
+      display: none;
+    }
+
+    .pof-moodboard-full {
+      margin-top: -72px;
+    }
+
+    .pof-logo-showcase--left {
+      gap: 32px;
+    }
+
+    .pof-logo-img--vertical,
+    .pof-logo-img--horizontal {
+      max-width: 220px;
+    }
+
+    .pof-icons-strip {
+      gap: 32px;
+
+      img {
+        width: 92px;
+        height: 92px;
+      }
+    }
+
+    .pof-outcome-layout {
+      .pof-outcome-visual {
+        order: 2;
+      }
+
+      .pof-outcome-copy {
+        order: 1;
+      }
+    }
+
+    .pof-outcome-quote {
+      position: static;
+      max-width: none;
+      margin-top: 20px;
+    }
+  }
+  .pof-page {
+    .pof-type-specimens {
+      justify-items: center;
+    }
+
+    .pof-type-specimen {
+      text-align: center;
+      max-width: 260px;
+    }
   }
 }
 
 @media (max-width: 768px) {
-  .pof-page .pof-palette.pof-palette--row {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
+  .pof-page {
+    .page-container {
+      max-width: 100%;
+      padding: 0 24px;
+    }
+
+    h2 {
+      margin-top: 56px;
+    }
+
+    .main-section-title-divider {
+      margin-top: -24px;
+    }
+
+    .case-hero-image {
+      max-width: 120px;
+    }
+
+    .pof-moodboard-full {
+      margin-top: -48px;
+    }
+
+    .pof-intro-grid {
+      display: block;
+    }
+
+    .pof-intro-title,
+    .pof-intro-text {
+      padding: 44px 28px;
+    }
+
+    .pof-section-intro,
+    .pof-palette-layout,
+    .pof-typography-layout,
+    .pof-social-layout,
+    .pof-social-layout-2,
+    .pof-outcome-layout {
+      margin-top: 48px;
+      padding: 36px 0;
+      gap: 36px;
+    }
+
+    /* Griglie immagini più compatte, ma ancora griglie */
+    .pof-board-grid--2 {
+      grid-template-columns: 1fr;
+    }
+
+    .pof-palette--row {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 36px 20px;
+    }
+
+    .pof-type-specimens {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 32px;
+    }
+
+    .pof-social-board {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .pof-social-item--wide {
+      grid-column: 1 / -1;
+    }
+
+    .pof-type-aa {
+      font-size: 5rem;
+    }
+
+    .pof-icons-strip {
+      gap: 28px;
+
+      img {
+        width: 76px;
+        height: 76px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .pof-page {
+    .page-container {
+      padding: 0 20px;
+    }
+
+    .pof-board-section {
+      padding-bottom: 56px;
+    }
+
+    .pof-palette-section,
+    .pof-typography-section,
+    .pof-icons-section,
+    .pof-social-section,
+    .pof-outcome-section {
+      padding-top: 24px;
+      padding-bottom: 64px;
+    }
+
+    .pof-intro-title,
+    .pof-intro-text {
+      padding: 36px 24px;
+    }
+
+    .pof-section-intro-title,
+    .pof-typography-copy,
+    .pof-social-copy {
+      padding-bottom: 28px;
+    }
+
+    /* Su mobile piccolo manteniamo griglie dove hanno senso */
+    .pof-palette--row {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 32px 16px;
+    }
+
+    .pof-type-specimens {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+
+    .pof-social-board {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .pof-social-item--wide {
+      grid-column: auto;
+    }
+
+    .pof-swatch-circle {
+      width: 64px;
+      height: 64px;
+    }
+
+    .pof-type-set {
+      font-size: 0.68rem;
+      line-height: 1.5;
+      letter-spacing: 0.1em;
+    }
+
+    .pof-page {
+    .pof-icons-strip {
+      grid-template-columns: repeat(4, max-content);
+      gap: 24px 22px;
+
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  
+    }
+
+    .pof-outcome-quote {
+      padding: 24px;
+    }
+
+    hr {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .pof-page {
+    .pof-palette-copy {
+      order: 1;
+    }
+
+    .pof-palette {
+      order: 2;
+    }
+    
   }
 }
