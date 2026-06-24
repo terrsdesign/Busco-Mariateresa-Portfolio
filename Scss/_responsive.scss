@@ -282,10 +282,6 @@
 
 /* ----------------------  RESPONSIVE - PROGETTI   -------------------------- */
 
-/* =========================
-   ECODREAM - HERO RESPONSIVE COMPLETE
-   Incollare alla fine del CSS
-========================= */
 @media (max-width: 768px) {
   .case-hero-top--ecodream {
     grid-template-columns: 1fr;
@@ -983,9 +979,7 @@
 
 
 
-/* =========================
-   RESPONSIVE - CV
-========================= */
+/* ------------------- RESPONSIVE - CV  -------------------------- */
 
 @media (max-width: 992px) {
   .cv-header {
@@ -1065,9 +1059,17 @@
   }
 }
 
-/* =========================
-   RESPONSIVE - CONTACT
-========================= */
+/* ------------------------- RESPONSIVE - CONTACT ----------------------------- */
+
+
+@media (max-width: 768px) {
+  .contact-footer-image {
+    margin-top: -40px;
+    margin-bottom: -126px;
+  }
+
+  
+}
 
 @media (max-width: 992px) {
   .contact-section {
@@ -1121,9 +1123,7 @@
 }
 
 
-/* =========================
-   MOBILE HAMBURGER MENU
-========================= */
+/* -------------------------  MOBILE HAMBURGER MENU ---------------------- */
 
 .nav-toggle {
   display: none;
@@ -1471,5 +1471,316 @@
       order: 2;
     }
     
+  }
+}
+
+
+
+
+
+
+
+/*-----------------------ABOUT ME -----------------------*/
+/* ---------------- ABOUT PAGE RESPONSIVE ---------------- */
+
+@media (max-width: 992px) {
+  .about-page {
+    .page-container {
+      max-width: 760px;
+      padding: 0 28px;
+    }
+
+    .about-hero {
+      min-height: auto;
+      padding: 72px 0 56px;
+    }
+
+    .about-hero-grid,
+    .about-bio-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .about-hero-copy {
+      text-align: center;
+    }
+
+    .about-hero-copy > p:not(.case-kicker) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .about-hero-visual img {
+      margin-top: 24px;
+    }
+
+    .about-bio {
+      padding: 72px 0;
+    }
+
+    .about-photo-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-bio-copy {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-passions {
+      padding: 64px 0;
+    }
+
+    .about-passions-grid {
+      grid-template-columns: 1fr;
+      gap: 56px;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .about-passion-card:nth-child(2) {
+      transform: none;
+    }
+
+    .about-passion-card:nth-child(2):hover {
+      transform: scale(1.06);
+    }
+
+    .about-currently {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .about-currently-list {
+      text-align: center;
+    }
+
+    .about-principles-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .about-final-cta {
+      padding: 80px 0 48px;
+    }
+
+    .about-final-title {
+      padding-inline: 16px;
+    }
+
+    .about-footer-image {
+      margin-bottom: -95px;
+
+      img {
+        width: min(100%, 820px);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    .page-container {
+      max-width: 100%;
+      padding: 0 24px;
+    }
+
+    .about-hero {
+      padding: 56px 0 48px;
+    }
+
+    .about-hero-grid,
+    .about-bio-grid {
+      gap: 40px;
+    }
+
+    .about-page hr,
+    hr {
+      width: 88%;
+      margin: 56px auto;
+    }
+
+    .about-quote-strip {
+      margin: -20px 0 64px;
+      padding: 0 20px;
+    }
+
+    .about-quote-strip-inner {
+      padding: 40px 28px;
+    }
+
+    .about-quote-strip-inner::before {
+      left: 16px;
+      top: -18px;
+    }
+
+    .about-quote-strip-inner::after {
+      right: 16px;
+      bottom: -72px;
+    }
+
+    .about-bio {
+      padding: 64px 0;
+    }
+
+    .about-photo-wrap img {
+      width: min(320px, 100%);
+    }
+
+    .about-passions-heading {
+      margin-bottom: 48px;
+    }
+
+    .about-passion-card {
+      min-height: 340px;
+      padding-bottom:64px;
+    }
+
+    .about-passion-icon {
+  bottom: 24px;
+}
+    .about-currently {
+      gap: 14px;
+      margin-top: 56px;
+      padding: 20px 22px;
+    }
+
+    .about-currently-list span {
+      margin: 0 7px;
+    }
+
+    .about-final-title {
+      padding-bottom: 72px;
+    }
+
+    .about-final-title .main-subtitle {
+      white-space: normal;
+      width: max-content;
+      max-width: calc(100vw - 48px);
+    }
+
+    .about-scroll-line {
+      height: 44px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .about-page {
+    .page-container {
+      padding: 0 20px;
+    }
+
+    .about-hero {
+      padding: 48px 0 40px;
+    }
+
+    .about-hero-copy {
+      text-align: left;
+    }
+
+    .about-hero-copy > p:not(.case-kicker) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .about-hero-visual img {
+      margin-top: 12px;
+    }
+
+    .about-page .main-subtitle,
+    .about-final-title .main-subtitle {
+      font-size: v.$font-size-body-sm;
+      line-height: v.$line-height-body-sm;
+      letter-spacing: 0.06rem;
+    }
+
+    .about-bio-copy {
+      padding: 28px 24px;
+      text-align: left;
+    }
+
+    .about-passions {
+      padding: 56px 0;
+    }
+
+    .about-passions-heading {
+      margin-bottom: 40px;
+    }
+
+    .about-passions-grid {
+      gap: 48px;
+    }
+
+    .about-passion-card {
+      min-height: auto;
+      margin-top: 64px;
+      padding: 156px 24px 120px;
+    }
+
+    .about-passion-photo {
+      top: -56px;
+      width: 150px;
+      height: 150px;
+    }
+
+    .about-passion-card .subtitle {
+      letter-spacing: 0.14rem;
+    }
+
+    .about-currently {
+      margin-top: 48px;
+      padding: 18px 20px;
+    }
+
+    .about-currently-list {
+      font-size: 0.78rem;
+      line-height: 1.8;
+    }
+
+    .about-currently-list span {
+      margin: 0 5px;
+    }
+
+    .about-quote-strip-inner {
+      padding: 36px 22px;
+    }
+
+    .about-final-cta {
+      padding: 64px 0 40px;
+    }
+
+    .about-final-title {
+      display: block;
+      padding: 0 0 72px;
+    }
+
+    .about-final-title h2 {
+      text-align: center;
+    }
+
+    .about-final-title .main-subtitle {
+      left: 50%;
+      bottom: 28px;
+      transform: translateX(-50%) rotate(-2deg);
+    }
+
+    .about-footer-image {
+      margin-top: 32px;
+      margin-bottom: -95px;
+
+      img {
+        width: 720px;
+        max-width: none;
+      }
+    }
   }
 }

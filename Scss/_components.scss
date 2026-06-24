@@ -1067,14 +1067,6 @@ border: 1px solid rgba(v.$neutral-dark, 0.05);
   padding-bottom: 0;
 }
 
-.contact-content img {
-  position: relative;
-  display: block;
-  max-width: 260px;
-  margin-top: 132px;
-  margin-bottom: -148px;
-  z-index: 2;
-}
 
 .contact-section .page-container {
   display: flex;
@@ -1149,6 +1141,7 @@ border: 1px solid rgba(v.$neutral-dark, 0.05);
   padding: 48px 80px;
   border-left: none;
   background-color: #FCFAF6;
+  margin-top:120px;
 }
 
 .contact-form-wrap::before {
@@ -1227,6 +1220,23 @@ border: 1px solid rgba(v.$neutral-dark, 0.05);
   margin: 0;
 }
 
+
+.contact-footer-image {
+  display: flex;
+  justify-content: left;
+  margin-left:120px;
+  margin-top: -300px;
+  margin-bottom: -120px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-footer-image img {
+  display: block;
+  width: min(100%, 260px);
+  height: auto;
+}
 
 
 
