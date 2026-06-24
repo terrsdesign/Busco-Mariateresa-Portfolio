@@ -3984,12 +3984,6 @@ p {
     grid-template-columns: 1fr;
   }
 }
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 @media (max-width: 768px) {
   .page-container {
     width: 100%;
