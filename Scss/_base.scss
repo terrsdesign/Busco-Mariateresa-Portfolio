@@ -45,6 +45,12 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
 }
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 body {
   margin: 0;
   background-color: v.$primary-color;
@@ -268,3 +274,38 @@ p {
   transform: none;
 }
 /* -----------------------------END BUTTON---------------------------------- */
+
+
+/* -------------- TOP -------------------*/
+
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background-color: color.adjust(v.$secondary-color, $lightness: 15%);
+  color: v.$primary-color;
+  border: 1px solid rgba(v.$primary-color, 0.15);
+
+  font-family: v.$font-accent;
+  font-size: 1.4rem;
+  text-decoration: none;
+
+  box-shadow: 0 10px 24px rgba(v.$neutral-dark, 0.18);
+  transition: transform 0.25s ease, background-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    background-color: color.adjust(v.$secondary-color, $lightness: -2%);
+    color: v.$primary-color;
+  }
+}

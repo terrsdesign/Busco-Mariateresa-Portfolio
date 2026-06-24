@@ -39,6 +39,12 @@ html {
   scroll-padding-top: 90px;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   background-color: #FCFAF6;
@@ -239,6 +245,33 @@ p {
 }
 
 /* -----------------------------END BUTTON---------------------------------- */
+/* -------------- TOP -------------------*/
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgb(182.1328125, 22.3671875, 68.69921875);
+  color: #FCFAF6;
+  border: 1px solid rgba(252, 250, 246, 0.15);
+  font-family: "Geist Mono", monospace;
+  font-size: 1.4rem;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(31, 27, 28, 0.18);
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+.back-to-top:hover {
+  transform: translateY(-4px);
+  background-color: rgb(104.915625, 12.884375, 39.5734375);
+  color: #FCFAF6;
+}
+
 /* ------------------LAYOUT / STRUCTURE--------------------------- */
 .page-container {
   max-width: 1180px;
@@ -3917,9 +3950,7 @@ p {
   line-height: 1.6rem;
 }
 
-/* =========================
-   RESPONSIVE - HOME
-========================= */
+/* ------------------- RESPONSIVE - HOME ----------------------- */
 @keyframes heroKeywordsScroll {
   from {
     transform: translateX(0);
@@ -3953,9 +3984,31 @@ p {
     grid-template-columns: 1fr;
   }
 }
-/* =========================
-   HAMBURGER MENU - SOLO MOBILE
-========================= */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .nav-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+  .navbar {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .site-header {
+    overflow-x: hidden;
+  }
+}
+/* --------------------- HAMBURGER MENU - SOLO MOBILE  ---------------------- */
 .nav-toggle {
   display: none;
   width: 44px;
@@ -4039,7 +4092,7 @@ p {
     gap: 16px;
   }
   .hero-title-arrow {
-    width: 56px;
+    width: 86px;
   }
   .hero-title-main {
     max-width: 100%;
@@ -4181,15 +4234,15 @@ p {
   }
   .ecodream-page .case-hero-top .case-info,
   .ecodream-page .case-info.h4 {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 24px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-top: 28px !important;
-    margin-bottom: 0 !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 28px;
+    margin-bottom: 0;
   }
   .ecodream-page .case-hero-top .btn-custom {
     min-width: 260px !important;
@@ -4198,72 +4251,72 @@ p {
     margin-bottom: 32px;
   }
   .ecodream-page .case-hero-grid {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
   .ecodream-page .case-meta {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 40px 32px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    padding-right: 0 !important;
-    padding-bottom: 36px !important;
-    border-right: 0 !important;
-    border-bottom: 1px solid rgba(167, 154, 157, 0.35) !important;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 32px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding-right: 0;
+    padding-bottom: 36px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(167, 154, 157, 0.35);
   }
   .ecodream-page .case-meta-item {
-    width: 100% !important;
-    min-width: 0 !important;
+    width: 100%;
+    min-width: 0;
   }
   .ecodream-page .case-info {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    margin-top: 40px !important;
-    overflow: visible !important;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-top: 40px;
+    overflow: visible;
   }
   .ecodream-page .case-info .section-label {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-bottom: 20px !important;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
   }
   .ecodream-page .case-quote {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 20px 0 !important;
-    padding-left: 20px !important;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+    padding-left: 20px;
   }
   .ecodream-page .case-quote h4,
   .ecodream-page .case-info h4,
   .ecodream-page .case-info p,
   .ecodream-page .case-stat p,
   .ecodream-page .case-stat span {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-wrap: break-word !important;
-    word-break: normal !important;
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
   }
   .ecodream-page .case-overview-stats {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    border-left: 0 !important;
-    gap: 1px !important;
-    background-color: #eae0c0 !important;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    border-left: 0;
+    gap: 1px;
+    background-color: #eae0c0;
   }
   .ecodream-page .case-stat {
-    width: 100% !important;
-    min-width: 0 !important;
-    min-height: auto !important;
-    padding: 20px !important;
-    border-right: 0 !important;
-    background-color: #FCFAF6 !important;
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+    padding: 20px;
+    border-right: 0;
+    background-color: #FCFAF6;
   }
 }
 @media (max-width: 576px) {
@@ -4275,29 +4328,27 @@ p {
   }
   .ecodream-page .case-hero-top .case-info,
   .ecodream-page .case-info.h4 {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    justify-items: center !important;
-    gap: 20px !important;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20px;
   }
   .ecodream-page .case-hero-top .btn-custom {
-    width: min(100%, 320px) !important;
-    min-width: 0 !important;
+    width: min(100%, 320px);
+    min-width: 0;
   }
   .ecodream-page .case-meta {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 36px 20px !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 20px;
   }
   .ecodream-page .case-meta-item .diagonal-highlight {
-    padding: 2px 12px !important;
+    padding: 2px 12px;
   }
   .ecodream-page .case-overview-stats {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 }
-/* =========================
-   ECODREAM - PROCESS MOBILE
-========================= */
+/* ------------------- ECODREAM - PROCESS MOBILE ---------------------- */
 @media (max-width: 768px) {
   .ecodream-page .case-process {
     padding: 48px 0;
@@ -5096,7 +5147,6 @@ p {
   }
 }
 /*-----------------------ABOUT ME -----------------------*/
-/* ---------------- ABOUT PAGE RESPONSIVE ---------------- */
 @media (max-width: 992px) {
   .about-page .page-container {
     max-width: 760px;
