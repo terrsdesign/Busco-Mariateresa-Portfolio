@@ -1833,6 +1833,11 @@ background: linear-gradient(
   text-align: center;
 }
 
+.about-final-cta p
+{color:v.$primary-color;
+width:500px;
+margin:auto;}
+
 .about-scroll-arrow {
   display: inline-block;
   margin-top: -6px;

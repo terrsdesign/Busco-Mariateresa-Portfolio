@@ -2058,6 +2058,12 @@ p {
   text-align: center;
 }
 
+.about-final-cta p {
+  color: #FCFAF6;
+  width: 500px;
+  margin: auto;
+}
+
 .about-scroll-arrow {
   display: inline-block;
   margin-top: -6px;
