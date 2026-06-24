@@ -3960,8 +3960,7 @@ p {
   }
 }
 @media (max-width: 992px) {
-  .projects-grid,
-  .approach-grid {
+  .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .hero-card-number {
@@ -4101,20 +4100,24 @@ p {
     min-height: auto;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) {
+@media (max-width: 1199.98px) {
   .approach-path-wrapper {
     display: block;
     margin-top: 0;
   }
   .approach-illustration,
-  .approach-line {
+  .approach-image,
+  .approach-line,
+  .approach-path-points {
     display: none;
   }
   .approach-path {
     position: relative;
     display: grid;
-    gap: 36px;
+    gap: 48px;
     min-height: auto;
+    width: 100%;
+    max-width: none;
     padding-left: 96px;
   }
   .approach-path::before {
@@ -4122,12 +4125,9 @@ p {
     position: absolute;
     left: 23px;
     top: 10px;
-    height: 620px;
+    bottom: 10px;
     width: 2px;
     background-color: #720E2B;
-  }
-  .approach-path-points {
-    display: none;
   }
   .approach-step,
   .approach-step-01,
@@ -4139,6 +4139,7 @@ p {
     left: auto;
     right: auto;
     top: auto;
+    bottom: auto;
     width: 100%;
     min-height: auto;
     padding: 0;
@@ -4174,30 +4175,13 @@ p {
   }
   .approach-step p {
     margin: 0;
-    max-width: 100%;
+    max-width: 52ch;
     font-size: 0.95rem;
     line-height: 1.35rem;
     text-align: left;
   }
   .approach-note {
     margin-top: 40px;
-  }
-}
-@media (max-width: 768px) {
-  .contact-cta {
-    padding: 36px 24px;
-  }
-  .footer-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .footer-social,
-  .footer-links {
-    align-items: flex-start;
-  }
-  .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
 /* ----------------------  RESPONSIVE - PROGETTI   -------------------------- */
