@@ -38,18 +38,13 @@ background: linear-gradient(
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-inline: 28px;
-  flex-shrink: 0;
 }
 
-
-.site-logo {
-  font-family: v.$font-heading;
-  font-size: 2rem;
-  line-height: 1;
-  font-weight: 400;
-  color: v.$accent-color;
-  text-decoration: none;
+.site-logo img {
+  display: block;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
 }
 
 .nav-menu a {

@@ -260,7 +260,7 @@ p {
 .nav-wrapper {
   width: -moz-fit-content;
   width: fit-content;
-  min-height: 40px;
+  min-height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -388,17 +388,14 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-inline: 28px;
-  flex-shrink: 0;
 }
 
-.site-logo {
-  font-family: "Sundrea", serif;
-  font-size: 2rem;
-  line-height: 1;
-  font-weight: 400;
-  color: #7DA6BB;
-  text-decoration: none;
+.site-logo img {
+  display: block;
+  width: 34px;
+  height: 34px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .nav-menu a {
