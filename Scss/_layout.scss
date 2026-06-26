@@ -15,7 +15,9 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-    border-bottom: 1px solid rgba(167, 154, 157, 0.25);
+  width: 100%;
+  background-color: v.$primary-color;
+  border-bottom: 1px solid rgba(167, 154, 157, 0.25);
 }
 
 .navbar {
@@ -50,7 +52,6 @@
 .hero-section {
   position: relative;
   z-index: 1;
-  overflow: hidden;
   padding-bottom: 0;
   padding-top:100px;
   

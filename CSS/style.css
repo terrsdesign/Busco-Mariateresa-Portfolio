@@ -41,8 +41,8 @@ html {
 
 html,
 body {
+  width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 body {
@@ -155,7 +155,8 @@ p {
 
 .main-section-title-divider {
   display: block;
-  width: 800px;
+  width: min(800px, 100%);
+  max-width: 100%;
   height: 1px;
   background: linear-gradient(90deg, rgba(114, 14, 43, 0) 0%, rgba(114, 14, 43, 0.3) 50%, rgba(114, 14, 43, 0) 100%);
 }
@@ -448,6 +449,8 @@ select:disabled,
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
+  background-color: #FCFAF6;
   border-bottom: 1px solid rgba(167, 154, 157, 0.25);
 }
 
@@ -483,7 +486,6 @@ select:disabled,
 .hero-section {
   position: relative;
   z-index: 1;
-  overflow: hidden;
   padding-bottom: 0;
   padding-top: 100px;
 }
@@ -4165,6 +4167,9 @@ select:disabled,
   }
   .site-header {
     overflow-x: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
 }
 /* --------------------- HAMBURGER MENU - SOLO MOBILE  ---------------------- */
