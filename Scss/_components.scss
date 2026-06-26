@@ -1290,6 +1290,12 @@ border: 1px solid rgba(v.$neutral-dark, 0.05);
   color:#ffde5a;
   box-shadow: 0 2px 5px rgba(31, 27, 28, 0.18);
   border-radius: v.$radius-md;
+
+  &:hover
+  {background: linear-gradient(
+    -90deg,
+    color.adjust(#7A0C31, $lightness: 20%) 0%,
+    color.adjust(#6c0c47, $lightness: 15%) 100%);}
 }
 
 .about-page {
@@ -1406,7 +1412,7 @@ background: linear-gradient(
     color: #4c085c;
 
     &:hover {
-      color: #7A0C31;
+      color: #cd231a;
     }
   }
 }

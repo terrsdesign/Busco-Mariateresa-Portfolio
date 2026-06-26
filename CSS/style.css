@@ -1784,6 +1784,9 @@ select:disabled,
   box-shadow: 0 2px 5px rgba(31, 27, 28, 0.18);
   border-radius: 8px;
 }
+.about-page .btn-custom-primary:hover {
+  background: linear-gradient(-90deg, rgb(214.8656716418, 21.1343283582, 86.2985074627) 0%, rgb(176.85, 19.65, 116.2625) 100%);
+}
 
 .about-page h1 {
   font-family: "Brush Signature", cursive;
@@ -1875,7 +1878,7 @@ select:disabled,
   color: #4c085c;
 }
 .about-page .navbar a:hover {
-  color: #7A0C31;
+  color: #cd231a;
 }
 
 .about-main {
