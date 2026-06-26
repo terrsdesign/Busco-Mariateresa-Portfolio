@@ -4222,11 +4222,6 @@ select:disabled,
   box-shadow: none;
 }
 
-.nav-menu li {
-  width: 100%;
-  border-bottom: 1px solid rgba(252, 250, 246, 0.15);
-}
-
 @media (max-width: 768px) {
   .nav-wrapper {
     width: 100%;
@@ -4251,6 +4246,10 @@ select:disabled,
     align-items: flex-start;
     gap: 18px;
     padding-top: 18px;
+  }
+  .nav-menu li {
+    width: 100%;
+    border-bottom: 1px solid rgba(252, 250, 246, 0.15);
   }
   .nav-menu-left {
     order: 2;
