@@ -327,10 +327,10 @@ background: linear-gradient(
 }
 
 .project-card-text h4 {
-  margin: 20px 0 -5px;
+  margin: 20px 0 0px;
   font-family: v.$font-main;
   font-size: 24px;
-  line-height: v.$line-height-h4;
+  line-height: v.$line-height-body;
   font-weight: normal;
   color: color.adjust(v.$accent-color, $lightness: -10%);
   letter-spacing:normal;
