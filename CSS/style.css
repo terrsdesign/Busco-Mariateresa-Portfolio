@@ -861,10 +861,10 @@ select:disabled,
 }
 
 .project-card-text h4 {
-  margin: 20px 0 10px;
+  margin: 20px 0 0px;
   font-family: "Satoshi-Variable", sans-serif;
   font-size: 24px;
-  line-height: 2.1875rem;
+  line-height: 1.5rem;
   font-weight: normal;
   color: rgb(91.5151515152, 143.0757575758, 169.4848484848);
   letter-spacing: normal;
@@ -1342,7 +1342,7 @@ select:disabled,
 /* ---------------------  CV PAGE  --------------------- */
 .cv-section .subtitle {
   color: rgb(75.6242424242, 121.2212121212, 144.5757575758) !important;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 .cv-section {
