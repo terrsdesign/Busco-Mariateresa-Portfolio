@@ -1539,6 +1539,13 @@
       padding: 72px 0 56px;
     }
 
+    .about-hero h1 {
+  line-height: 1.08;
+  padding-bottom: 0.12em;
+  overflow: visible;
+  padding-top:20px;
+}
+
     .about-hero-grid,
     .about-bio-grid {
       grid-template-columns: 1fr;
@@ -1576,6 +1583,9 @@
     .about-passions {
       padding: 64px 0;
     }
+    
+    .about-passions h2
+    {padding-top:20px;}
 
     .about-passions-grid {
       grid-template-columns: 1fr;
