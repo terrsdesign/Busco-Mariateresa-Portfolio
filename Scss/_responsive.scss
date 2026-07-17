@@ -5,6 +5,11 @@
 
 
 
+@media (prefers-reduced-motion: reduce) {
+  .gradient-portfolio::before {
+    animation: none;
+  }
+}
 
 @keyframes heroKeywordsScroll {
   from {

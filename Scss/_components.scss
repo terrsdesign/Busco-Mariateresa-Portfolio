@@ -397,6 +397,8 @@ background: linear-gradient(
 
 .project-card-portfolio {
   grid-column: 1 / -1;
+  border-radius: v.$radius-md;
+
 }
 
 .project-card-portfolio-main {
@@ -410,7 +412,6 @@ background: linear-gradient(
 
 .portfolio-system-preview {
   padding: 32px;
-  border-left: 1px solid rgba(v.$secondary-color, 0.12);
   
 }
 
@@ -457,7 +458,7 @@ background: linear-gradient(
   justify-content: space-between;
   gap: 20px;
   padding: 14px 0;
-  border-top: 1px solid rgba(v.$secondary-color, 0.14);
+  border-top: 1px solid rgba(v.$secondary-color, 0.05);
   font-family: v.$font-accent;
   font-size: v.$font-size-link-sm;
   line-height: v.$line-height-link-sm;
@@ -558,6 +559,103 @@ background: linear-gradient(
   border-radius: v.$radius-md;
   background-color: rgba(v.$primary-color, 0.72);
 }
+
+
+
+
+
+.gradient-portfolio {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: v.$primary-color;
+  border-radius: v.$radius-md;
+}
+
+.gradient-portfolio::before {
+  content: "";
+  position: absolute;
+  inset: -90px;
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      circle at 16% 22%,
+      rgba(v.$accent-color, 0.10) 0%,
+      rgba(v.$accent-color, 0.02) 22%,
+      transparent 48%
+    ),
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(v.$secondary-color, 0.16) 0%,
+      rgba(v.$secondary-color, 0.06) 20%,
+      transparent 46%
+    ),
+    radial-gradient(
+      circle at 76% 86%,
+      rgba(v.$secondary-color, 0.12) 0%,
+      rgba(v.$secondary-color, 0.02) 18%,
+      transparent 44%
+    ),
+    radial-gradient(
+      circle at 34% 82%,
+      rgba(v.$accent-color, 0.06) 0%,
+      rgba(v.$accent-color, 0.02) 20%,
+      transparent 44%
+    ),
+    linear-gradient(
+      135deg,
+      v.$primary-color 0%,
+      color.adjust(v.$primary-color, $lightness: 5%) 100%
+    );
+
+  background-size:
+    150% 150%,
+    170% 170%,
+    160% 160%,
+    145% 145%,
+    100% 100%;
+
+  filter: blur(15px);
+  transform: scale(1.12);
+
+  animation: portfolioMeshMove 5s ease-in-out infinite alternate;
+}
+
+@keyframes portfolioMeshMove {
+  0% {
+    background-position:
+      0% 8%,
+      100% 4%,
+      86% 100%,
+      18% 92%,
+      0% 0%;
+    transform: scale(1.12) translate(-18px, -10px);
+  }
+
+  50% {
+    background-position:
+      34% 24%,
+      66% 34%,
+      48% 76%,
+      52% 58%,
+      0% 0%;
+    transform: scale(1.18) translate(12px, 10px);
+  }
+
+  100% {
+    background-position:
+      58% 36%,
+      42% 58%,
+      26% 62%,
+      78% 38%,
+      0% 0%;
+    transform: scale(1.14) translate(18px, -8px);
+  }
+}
+
+
+
 
 /* -------------------------END PROJECTS--------------------------- */
 
