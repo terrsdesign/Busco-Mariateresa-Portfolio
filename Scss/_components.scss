@@ -1,6 +1,11 @@
 @use "variables" as v;
 @use "sass:color";
 
+
+/*---------------------hidden things----------------------*/
+.project-card-03, .project-card-04
+{display: none !important;}
+
 .style-one {
   font-feature-settings: "ss01" on;
   
@@ -25,8 +30,9 @@ background: linear-gradient(
 
 .bigger-word {
   display: inline-block;
-  font-size: 120%;
-  color: color.adjust(v.$accent-color, $lightness: -10%)
+  font-size: 210%;
+  color: color.adjust(v.$accent-color, $lightness: -10%);
+  margin-top:8px;
 }
 
 
@@ -100,6 +106,8 @@ background: linear-gradient(
   font-size: v.$font-size-h1;
   line-height: v.$line-height-h1;
   font-weight: 400;
+    white-space:nowrap;
+
 }
 
 .hero-title-kicker {
@@ -126,9 +134,9 @@ background: linear-gradient(
   position: relative;
   display: inline-block;
   flex-shrink: 0;
-  width: 85px;
+  width: 140px;
   height: 2px;
-  margin-bottom: 4px;
+  margin-top:10px;
   background-color: rgba(v.$secondary-color, 0.58);
 }
 

@@ -561,6 +561,11 @@ select:disabled,
   gap: 20px;
 }
 
+/*---------------------hidden things----------------------*/
+.project-card-03, .project-card-04 {
+  display: none !important;
+}
+
 .style-one {
   font-feature-settings: "ss01" on;
 }
@@ -580,8 +585,9 @@ select:disabled,
 
 .bigger-word {
   display: inline-block;
-  font-size: 120%;
+  font-size: 210%;
   color: rgb(91.5151515152, 143.0757575758, 169.4848484848);
+  margin-top: 8px;
 }
 
 /* ------------------Nav Menu--------------------------- */
@@ -647,6 +653,7 @@ select:disabled,
   font-size: 4.25rem;
   line-height: 5.1875rem;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .hero-title-kicker {
@@ -671,9 +678,9 @@ select:disabled,
   position: relative;
   display: inline-block;
   flex-shrink: 0;
-  width: 85px;
+  width: 140px;
   height: 2px;
-  margin-bottom: 4px;
+  margin-top: 10px;
   background-color: rgba(114, 14, 43, 0.58);
 }
 
@@ -4283,6 +4290,7 @@ select:disabled,
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+    white-space: normal;
   }
   .hero-title-arrow {
     width: 86px;
