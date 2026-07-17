@@ -548,6 +548,7 @@ background: linear-gradient(
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 12px;
+  justify-content: space-between;
 }
 
 .portfolio-tools-list img {
@@ -557,7 +558,6 @@ background: linear-gradient(
   object-fit: contain;
   padding: 2px;
   border-radius: v.$radius-md;
-  background-color: rgba(v.$primary-color, 0.72);
 }
 
 
@@ -619,7 +619,7 @@ background: linear-gradient(
   filter: blur(15px);
   transform: scale(1.12);
 
-  animation: portfolioMeshMove 5s ease-in-out infinite alternate;
+  animation: portfolioMeshMove 4s ease-in-out infinite alternate;
 }
 
 @keyframes portfolioMeshMove {

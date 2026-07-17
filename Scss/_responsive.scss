@@ -5,12 +5,6 @@
 
 
 
-@media (prefers-reduced-motion: reduce) {
-  .gradient-portfolio::before {
-    animation: none;
-  }
-}
-
 @keyframes heroKeywordsScroll {
   from {
     transform: translateX(0);
@@ -331,9 +325,99 @@
   }
 }
 
+/* ---------------- PORTFOLIO CARD - RESPONSIVE ---------------- */
+
+@media (max-width: 1199.98px) {
+  .project-card-portfolio {
+    grid-column: 1 / -1;
+  }
+
+  .project-card-portfolio-main {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-system-preview {
+    border-left: 0;
+    border-top: 1px solid rgba(v.$secondary-color, 0.12);
+  }
+
+  .portfolio-build-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card-portfolio-text,
+  .portfolio-system-preview {
+    padding: 24px;
+  }
+
+  .portfolio-build-cards {
+    padding: 0 24px 24px;
+    gap: 12px;
+  }
+
+  .portfolio-swatches {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .portfolio-swatches span {
+    min-height: 54px;
+  }
+
+  .portfolio-system-specs div {
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+  }
+
+  .portfolio-system-specs strong {
+    text-align: left;
+  }
+
+  .portfolio-type-spec strong {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .portfolio-tools-list {
+    gap: 10px;
+  }
+
+  .portfolio-tools-list img {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card-portfolio-text,
+  .portfolio-system-preview {
+    padding: 20px;
+  }
+
+  .portfolio-build-cards {
+    padding: 0 20px 20px;
+  }
+
+  .portfolio-swatches span {
+    min-height: 44px;
+  }
+
+  .portfolio-font-heading {
+    font-size: 1.25rem;
+  }
+
+  .portfolio-system-specs div {
+    font-size: v.$font-size-link-sm;
+    line-height: v.$line-height-link-sm;
+  }
+}
 
 
-/* ----------------------  RESPONSIVE - PROGETTI   -------------------------- */
+
+/* ----------------------  RESPONSIVE - PROJECTS   -------------------------- */
 
 @media (max-width: 768px) {
   .case-hero-top--ecodream {
@@ -592,6 +676,14 @@
     grid-column: 2;
     justify-self: start;
     margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gradient-portfolio::before {
+    inset: -50px;
+    filter: blur(18px);
+    animation-duration: 10s;
   }
 }
 
