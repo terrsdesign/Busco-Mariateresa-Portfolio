@@ -394,6 +394,171 @@ background: linear-gradient(
   color: v.$secondary-color;
 }
 
+
+.project-card-portfolio {
+  grid-column: 1 / -1;
+}
+
+.project-card-portfolio-main {
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
+  gap: 0;
+}
+
+.project-card-portfolio-text {
+  padding: 32px;
+}
+
+.portfolio-system-preview {
+  padding: 32px;
+  border-left: 1px solid rgba(v.$secondary-color, 0.12);
+  
+}
+
+.portfolio-swatches {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.portfolio-swatches span {
+  display: block;
+  min-height: 60px;
+  border-radius: v.$radius-md;
+  border: 1px solid rgba(v.$neutral-dark, 0.08);
+}
+
+.portfolio-swatches span:nth-child(1) {
+  background-color: v.$primary-color;
+}
+
+.portfolio-swatches span:nth-child(2) {
+  background-color: v.$secondary-color;
+}
+
+.portfolio-swatches span:nth-child(3) {
+  background-color: v.$accent-color;
+}
+
+.portfolio-swatches span:nth-child(4) {
+  background-color: v.$neutral-dark;
+}
+
+.portfolio-swatches span:nth-child(5) {
+  background-color: v.$neutral-light;
+}
+
+.portfolio-system-specs {
+  display: grid;
+}
+
+.portfolio-system-specs div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(v.$secondary-color, 0.14);
+  font-family: v.$font-accent;
+  font-size: v.$font-size-link-sm;
+  line-height: v.$line-height-link-sm;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.portfolio-system-specs span {
+  color: rgba(v.$secondary-color, 0.72);
+  font-weight: 500;
+}
+
+.portfolio-system-specs strong {
+  font-weight: 400;
+  color: v.$neutral-medium;
+  text-align: right;
+}
+
+.portfolio-build-cards {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding: 24px 32px 32px;
+}
+
+.portfolio-build-cards > div {
+  padding: 20px;
+  border-radius: v.$radius-md;
+  border: 1px solid rgba(v.$neutral-dark, 0.04);
+  background-color: rgba(v.$primary-color, 0.72);
+}
+
+.portfolio-build-cards p:last-child {
+  margin: 0;
+  color: v.$neutral-medium;
+}
+
+.portfolio-type-spec strong {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 16px;
+  text-align: right;
+  align-items: flex-end;
+}
+
+.portfolio-type-spec em {
+  font-style: normal;
+}
+
+.portfolio-font-heading {
+  font-family: v.$font-heading;
+  font-size: 1.3rem;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  color: v.$secondary-color;
+}
+
+.portfolio-font-main {
+  font-family: v.$font-main;
+  font-size: v.$font-size-body;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  color: v.$neutral-medium;
+}
+
+.portfolio-font-accent {
+  font-family: v.$font-accent;
+  font-size: v.$font-size-link-sm;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: color.adjust(v.$accent-color, $lightness: -12%);
+}
+
+
+.portfolio-tools-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.portfolio-tools-list img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  padding: 2px;
+  border-radius: v.$radius-md;
+  background-color: rgba(v.$primary-color, 0.72);
+}
+
 /* -------------------------END PROJECTS--------------------------- */
 
 

@@ -920,6 +920,169 @@ select:disabled,
   color: #720E2B;
 }
 
+.project-card-portfolio {
+  grid-column: 1/-1;
+}
+
+.project-card-portfolio-main {
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
+  gap: 0;
+}
+
+.project-card-portfolio-text {
+  padding: 32px;
+}
+
+.portfolio-system-preview {
+  padding: 32px;
+  border-left: 1px solid rgba(114, 14, 43, 0.12);
+}
+
+.portfolio-swatches {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.portfolio-swatches span {
+  display: block;
+  min-height: 60px;
+  border-radius: 8px;
+  border: 1px solid rgba(31, 27, 28, 0.08);
+}
+
+.portfolio-swatches span:nth-child(1) {
+  background-color: #FCFAF6;
+}
+
+.portfolio-swatches span:nth-child(2) {
+  background-color: #720E2B;
+}
+
+.portfolio-swatches span:nth-child(3) {
+  background-color: #7DA6BB;
+}
+
+.portfolio-swatches span:nth-child(4) {
+  background-color: #1F1B1C;
+}
+
+.portfolio-swatches span:nth-child(5) {
+  background-color: #A79A9D;
+}
+
+.portfolio-system-specs {
+  display: grid;
+}
+
+.portfolio-system-specs div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(114, 14, 43, 0.14);
+  font-family: "Geist Mono", monospace;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.portfolio-system-specs span {
+  color: rgba(114, 14, 43, 0.72);
+  font-weight: 500;
+}
+
+.portfolio-system-specs strong {
+  font-weight: 400;
+  color: #4A4243;
+  text-align: right;
+}
+
+.portfolio-build-cards {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding: 24px 32px 32px;
+}
+
+.portfolio-build-cards > div {
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(31, 27, 28, 0.04);
+  background-color: rgba(252, 250, 246, 0.72);
+}
+
+.portfolio-build-cards p:last-child {
+  margin: 0;
+  color: #4A4243;
+}
+
+.portfolio-type-spec strong {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 16px;
+  text-align: right;
+  align-items: flex-end;
+}
+
+.portfolio-type-spec em {
+  font-style: normal;
+}
+
+.portfolio-font-heading {
+  font-family: "Sundrea", serif;
+  font-size: 1.3rem;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #720E2B;
+}
+
+.portfolio-font-main {
+  font-family: "Satoshi-Variable", sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #4A4243;
+}
+
+.portfolio-font-accent {
+  font-family: "Geist Mono", monospace;
+  font-size: 0.8rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgb(86.1333333333, 138.0666666667, 164.6666666667);
+}
+
+.portfolio-tools-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.portfolio-tools-list img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 2px;
+  border-radius: 8px;
+  background-color: rgba(252, 250, 246, 0.72);
+}
+
 /* -------------------------END PROJECTS--------------------------- */
 /* ========================  APPROACH PATH ========================= */
 .approach-section .section-heading h2 {
