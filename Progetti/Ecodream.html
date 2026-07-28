@@ -361,18 +361,26 @@ Too much text, no hierarchy, same content repeated across pages. <br><br>
   </div>
 </section>
 
-<!---------------------Accessibility------------->
+<!--------------------- ACCESSIBILITY --------------------->
+
 <section class="case-accessibility">
   <div class="container page-container">
+
     <div class="case-accessibility-block">
       <p class="case-kicker">Accessibility Audit</p>
 
       <div class="case-accessibility-grid">
+
         <div class="case-accessibility-item">
-            <div class="case-accessibility-item-header">
-          <img src="../Assets/Image/icon-html.svg" alt="" aria-hidden="true">
-          <span>HTML Structure</span>
+          <div class="case-accessibility-item-header">
+            <img
+              src="../Assets/Image/icon-html.svg"
+              alt=""
+              aria-hidden="true"
+            >
+            <span>HTML Structure</span>
           </div>
+
           <ul>
             <li>Missing ARIA attributes</li>
             <li>Misused headings</li>
@@ -381,10 +389,15 @@ Too much text, no hierarchy, same content repeated across pages. <br><br>
         </div>
 
         <div class="case-accessibility-item">
-            <div class="case-accessibility-item-header">          
-          <img src="../Assets/Image/icon-image.svg" alt="" aria-hidden="true">
-          <span>Images & Alt Text</span>
+          <div class="case-accessibility-item-header">
+            <img
+              src="../Assets/Image/icon-image.svg"
+              alt=""
+              aria-hidden="true"
+            >
+            <span>Images &amp; Alt Text</span>
           </div>
+
           <ul>
             <li>Missing or uninformative alt text</li>
             <li>Icons too small</li>
@@ -392,24 +405,33 @@ Too much text, no hierarchy, same content repeated across pages. <br><br>
         </div>
 
         <div class="case-accessibility-item">
-            <div class="case-accessibility-item-header">
-          <img src="../Assets/Image/icon-focus.svg" alt="" aria-hidden="true">
-          <span>Focus & Navigation</span>
+          <div class="case-accessibility-item-header">
+            <img
+              src="../Assets/Image/icon-focus.svg"
+              alt=""
+              aria-hidden="true"
+            >
+            <span>Focus &amp; Navigation</span>
           </div>
+
           <ul>
             <li>Focus indicator barely visible</li>
             <li>Non-sequential tab order</li>
             <li>No wishlist</li>
             <li>No search bar</li>
-            
           </ul>
         </div>
 
         <div class="case-accessibility-item">
-            <div class="case-accessibility-item-header">          
-          <img src="../Assets/Image/icon-text.svg" alt="" aria-hidden="true">
-          <span>Text & Contrast</span>
+          <div class="case-accessibility-item-header">
+            <img
+              src="../Assets/Image/icon-text.svg"
+              alt=""
+              aria-hidden="true"
+            >
+            <span>Text &amp; Contrast</span>
           </div>
+
           <ul>
             <li>Fonts too thin</li>
             <li>Poor contrast</li>
@@ -418,23 +440,160 @@ Too much text, no hierarchy, same content repeated across pages. <br><br>
         </div>
 
         <div class="case-accessibility-item">
-            <div class="case-accessibility-item-header">
-          <img src="../Assets/Image/icon-link.svg" alt="" aria-hidden="true">
-          <span>Links & Inputs</span>
+          <div class="case-accessibility-item-header">
+            <img
+              src="../Assets/Image/icon-link.svg"
+              alt=""
+              aria-hidden="true"
+            >
+            <span>Links &amp; Inputs</span>
           </div>
+
           <ul>
             <li>No meaningful link text</li>
-            <li>Input without labels</li>
+            <li>Inputs without labels</li>
             <li>Errors not signalled</li>
           </ul>
         </div>
 
-      
+      </div>
+
+      <!---------------- AUDIT TO SOLUTION BRIDGE ---------------->
+
+      <div class="case-accessibility-bridge">
+        <span>How I made it accessible?</span>
+        <span class="case-accessibility-bridge-arrow" aria-hidden="true"></span>
+      </div>
+
+      <!---------------- ACCESSIBILITY SOLUTIONS ---------------->
+
+      <div class="case-accessibility-fixes">
+
+        <article class="case-accessibility-fix">
+          <div
+            class="case-accessibility-fix-visual"
+            aria-hidden="true"
+          >
+            <div class="accessibility-semantic-demo">
+              <span>header</span>
+              <span>main</span>
+              <span>footer</span>
+            </div>
+          </div>
+
+          <h3 class="case-accessibility-fix-title">
+            Semantic Layout
+          </h3>
+
+          <p>
+            Correct heading hierarchy, semantic landmarks and meaningful
+            ARIA labels.
+          </p>
+        </article>
+
+        <article class="case-accessibility-fix">
+          <div
+            class="case-accessibility-fix-visual"
+            aria-hidden="true"
+          >
+            <div class="accessibility-alt-demo">
+              <span class="accessibility-alt-image"></span>
+              <span class="accessibility-alt-label">ALT ✓</span>
+            </div>
+          </div>
+
+          <h3 class="case-accessibility-fix-title">
+            Useful Alternatives
+          </h3>
+
+          <p>
+            Descriptive alternative text and larger, more recognisable
+            interface icons.
+          </p>
+        </article>
+
+        <article class="case-accessibility-fix">
+          <div
+            class="case-accessibility-fix-visual"
+            aria-hidden="true"
+          >
+            <div class="accessibility-focus-demo">
+              <span class="accessibility-search-demo">
+                <span class="accessibility-search-icon"></span>
+                Search
+              </span>
+
+              <span class="accessibility-button-demo">
+                Shop now
+              </span>
+            </div>
+          </div>
+
+          <h3 class="case-accessibility-fix-title">
+            Clear Navigation
+          </h3>
+
+          <p>
+            Logical keyboard order, visible focus states and clearer
+            navigation tools.
+          </p>
+        </article>
+
+        <article class="case-accessibility-fix">
+          <div
+            class="case-accessibility-fix-visual"
+            aria-hidden="true"
+          >
+            <div class="accessibility-text-demo">
+              <strong>Readable content</strong>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <h3 class="case-accessibility-fix-title">
+            Visual Clarity
+          </h3>
+
+          <p>
+            Stronger contrast, readable font weights and a clearer
+            information hierarchy.
+          </p>
+        </article>
+
+        <article class="case-accessibility-fix">
+          <div
+            class="case-accessibility-fix-visual"
+            aria-hidden="true"
+          >
+            <div class="accessibility-form-demo">
+              <span>Email address</span>
+              <span class="accessibility-input-demo"></span>
+              <span class="accessibility-feedback-demo">
+                ✓ Clear feedback
+              </span>
+            </div>
+          </div>
+
+          <h3 class="case-accessibility-fix-title">
+            Explicit Actions
+          </h3>
+
+          <p>
+            Meaningful links, visible form labels and clear validation
+            feedback.
+          </p>
+        </article>
+
       </div>
     </div>
   </div>
-    <span class="main-section-title-divider" aria-hidden="true"></span>
 
+  <span
+    class="main-section-title-divider"
+    aria-hidden="true"
+  ></span>
 </section>
 
 
