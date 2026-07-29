@@ -792,6 +792,191 @@
   }
 }
 
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 1199.98px) {
+  .case-accessibility-grid,
+  .case-accessibility-fixes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .case-accessibility-item {
+    padding-block: 24px;
+    border-bottom: 1px solid rgba(
+      v.$ecodream-accent-color,
+      0.08
+    );
+
+    &:nth-child(2n) {
+      border-right: 0;
+    }
+
+    &:last-child {
+      grid-column: 1 / -1;
+      border-bottom: 0;
+    }
+  }
+
+  .case-accessibility-fix {
+    padding-block: 28px;
+    border-bottom: 1px solid rgba(
+      v.$ecodream-accent-color,
+      0.08
+    );
+
+    &::before {
+      display: none;
+    }
+
+    &:last-child {
+      grid-column: 1 / -1;
+      border-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .case-accessibility {
+    margin-top: 0;
+  }
+
+  .case-accessibility-block .case-kicker {
+    margin-bottom: 24px;
+  }
+
+  .case-accessibility-grid,
+  .case-accessibility-fixes {
+    grid-template-columns: 1fr;
+  }
+
+  .case-accessibility-item {
+    padding: 20px 0;
+    border-right: 0;
+
+    &:last-child {
+      grid-column: auto;
+    }
+  }
+
+  .case-accessibility-bridge {
+    margin-top: 12px;
+
+    > span:first-child {
+      text-align: center;
+    }
+  }
+
+  .case-accessibility-fixes {
+    padding-top: 12px;
+  }
+
+  .case-accessibility-fix {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr);
+    column-gap: 20px;
+    align-items: center;
+    padding: 24px 0;
+    text-align: left;
+
+    &:last-child {
+      grid-column: auto;
+    }
+
+    p {
+      grid-column: 2;
+      margin-top: 6px;
+    }
+  }
+
+  .case-accessibility-fix-visual {
+    grid-row: 1 / span 2;
+    width: 110px;
+    height: 90px;
+    margin: 0;
+  }
+
+  .case-accessibility-fix-title {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .case-accessibility-fix {
+    grid-template-columns: 88px minmax(0, 1fr);
+    column-gap: 14px;
+  }
+
+  .case-accessibility-fix-visual {
+    width: 88px;
+    transform: scale(0.86);
+    transform-origin: left center;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .ecodream-page {
+    .case-comparison-carousel {
+      margin-top: 80px;
+    }
+
+    .case-comparison-heading {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .case-comparison-slide {
+      flex-basis: 100%;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ecodream-page {
+    .case-comparison-pair {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .case-comparison-arrow {
+      transform: rotate(90deg);
+    }
+
+    .case-comparison-description {
+      text-align: left;
+    }
+
+    .case-comparison-controls {
+      grid-template-columns: auto 1fr;
+    }
+
+    .case-comparison-progress {
+      grid-column: 1 / -1;
+      grid-row: 2;
+    }
+
+    .case-comparison-buttons {
+      justify-self: end;
+    }
+
+    .case-image-lightbox {
+      width: calc(100% - 24px);
+      padding-inline: 12px;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ecodream-page {
+    .case-comparison-track,
+    .case-comparison-progress span,
+    .case-comparison-image-button,
+    .case-comparison-control {
+      transition: none;
+    }
+  }
+}
+
 @media (max-width: 992px) {
   .ecodream-page {
     .case-hero-top--ecodream {

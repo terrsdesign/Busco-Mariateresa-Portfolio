@@ -2908,7 +2908,8 @@ select:disabled,
 .case-survey .case-kicker,
 .case-accessibility .case-kicker,
 .case-design-step-head p,
-.prototype-detail-item .case-kicker {
+.prototype-detail-item .case-kicker,
+.case-comparison-heading .case-kicker {
   margin: 0 0 40px;
   font-family: "Geist Mono", monospace;
   font-size: 1rem;
@@ -3227,7 +3228,7 @@ select:disabled,
   align-items: center;
   gap: 12px;
   min-height: 48px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 .case-accessibility-item-header img {
   width: 24px;
@@ -3253,7 +3254,7 @@ select:disabled,
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100px;
+  min-height: 80px;
   margin-top: 20px;
 }
 .case-accessibility-bridge > span:first-child {
@@ -3498,100 +3499,6 @@ select:disabled,
   color: rgb(122.3243243243, 116.4594594595, 63.6756756757);
 }
 
-/* ---------------- RESPONSIVE ---------------- */
-@media (max-width: 1199.98px) {
-  .case-accessibility-grid,
-  .case-accessibility-fixes {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .case-accessibility-item {
-    padding-block: 24px;
-    border-bottom: 1px solid rgba(153, 86, 126, 0.08);
-  }
-  .case-accessibility-item:nth-child(2n) {
-    border-right: 0;
-  }
-  .case-accessibility-item:last-child {
-    grid-column: 1/-1;
-    border-bottom: 0;
-  }
-  .case-accessibility-fix {
-    padding-block: 28px;
-    border-bottom: 1px solid rgba(153, 86, 126, 0.08);
-  }
-  .case-accessibility-fix::before {
-    display: none;
-  }
-  .case-accessibility-fix:last-child {
-    grid-column: 1/-1;
-    border-bottom: 0;
-  }
-}
-@media (max-width: 767.98px) {
-  .case-accessibility {
-    margin-top: 0;
-  }
-  .case-accessibility-block .case-kicker {
-    margin-bottom: 24px;
-  }
-  .case-accessibility-grid,
-  .case-accessibility-fixes {
-    grid-template-columns: 1fr;
-  }
-  .case-accessibility-item {
-    padding: 20px 0;
-    border-right: 0;
-  }
-  .case-accessibility-item:last-child {
-    grid-column: auto;
-  }
-  .case-accessibility-bridge {
-    margin-top: 12px;
-  }
-  .case-accessibility-bridge > span:first-child {
-    text-align: center;
-  }
-  .case-accessibility-fixes {
-    padding-top: 12px;
-  }
-  .case-accessibility-fix {
-    display: grid;
-    grid-template-columns: 110px minmax(0, 1fr);
-    -moz-column-gap: 20px;
-         column-gap: 20px;
-    align-items: center;
-    padding: 24px 0;
-    text-align: left;
-  }
-  .case-accessibility-fix:last-child {
-    grid-column: auto;
-  }
-  .case-accessibility-fix p {
-    grid-column: 2;
-    margin-top: 6px;
-  }
-  .case-accessibility-fix-visual {
-    grid-row: 1/span 2;
-    width: 110px;
-    height: 90px;
-    margin: 0;
-  }
-  .case-accessibility-fix-title {
-    margin-top: 0;
-  }
-}
-@media (max-width: 479.98px) {
-  .case-accessibility-fix {
-    grid-template-columns: 88px minmax(0, 1fr);
-    -moz-column-gap: 14px;
-         column-gap: 14px;
-  }
-  .case-accessibility-fix-visual {
-    width: 88px;
-    transform: scale(0.86);
-    transform-origin: left center;
-  }
-}
 /* ------------USER PERSONAS-----------*/
 .ecodream-page .case-personas-heading {
   display: grid;
@@ -3856,6 +3763,259 @@ select:disabled,
   font-size: 1.5rem;
   line-height: 1;
   color: #99567E;
+}
+
+/* ---------------- BEFORE & AFTER ---------------- */
+.ecodream-page .case-comparison-carousel {
+  margin-top: 120px;
+  background-color: rgb(241.9020920502, 231.6979079498, 237.789958159);
+  padding: 24px;
+  border-radius: 8px;
+}
+.ecodream-page .case-comparison-heading {
+  align-items: end;
+  margin-bottom: 48px;
+}
+.ecodream-page .case-comparison-heading .case-kicker {
+  margin: 0 0 16px;
+  color: rgb(120.3514644351, 67.6485355649, 99.1129707113);
+}
+.ecodream-page .case-comparison-viewport {
+  overflow: hidden;
+}
+.ecodream-page .case-comparison-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+.ecodream-page .case-comparison-slide {
+  flex: 0 0 calc((100% - 24px) / 2);
+  min-width: 0;
+}
+.ecodream-page .case-comparison-slide-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.ecodream-page .case-comparison-slide-head h3,
+.ecodream-page .case-comparison-slide-head span {
+  margin: 0;
+  font-family: "Geist Mono", monospace;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.ecodream-page .case-comparison-slide-head h3 {
+  color: rgb(88.7837837838, 84.527027027, 46.2162162162);
+  font-weight: 500;
+  position: relative;
+  margin: auto;
+  border-bottom: 1px solid rgba(153, 86, 126, 0.08);
+  margin-bottom: 16px;
+  padding: 0 120px;
+}
+.ecodream-page .case-comparison-slide-head span {
+  color: #4A4243;
+  display: none;
+}
+.ecodream-page .case-comparison-pair {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 32px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+.ecodream-page .case-comparison-screen {
+  min-width: 0;
+  margin: 0;
+}
+.ecodream-page .case-comparison-screen figcaption {
+  margin: auto;
+  font-family: "Geist Mono", monospace;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4A4243;
+  text-align: center;
+  padding: 8px 0;
+}
+.ecodream-page .case-comparison-image-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 10/16;
+  padding: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(31, 27, 28, 0.08);
+  border-radius: 8px;
+  background-color: rgb(253.275, 252.125, 249.825);
+  box-shadow: 0 12px 30px rgba(31, 27, 28, 0.06), 0 3px 8px rgba(31, 27, 28, 0.04);
+  cursor: zoom-in;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.ecodream-page .case-comparison-image-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 38px rgba(31, 27, 28, 0.1), 0 4px 10px rgba(31, 27, 28, 0.05);
+}
+.ecodream-page .case-comparison-image-button:focus-visible {
+  outline: 3px solid #99567E;
+  outline-offset: 4px;
+}
+.ecodream-page .case-comparison-image-button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+}
+.ecodream-page .case-comparison-screen:first-child .case-comparison-image-button img {
+  filter: grayscale(0.8);
+  opacity: 0.78;
+}
+.ecodream-page .case-comparison-zoom {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(252, 250, 246, 0.92);
+  color: #99567E;
+  font-size: 1.2rem;
+  box-shadow: 0 3px 8px rgba(31, 27, 28, 0.12);
+}
+.ecodream-page .case-comparison-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #99567E;
+  font-size: 1.5rem;
+}
+.ecodream-page .case-comparison-controls {
+  display: grid;
+  grid-template-columns: auto minmax(140px, 1fr) auto;
+  gap: 20px;
+  align-items: center;
+  margin-top: 40px;
+}
+.ecodream-page .case-comparison-count {
+  font-family: "Geist Mono", monospace;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  color: rgb(122.3243243243, 116.4594594595, 63.6756756757);
+}
+.ecodream-page .case-comparison-progress {
+  height: 2px;
+  overflow: hidden;
+  background-color: rgba(153, 86, 126, 0.12);
+}
+.ecodream-page .case-comparison-progress span {
+  display: block;
+  width: 40%;
+  height: 100%;
+  background-color: #99567E;
+  transition: width 0.35s ease;
+}
+.ecodream-page .case-comparison-buttons {
+  display: flex;
+  gap: 10px;
+}
+.ecodream-page .case-comparison-control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid rgba(153, 86, 126, 0.28);
+  border-radius: 50%;
+  background-color: transparent;
+  color: #99567E;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+.ecodream-page .case-comparison-control:hover:not(:disabled) {
+  background-color: #99567E;
+  color: #FCFAF6;
+  transform: scale(1.06);
+}
+.ecodream-page .case-comparison-control:active:not(:disabled) {
+  transform: scale(0.96);
+}
+.ecodream-page .case-comparison-control:focus-visible {
+  outline: 3px solid #99567E;
+  outline-offset: 3px;
+}
+.ecodream-page .case-comparison-control:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.ecodream-page {
+  /* Lightbox */
+}
+.ecodream-page .case-image-lightbox {
+  width: min(94vw, 1500px);
+  max-width: none;
+  max-height: 92vh;
+  padding: 52px 24px 22px;
+  border: 0;
+  border-radius: 8px;
+  background-color: #FCFAF6;
+  box-shadow: 0 30px 90px rgba(31, 27, 28, 0.28);
+}
+.ecodream-page .case-image-lightbox::backdrop {
+  background-color: rgba(31, 27, 28, 0.78);
+  backdrop-filter: blur(4px);
+}
+.ecodream-page .case-image-lightbox img {
+  display: block;
+  width: 100%;
+  max-height: 76vh;
+  margin-inline: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top center;
+     object-position: top center;
+}
+.ecodream-page .case-image-lightbox-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #1F1B1C;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.ecodream-page .case-image-lightbox-close:focus-visible {
+  outline: 3px solid #99567E;
+  outline-offset: 2px;
+}
+.ecodream-page .case-image-lightbox-caption {
+  margin: 14px 0 0;
+  font-family: "Geist Mono", monospace;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(122.3243243243, 116.4594594595, 63.6756756757);
 }
 
 /* ------------------------Prototype ------------------------ */
@@ -5305,6 +5465,146 @@ select:disabled,
   }
   .ecodream-page .case-conclusion-image {
     width: 100%;
+  }
+}
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 1199.98px) {
+  .case-accessibility-grid,
+  .case-accessibility-fixes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .case-accessibility-item {
+    padding-block: 24px;
+    border-bottom: 1px solid rgba(153, 86, 126, 0.08);
+  }
+  .case-accessibility-item:nth-child(2n) {
+    border-right: 0;
+  }
+  .case-accessibility-item:last-child {
+    grid-column: 1/-1;
+    border-bottom: 0;
+  }
+  .case-accessibility-fix {
+    padding-block: 28px;
+    border-bottom: 1px solid rgba(153, 86, 126, 0.08);
+  }
+  .case-accessibility-fix::before {
+    display: none;
+  }
+  .case-accessibility-fix:last-child {
+    grid-column: 1/-1;
+    border-bottom: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .case-accessibility {
+    margin-top: 0;
+  }
+  .case-accessibility-block .case-kicker {
+    margin-bottom: 24px;
+  }
+  .case-accessibility-grid,
+  .case-accessibility-fixes {
+    grid-template-columns: 1fr;
+  }
+  .case-accessibility-item {
+    padding: 20px 0;
+    border-right: 0;
+  }
+  .case-accessibility-item:last-child {
+    grid-column: auto;
+  }
+  .case-accessibility-bridge {
+    margin-top: 12px;
+  }
+  .case-accessibility-bridge > span:first-child {
+    text-align: center;
+  }
+  .case-accessibility-fixes {
+    padding-top: 12px;
+  }
+  .case-accessibility-fix {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr);
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    align-items: center;
+    padding: 24px 0;
+    text-align: left;
+  }
+  .case-accessibility-fix:last-child {
+    grid-column: auto;
+  }
+  .case-accessibility-fix p {
+    grid-column: 2;
+    margin-top: 6px;
+  }
+  .case-accessibility-fix-visual {
+    grid-row: 1/span 2;
+    width: 110px;
+    height: 90px;
+    margin: 0;
+  }
+  .case-accessibility-fix-title {
+    margin-top: 0;
+  }
+}
+@media (max-width: 479.98px) {
+  .case-accessibility-fix {
+    grid-template-columns: 88px minmax(0, 1fr);
+    -moz-column-gap: 14px;
+         column-gap: 14px;
+  }
+  .case-accessibility-fix-visual {
+    width: 88px;
+    transform: scale(0.86);
+    transform-origin: left center;
+  }
+}
+@media (max-width: 991.98px) {
+  .ecodream-page .case-comparison-carousel {
+    margin-top: 80px;
+  }
+  .ecodream-page .case-comparison-heading {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .ecodream-page .case-comparison-slide {
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 575.98px) {
+  .ecodream-page .case-comparison-pair {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .ecodream-page .case-comparison-arrow {
+    transform: rotate(90deg);
+  }
+  .ecodream-page .case-comparison-description {
+    text-align: left;
+  }
+  .ecodream-page .case-comparison-controls {
+    grid-template-columns: auto 1fr;
+  }
+  .ecodream-page .case-comparison-progress {
+    grid-column: 1/-1;
+    grid-row: 2;
+  }
+  .ecodream-page .case-comparison-buttons {
+    justify-self: end;
+  }
+  .ecodream-page .case-image-lightbox {
+    width: calc(100% - 24px);
+    padding-inline: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ecodream-page .case-comparison-track,
+  .ecodream-page .case-comparison-progress span,
+  .ecodream-page .case-comparison-image-button,
+  .ecodream-page .case-comparison-control {
+    transition: none;
   }
 }
 @media (max-width: 992px) {
