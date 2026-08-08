@@ -1902,6 +1902,15 @@ color:color.adjust(v.$ecodream-accent-color, $lightness: -15%);
     margin-top:40px;
   }
 
+  .case-conclusion ul {
+    margin-top:-25px;
+  }
+  .case-conclusion li {margin-bottom: 8px;
+    color: v.$neutral-medium;
+    line-height: v.$line-height-body;
+  }
+
+
   .case-conclusion-showcase {
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;

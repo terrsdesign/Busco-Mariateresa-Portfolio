@@ -4133,6 +4133,14 @@ select:disabled,
   background-color: #FCFAF6;
   margin-top: 40px;
 }
+.ecodream-page .case-conclusion ul {
+  margin-top: -25px;
+}
+.ecodream-page .case-conclusion li {
+  margin-bottom: 8px;
+  color: #4A4243;
+  line-height: 1.5rem;
+}
 .ecodream-page .case-conclusion-showcase {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
